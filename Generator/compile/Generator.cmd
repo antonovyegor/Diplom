@@ -1,0 +1,1 @@
+-w -s "d:\My_Designs\Diplom\library.cfg"  -j "d:\My_Designs\Diplom\Generator\projlib.cfg"  -d "d:\My_Designs\Diplom\Generator\compile"   -work Generator  -O3 -e 100 -2002 "d:/My_Designs/Diplom/gen.vhd" "d:/My_Designs/Diplom/Timer.vhd" "d:/My_Designs/Diplom/ROM12.vhd" "d:/My_Designs/Diplom/Main.vhd" "d:/My_Designs/Diplom/Oscill.vhd"

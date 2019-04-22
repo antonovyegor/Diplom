@@ -1,0 +1,473 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/My_Designs/testModel
+Eadd
+Z0 w1555703721
+Z1 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dD:/My_Designs/Diplom
+Z5 8D:/My_Designs/Diplom/ADD.vhd
+Z6 FD:/My_Designs/Diplom/ADD.vhd
+l0
+L42
+VWSIO]lWAZCfi;Waa<CX;D1
+!s100 _5CCK3N]P`1]<LATJj^KK0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1555750913
+!i10b 1
+Z9 !s108 1555750913.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ADD.vhd|
+Z11 !s107 D:/My_Designs/Diplom/ADD.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Asyn
+R1
+R2
+R3
+DEx4 work 3 add 0 22 WSIO]lWAZCfi;Waa<CX;D1
+l81
+L62
+Vkl0Vf>=@M:WhYL56fof6`2
+!s100 CCCzX4T?C2IX8QFlUBZN_3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eadsr
+Z14 w1555578626
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R4
+Z17 8D:/My_Designs/Diplom/ADSR.vhd
+Z18 FD:/My_Designs/Diplom/ADSR.vhd
+l0
+L6
+VgBL_9[]a2M:g1`V0foOQa2
+!s100 3oQH_oDgiUao[j>lHa0RD1
+R7
+32
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ADSR.vhd|
+Z20 !s107 D:/My_Designs/Diplom/ADSR.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 4 adsr 0 22 gBL_9[]a2M:g1`V0foOQa2
+l24
+L19
+VJ>ERY`5f;F>gH7zB`R`_]0
+!s100 k?Vb7o4=^^3>eC>T^GAU@1
+R7
+32
+R8
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Egen
+Z21 w1555491222
+R15
+R2
+R3
+R16
+R4
+Z22 8D:/My_Designs/Diplom/gen.vhd
+Z23 FD:/My_Designs/Diplom/gen.vhd
+l0
+L7
+Vho[>ZZ^hj;OnIhJl6eH=23
+!s100 O9eoCA@MLMjo]e;hA12WE3
+R7
+32
+Z24 !s110 1555750912
+!i10b 1
+Z25 !s108 1555750912.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/gen.vhd|
+Z27 !s107 D:/My_Designs/Diplom/gen.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 3 gen 0 22 ho[>ZZ^hj;OnIhJl6eH=23
+l24
+L22
+V<K`<UVf8Bd7nT5o3XWe0W1
+!s100 cGkUX8m=czzKXERHjhe=Q3
+R7
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 1
+R12
+R13
+Emain
+Z28 w1555746188
+Z29 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R15
+R2
+R3
+R16
+R4
+Z30 8D:/My_Designs/Diplom/Main.vhd
+Z31 FD:/My_Designs/Diplom/Main.vhd
+l0
+L7
+VW?IBNe:7:XKDM^zmKmUF^2
+!s100 <QH2VoNizTzAIj==Z<5I43
+R7
+32
+R8
+!i10b 1
+R25
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Main.vhd|
+Z33 !s107 D:/My_Designs/Diplom/Main.vhd|
+!i113 1
+R12
+R13
+Abeh
+R29
+R15
+R2
+R3
+R16
+DEx4 work 4 main 0 22 W?IBNe:7:XKDM^zmKmUF^2
+l110
+L17
+VDLLS?jT[d]hVFki<@k@4X0
+!s100 G]WgEb?5<9i`9eCn5fdc>1
+R7
+32
+R8
+!i10b 1
+R25
+R32
+R33
+!i113 1
+R12
+R13
+Eoscill
+Z34 w1555702224
+R15
+R2
+R3
+R16
+R4
+Z35 8D:/My_Designs/Diplom/Oscill.vhd
+Z36 FD:/My_Designs/Diplom/Oscill.vhd
+l0
+L6
+VVjl=TV7^UdYc^bMbI<cWI2
+!s100 N[TF5SFP1=R3j8c@E=h<n0
+R7
+32
+R8
+!i10b 1
+R9
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Oscill.vhd|
+Z38 !s107 D:/My_Designs/Diplom/Oscill.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 6 oscill 0 22 Vjl=TV7^UdYc^bMbI<cWI2
+l49
+L21
+VKm?f8L0dcfBK5JgWof0b90
+!s100 ZoQN3d9YmF0?UAk:`8R^H1
+R7
+32
+R8
+!i10b 1
+R9
+R37
+R38
+!i113 1
+R12
+R13
+Epll
+Z39 w1555746039
+R2
+R3
+R4
+Z40 8D:/My_Designs/Diplom/PLL.vhd
+Z41 FD:/My_Designs/Diplom/PLL.vhd
+l0
+L42
+VG@FXNlRZn6SRLR?b0l_863
+!s100 i8<iCUn^^9>AiHRSWCmHX1
+R7
+32
+R8
+!i10b 1
+R9
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/PLL.vhd|
+Z43 !s107 D:/My_Designs/Diplom/PLL.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 3 pll 0 22 G@FXNlRZn6SRLR?b0l_863
+l137
+L53
+V`XA4h[8=[30WRm33T8mnY1
+!s100 mgeNDIMOmSknOFCEGP]CC0
+R7
+32
+R8
+!i10b 1
+R9
+R42
+R43
+!i113 1
+R12
+R13
+Erom1
+Z44 w1555703890
+R1
+R2
+R3
+R4
+Z45 8D:/My_Designs/Diplom/ROM1.vhd
+Z46 FD:/My_Designs/Diplom/ROM1.vhd
+l0
+L42
+VFFAfdTZkGd9mS?i<TFL;X3
+!s100 BLPNX1ej383_]I>;SQTPi3
+R7
+32
+R8
+!i10b 1
+R9
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM1.vhd|
+Z48 !s107 D:/My_Designs/Diplom/ROM1.vhd|
+!i113 1
+R12
+R13
+Asyn
+R1
+R2
+R3
+DEx4 work 4 rom1 0 22 FFAfdTZkGd9mS?i<TFL;X3
+l56
+L52
+VRh6F^ce>QR@6zQPP@J1[K2
+!s100 84Z4=fM9N7[IK[oX_S1G`1
+R7
+32
+R8
+!i10b 1
+R9
+R47
+R48
+!i113 1
+R12
+R13
+Erom12
+Z49 w1555680543
+R15
+R2
+R3
+R16
+R4
+Z50 8D:/My_Designs/Diplom/ROM12.vhd
+Z51 FD:/My_Designs/Diplom/ROM12.vhd
+l0
+L8
+VQBF@l]QAZ_gjHI27ZdeL`1
+!s100 fn_]LSV09NN>0z2O>;iQ01
+R7
+32
+R8
+!i10b 1
+R9
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM12.vhd|
+Z53 !s107 D:/My_Designs/Diplom/ROM12.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 5 rom12 0 22 QBF@l]QAZ_gjHI27ZdeL`1
+l564
+L41
+VRegX6m@5<F3a]Om5aNS0T1
+!s100 mPGi>[WLH;CG?mY;;a?Ph3
+R7
+32
+R8
+!i10b 1
+R9
+R52
+R53
+!i113 1
+R12
+R13
+Eromserial
+Z54 w1555750889
+R15
+R2
+R3
+R16
+R4
+Z55 8D:/My_Designs/Diplom/ROMSERIAL.vhd
+Z56 FD:/My_Designs/Diplom/ROMSERIAL.vhd
+l0
+L7
+VK>h3@98RO5]5J[GATCC?13
+!s100 XPCWe:[flYAF9zhoSbe]J3
+R7
+32
+R8
+!i10b 1
+R9
+Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROMSERIAL.vhd|
+Z58 !s107 D:/My_Designs/Diplom/ROMSERIAL.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 9 romserial 0 22 K>h3@98RO5]5J[GATCC?13
+l50
+L31
+VG46E55L>UL5b9Q:gofJNY2
+!s100 Oj4g=WW_im1lZD]O3hZBF3
+R7
+32
+R8
+!i10b 1
+R9
+R57
+R58
+!i113 1
+R12
+R13
+Eshll
+Z59 w1555703736
+R2
+R3
+R4
+Z60 8D:/My_Designs/Diplom/SHLL.vhd
+Z61 FD:/My_Designs/Diplom/SHLL.vhd
+l0
+L42
+VlkS3fKonkU?VDNa2=Q]jg3
+!s100 Qkn@J5cg[O5cjO?=D[n0C0
+R7
+32
+Z62 !s110 1555750914
+!i10b 1
+Z63 !s108 1555750914.000000
+Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/SHLL.vhd|
+Z65 !s107 D:/My_Designs/Diplom/SHLL.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+Z66 DEx4 work 4 shll 0 22 lkS3fKonkU?VDNa2=Q]jg3
+l74
+L52
+Z67 V4KUVGTeg[GNcIQE9jN[9:3
+Z68 !s100 3Y8@MgBO_B3QOJWRLo>W[2
+R7
+32
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R12
+R13
+Etimer
+Z69 w1555667019
+R15
+R2
+R3
+R16
+R4
+Z70 8D:/My_Designs/Diplom/Timer.vhd
+Z71 FD:/My_Designs/Diplom/Timer.vhd
+l0
+L6
+VgaN8GmD^=4NST>Lm]Df>m0
+!s100 Yg@F6zZ^4Zim_QL1ZEgd00
+R7
+32
+R8
+!i10b 1
+R9
+Z72 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Timer.vhd|
+Z73 !s107 D:/My_Designs/Diplom/Timer.vhd|
+!i113 1
+R12
+R13
+Abeh
+R15
+R2
+R3
+R16
+DEx4 work 5 timer 0 22 gaN8GmD^=4NST>Lm]Df>m0
+l22
+L17
+V`gAM:lHn`8Ro]_;jOn[bW0
+!s100 H23OKie^9`]eI@_2LSEWC1
+R7
+32
+R8
+!i10b 1
+R9
+R72
+R73
+!i113 1
+R12
+R13

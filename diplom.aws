@@ -1,0 +1,12 @@
+[Version]
+Version=10.1
+[Designs]
+generator=.\Generator\Generator.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+macro=
+[Expand]
+generator=1

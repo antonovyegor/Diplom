@@ -1,0 +1,96 @@
+D:/My_Designs/Diplom/gen.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity gen
+-- Compiling architecture BEH of gen
+
+} {} {}} D:/My_Designs/Diplom/ADSR.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ADSR.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ADSR
+-- Compiling architecture BEH of ADSR
+
+} {} {}} D:/My_Designs/Diplom/Oscill.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Oscill.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Oscill
+-- Compiling architecture BEH of Oscill
+
+} {} {}} D:/My_Designs/Diplom/SHLL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/SHLL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity SHLL
+-- Compiling architecture SYN of shll
+
+} {} {}} D:/My_Designs/Diplom/ROM1.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ROM1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ROM1
+-- Compiling architecture SYN of rom1
+
+} {} {}} D:/My_Designs/Diplom/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/PLL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PLL
+-- Compiling architecture SYN of pll
+
+} {} {}} D:/My_Designs/Diplom/Main.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Main.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity Main
+-- Compiling architecture BEH of Main
+
+} {} {}} D:/My_Designs/Diplom/ROM12.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ROM12.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ROM12
+-- Compiling architecture BEH of ROM12
+
+} {} {}} D:/My_Designs/Diplom/Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Timer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Timer
+-- Compiling architecture BEH of Timer
+
+} {} {}} D:/My_Designs/Diplom/ADD.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ADD.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ADD
+-- Compiling architecture SYN of add
+
+} {} {}}

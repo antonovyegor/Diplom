@@ -1,0 +1,25 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: d:\My_Designs\Diplom\gen.vhd" 
+MESSAGE "Compile Entity "gen"" 
+MESSAGE "Compile Architecture "BEH" of Entity "gen"" 
+MESSAGE "File: d:\My_Designs\Diplom\Timer.vhd" 
+MESSAGE "Compile Entity "Timer"" 
+MESSAGE "Compile Architecture "BEH" of Entity "Timer"" 
+MESSAGE "File: d:\My_Designs\Diplom\ROM12.vhd" 
+BEGINPROGRESS d:\My_Designs\Diplom\ROM12.vhd
+UPDATEPROGRESS 1
+MESSAGE "Compile Entity "ROM12"" 
+UPDATEPROGRESS 6
+UPDATEPROGRESS 7
+MESSAGE "Compile Architecture "BEH" of Entity "ROM12"" 
+UPDATEPROGRESS 96
+UPDATEPROGRESS 99
+UPDATEPROGRESS 100
+ENDPROGRESS d:\My_Designs\Diplom\ROM12.vhd
+MESSAGE "File: d:\My_Designs\Diplom\Main.vhd" 
+MESSAGE "Compile Entity "Main"" 
+MESSAGE "Compile Architecture "BEH" of Entity "Main"" 
+MESSAGE "File: d:\My_Designs\Diplom\Oscill.vhd" 
+MESSAGE "Compile Entity "Oscill"" 
+MESSAGE "Compile Architecture "BEH" of Entity "Oscill"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

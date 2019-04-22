@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Apr 20 22:22:34 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Generator
+Top-level Entity Name : uartRX
+Family : Cyclone IV E
+Device : EP4CE6E22C8
+Timing Models : Final
+Total logic elements : 104 / 6,272 ( 2 % )
+    Total combinational functions : 38 / 6,272 ( < 1 % )
+    Dedicated logic registers : 88 / 6,272 ( 1 % )
+Total registers : 88
+Total pins : 36 / 92 ( 39 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

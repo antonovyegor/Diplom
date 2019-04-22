@@ -1,0 +1,11 @@
+380
+~E 1 "./../../gen.vhd" 7 gen
+~A 1 "./../../gen.vhd" 22 BEH
+~E 1 "./../../Main.vhd" 7 Main
+~A 1 "./../../Main.vhd" 17 BEH
+~E 1 "./../../Oscill.vhd" 6 Oscill
+~A 1 "./../../Oscill.vhd" 19 BEH
+~E 1 "./../../ROM12.vhd" 8 ROM12
+~A 1 "./../../ROM12.vhd" 43 BEH
+~E 1 "./../../Timer.vhd" 6 Timer
+~A 1 "./../../Timer.vhd" 15 BEH

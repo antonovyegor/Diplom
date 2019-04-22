@@ -1,0 +1,1 @@
+ -w -cvi  -2002  -s "d:/My_Designs/Diplom/Generator/hdl_assist/library.cfg"  -work Generator  -e 100  "d:/My_Designs/Diplom/Main.vhd"

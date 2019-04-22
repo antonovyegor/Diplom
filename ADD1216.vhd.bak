@@ -1,0 +1,36 @@
+library ieee;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.numeric_std.all;  
+
+
+entity ADD1216 is
+	port (
+	data0 : in std_logic_vector(11 downto 0 );
+	data1 : in std_logic_vector(11 downto 0 );
+	data2 : in std_logic_vector(11 downto 0 );
+	data3 : in std_logic_vector(11 downto 0 );
+	data4 : in std_logic_vector(11 downto 0 );
+	data5 : in std_logic_vector(11 downto 0 );
+	data6 : in std_logic_vector(11 downto 0 );
+	data7 : in std_logic_vector(11 downto 0 );
+	data8 : in std_logic_vector(11 downto 0 );
+	data9 : in std_logic_vector(11 downto 0 );
+	data10 : in std_logic_vector(11 downto 0 );
+	data11 : in std_logic_vector(11 downto 0 );
+	resulr : out std_logic_vector(15 downto 0)
+	);
+	
+end entity;
+
+architecture SYN of ADD1216 
+		signal wire11,wire12,wire13,wire21,wire22 : std_logic_vector(15 downto 0);
+		component ADD 
+		dataa		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		datab		: IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		result		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
+		end component;
+begin
+		ADD1 : ADD port map(dataa=>);
+end SYN;

@@ -1,0 +1,5 @@
+.\..\gen.vhd
+.\..\Timer.vhd
+.\..\ROM12.vhd
+.\..\Main.vhd
+.\..\Oscill.vhd

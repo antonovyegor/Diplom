@@ -1,0 +1,22 @@
+package LOGIC is 
+
+function To_Std_Logic(L: BOOLEAN) return std_ulogic;
+
+end function To_Std_Logic;
+
+
+end LOGIC;
+
+Package body LOGIC is 
+
+
+function To_Std_Logic(L: BOOLEAN) return std_ulogic is
+begin
+if L then
+return('1');
+else
+return('0');
+end if;
+end function To_Std_Logic;
+
+end package body;
