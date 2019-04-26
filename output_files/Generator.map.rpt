@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Generator
-Sat Apr 20 22:22:20 2019
+Wed Apr 24 18:22:45 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,15 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |uartRX|fsm
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,20 +36,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 20 22:22:20 2019       ;
+; Analysis & Synthesis Status        ; Failed - Wed Apr 24 18:22:45 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Generator                                   ;
-; Top-level Entity Name              ; uartRX                                      ;
+; Top-level Entity Name              ; ADSR                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 106                                         ;
-;     Total combinational functions  ; 38                                          ;
-;     Dedicated logic registers      ; 88                                          ;
-; Total registers                    ; 88                                          ;
-; Total pins                         ; 36                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -67,7 +59,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6E22C8        ;                    ;
-; Top-level entity name                                            ; uartRX             ; Generator          ;
+; Top-level entity name                                            ; ADSR               ; Generator          ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,136 +148,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.1%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                           ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path    ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-; uartRX.vhd                       ; yes             ; User VHDL File  ; D:/My_Designs/Diplom/uartRX.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 106         ;
-;                                             ;             ;
-; Total combinational functions               ; 38          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 17          ;
-;     -- 3 input functions                    ; 4           ;
-;     -- <=2 input functions                  ; 17          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 25          ;
-;     -- arithmetic mode                      ; 13          ;
-;                                             ;             ;
-; Total registers                             ; 88          ;
-;     -- Dedicated logic registers            ; 88          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 36          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; clk50~input ;
-; Maximum fan-out                             ; 88          ;
-; Total fan-out                               ; 469         ;
-; Average fan-out                             ; 2.37        ;
-+---------------------------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |uartRX                    ; 38 (38)             ; 88 (88)                   ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |uartRX             ; uartRX      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------+
-; State Machine - |uartRX|fsm                              ;
-+------------+------------+---------+-----------+----------+
-; Name       ; fsm.finish ; fsm.rec ; fsm.start ; fsm.idle ;
-+------------+------------+---------+-----------+----------+
-; fsm.idle   ; 0          ; 0       ; 0         ; 0        ;
-; fsm.start  ; 0          ; 0       ; 1         ; 1        ;
-; fsm.rec    ; 0          ; 1       ; 0         ; 1        ;
-; fsm.finish ; 1          ; 0       ; 0         ; 1        ;
-+------------+------------+---------+-----------+----------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 88    ;
-; Number of registers using Synchronous Clear  ; 15    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 13    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 84    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |uartRX|bit_cnt[5]         ;
-; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |uartRX|cnt[8]             ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |uartRX|Selector6          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 36                          ;
-; cycloneiii_ff         ; 88                          ;
-;     CLR               ; 4                           ;
-;     ENA               ; 69                          ;
-;     ENA CLR SCLR      ; 9                           ;
-;     ENA SCLR          ; 6                           ;
-; cycloneiii_lcell_comb ; 38                          ;
-;     arith             ; 13                          ;
-;         2 data inputs ; 13                          ;
-;     normal            ; 25                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 17                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.37                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -294,7 +161,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 20 22:21:59 2019
+    Info: Processing started: Wed Apr 24 18:22:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Generator -c Generator
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -302,26 +169,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file oscill.
     Info (12022): Found design unit 1: Oscill-BEH File: D:/My_Designs/Diplom/Oscill.vhd Line: 21
     Info (12023): Found entity 1: Oscill File: D:/My_Designs/Diplom/Oscill.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file gen.vhd
-    Info (12022): Found design unit 1: gen-BEH File: D:/My_Designs/Diplom/gen.vhd Line: 22
+    Info (12022): Found design unit 1: gen-BEH File: D:/My_Designs/Diplom/gen.vhd Line: 19
     Info (12023): Found entity 1: gen File: D:/My_Designs/Diplom/gen.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
-    Info (12022): Found design unit 1: Timer-BEH File: D:/My_Designs/Diplom/Timer.vhd Line: 17
+    Info (12022): Found design unit 1: Timer-BEH File: D:/My_Designs/Diplom/Timer.vhd Line: 21
     Info (12023): Found entity 1: Timer File: D:/My_Designs/Diplom/Timer.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file rom12.vhd
-    Info (12022): Found design unit 1: ROM12-BEH File: D:/My_Designs/Diplom/ROM12.vhd Line: 41
-    Info (12023): Found entity 1: ROM12 File: D:/My_Designs/Diplom/ROM12.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
     Info (12022): Found design unit 1: Main-BEH File: D:/My_Designs/Diplom/Main.vhd Line: 17
     Info (12023): Found entity 1: Main File: D:/My_Designs/Diplom/Main.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file add.vhd
-    Info (12022): Found design unit 1: add-SYN File: D:/My_Designs/Diplom/ADD.vhd Line: 62
+    Info (12022): Found design unit 1: add-SYN File: D:/My_Designs/Diplom/ADD.vhd Line: 52
     Info (12023): Found entity 1: ADD File: D:/My_Designs/Diplom/ADD.vhd Line: 42
-Warning (12019): Can't analyze file -- file ADD1216.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file shll.vhd
     Info (12022): Found design unit 1: shll-SYN File: D:/My_Designs/Diplom/SHLL.vhd Line: 52
     Info (12023): Found entity 1: SHLL File: D:/My_Designs/Diplom/SHLL.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file romserial.vhd
-    Info (12022): Found design unit 1: ROMSERIAL-BEH File: D:/My_Designs/Diplom/ROMSERIAL.vhd Line: 41
+    Info (12022): Found design unit 1: ROMSERIAL-BEH File: D:/My_Designs/Diplom/ROMSERIAL.vhd Line: 23
     Info (12023): Found entity 1: ROMSERIAL File: D:/My_Designs/Diplom/ROMSERIAL.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file rom1.vhd
     Info (12022): Found design unit 1: rom1-SYN File: D:/My_Designs/Diplom/ROM1.vhd Line: 52
@@ -332,18 +195,120 @@ Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file uartrx.vhd
     Info (12022): Found design unit 1: uartRX-SYN File: D:/My_Designs/Diplom/uartRX.vhd Line: 25
     Info (12023): Found entity 1: uartRX File: D:/My_Designs/Diplom/uartRX.vhd Line: 9
-Info (12127): Elaborating entity "uartRX" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 106 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4789 megabytes
-    Info: Processing ended: Sat Apr 20 22:22:20 2019
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:31
+Info (12021): Found 4 design units, including 2 entities, in source file mul.vhd
+    Info (12022): Found design unit 1: MUL_altfp_mult_tao-RTL File: D:/My_Designs/Diplom/MUL.vhd Line: 57
+    Info (12022): Found design unit 2: mul-RTL File: D:/My_Designs/Diplom/MUL.vhd Line: 1451
+    Info (12023): Found entity 1: MUL_altfp_mult_tao File: D:/My_Designs/Diplom/MUL.vhd Line: 46
+    Info (12023): Found entity 2: MUL File: D:/My_Designs/Diplom/MUL.vhd Line: 1439
+Info (12021): Found 20 design units, including 10 entities, in source file conv_int_to_float.vhd
+    Info (12022): Found design unit 1: CONV_INT_TO_FLOAT_altbarrel_shift_qvf-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 59
+    Info (12022): Found design unit 2: CONV_INT_TO_FLOAT_altpriority_encoder_3v7-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 328
+    Info (12022): Found design unit 3: CONV_INT_TO_FLOAT_altpriority_encoder_3e8-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 353
+    Info (12022): Found design unit 4: CONV_INT_TO_FLOAT_altpriority_encoder_6v7-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 374
+    Info (12022): Found design unit 5: CONV_INT_TO_FLOAT_altpriority_encoder_6e8-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 436
+    Info (12022): Found design unit 6: CONV_INT_TO_FLOAT_altpriority_encoder_bv7-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 489
+    Info (12022): Found design unit 7: CONV_INT_TO_FLOAT_altpriority_encoder_be8-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 557
+    Info (12022): Found design unit 8: CONV_INT_TO_FLOAT_altpriority_encoder_rb6-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 616
+    Info (12022): Found design unit 9: CONV_INT_TO_FLOAT_altfp_convert_h1n-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 683
+    Info (12022): Found design unit 10: conv_int_to_float-RTL File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 1084
+    Info (12023): Found entity 1: CONV_INT_TO_FLOAT_altbarrel_shift_qvf File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 47
+    Info (12023): Found entity 2: CONV_INT_TO_FLOAT_altpriority_encoder_3v7 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 320
+    Info (12023): Found entity 3: CONV_INT_TO_FLOAT_altpriority_encoder_3e8 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 344
+    Info (12023): Found entity 4: CONV_INT_TO_FLOAT_altpriority_encoder_6v7 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 366
+    Info (12023): Found entity 5: CONV_INT_TO_FLOAT_altpriority_encoder_6e8 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 427
+    Info (12023): Found entity 6: CONV_INT_TO_FLOAT_altpriority_encoder_bv7 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 481
+    Info (12023): Found entity 7: CONV_INT_TO_FLOAT_altpriority_encoder_be8 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 548
+    Info (12023): Found entity 8: CONV_INT_TO_FLOAT_altpriority_encoder_rb6 File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 608
+    Info (12023): Found entity 9: CONV_INT_TO_FLOAT_altfp_convert_h1n File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 674
+    Info (12023): Found entity 10: CONV_INT_TO_FLOAT File: D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd Line: 1074
+Info (12021): Found 44 design units, including 22 entities, in source file addsub.vhd
+    Info (12022): Found design unit 1: ADDSUB_altbarrel_shift_35e-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 59
+    Info (12022): Found design unit 2: ADDSUB_altbarrel_shift_olb-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 314
+    Info (12022): Found design unit 3: ADDSUB_altpriority_encoder_3e8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 557
+    Info (12022): Found design unit 4: ADDSUB_altpriority_encoder_6e8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 579
+    Info (12022): Found design unit 5: ADDSUB_altpriority_encoder_be8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 633
+    Info (12022): Found design unit 6: ADDSUB_altpriority_encoder_3v7-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 704
+    Info (12022): Found design unit 7: ADDSUB_altpriority_encoder_6v7-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 724
+    Info (12022): Found design unit 8: ADDSUB_altpriority_encoder_bv7-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 781
+    Info (12022): Found design unit 9: ADDSUB_altpriority_encoder_r08-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 844
+    Info (12022): Found design unit 10: ADDSUB_altpriority_encoder_rf8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 912
+    Info (12022): Found design unit 11: ADDSUB_altpriority_encoder_qb6-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 971
+    Info (12022): Found design unit 12: ADDSUB_altpriority_encoder_nh8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1055
+    Info (12022): Found design unit 13: ADDSUB_altpriority_encoder_qh8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1081
+    Info (12022): Found design unit 14: ADDSUB_altpriority_encoder_vh8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1135
+    Info (12022): Found design unit 15: ADDSUB_altpriority_encoder_fj8-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1195
+    Info (12022): Found design unit 16: ADDSUB_altpriority_encoder_n28-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1270
+    Info (12022): Found design unit 17: ADDSUB_altpriority_encoder_q28-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1294
+    Info (12022): Found design unit 18: ADDSUB_altpriority_encoder_v28-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1351
+    Info (12022): Found design unit 19: ADDSUB_altpriority_encoder_f48-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1414
+    Info (12022): Found design unit 20: ADDSUB_altpriority_encoder_e48-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1477
+    Info (12022): Found design unit 21: ADDSUB_altfp_add_sub_ksk-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1547
+    Info (12022): Found design unit 22: addsub-RTL File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 4859
+    Info (12023): Found entity 1: ADDSUB_altbarrel_shift_35e File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 47
+    Info (12023): Found entity 2: ADDSUB_altbarrel_shift_olb File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 305
+    Info (12023): Found entity 3: ADDSUB_altpriority_encoder_3e8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 548
+    Info (12023): Found entity 4: ADDSUB_altpriority_encoder_6e8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 570
+    Info (12023): Found entity 5: ADDSUB_altpriority_encoder_be8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 624
+    Info (12023): Found entity 6: ADDSUB_altpriority_encoder_3v7 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 696
+    Info (12023): Found entity 7: ADDSUB_altpriority_encoder_6v7 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 716
+    Info (12023): Found entity 8: ADDSUB_altpriority_encoder_bv7 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 773
+    Info (12023): Found entity 9: ADDSUB_altpriority_encoder_r08 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 836
+    Info (12023): Found entity 10: ADDSUB_altpriority_encoder_rf8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 903
+    Info (12023): Found entity 11: ADDSUB_altpriority_encoder_qb6 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 963
+    Info (12023): Found entity 12: ADDSUB_altpriority_encoder_nh8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1046
+    Info (12023): Found entity 13: ADDSUB_altpriority_encoder_qh8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1072
+    Info (12023): Found entity 14: ADDSUB_altpriority_encoder_vh8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1126
+    Info (12023): Found entity 15: ADDSUB_altpriority_encoder_fj8 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1186
+    Info (12023): Found entity 16: ADDSUB_altpriority_encoder_n28 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1262
+    Info (12023): Found entity 17: ADDSUB_altpriority_encoder_q28 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1286
+    Info (12023): Found entity 18: ADDSUB_altpriority_encoder_v28 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1343
+    Info (12023): Found entity 19: ADDSUB_altpriority_encoder_f48 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1406
+    Info (12023): Found entity 20: ADDSUB_altpriority_encoder_e48 File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1469
+    Info (12023): Found entity 21: ADDSUB_altfp_add_sub_ksk File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 1535
+    Info (12023): Found entity 22: ADDSUB File: D:/My_Designs/Diplom/ADDSUB.vhd Line: 4846
+Info (12021): Found 2 design units, including 1 entities, in source file adsr.vhd
+    Info (12022): Found design unit 1: ADSR-SYN File: D:/My_Designs/Diplom/ADSR.vhd Line: 28
+    Info (12023): Found entity 1: ADSR File: D:/My_Designs/Diplom/ADSR.vhd Line: 8
+Info (12021): Found 6 design units, including 3 entities, in source file conv_float_to_int.vhd
+    Info (12022): Found design unit 1: CONV_FLOAT_TO_INT_altbarrel_shift_00g-RTL File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 59
+    Info (12022): Found design unit 2: CONV_FLOAT_TO_INT_altfp_convert_h1n-RTL File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 405
+    Info (12022): Found design unit 3: conv_float_to_int-RTL File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 1746
+    Info (12023): Found entity 1: CONV_FLOAT_TO_INT_altbarrel_shift_00g File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 47
+    Info (12023): Found entity 2: CONV_FLOAT_TO_INT_altfp_convert_h1n File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 396
+    Info (12023): Found entity 3: CONV_FLOAT_TO_INT File: D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd Line: 1736
+Info (12021): Found 1 design units, including 1 entities, in source file block.bdf
+    Info (12023): Found entity 1: BLOCK
+Info (12021): Found 2 design units, including 1 entities, in source file block1.vhd
+    Info (12022): Found design unit 1: Block1-Syn File: D:/My_Designs/Diplom/Block1.vhd Line: 28
+    Info (12023): Found entity 1: Block1 File: D:/My_Designs/Diplom/Block1.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file buttonproc.vhd
+    Info (12022): Found design unit 1: BUTtonProc-SYN File: D:/My_Designs/Diplom/ButtonProc.vhd Line: 34
+    Info (12023): Found entity 1: ButtonProc File: D:/My_Designs/Diplom/ButtonProc.vhd Line: 8
+Info (12127): Elaborating entity "ADSR" for the top level hierarchy
+Error (10028): Can't resolve multiple constant drivers for net "data1[31]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10029): Constant driver at ADSR.vhd(68) File: D:/My_Designs/Diplom/ADSR.vhd Line: 68
+Error (10028): Can't resolve multiple constant drivers for net "data1[30]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[29]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[28]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[27]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[26]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[25]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[24]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[23]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[22]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[21]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[20]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[19]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[18]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[17]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[16]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[15]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (10028): Can't resolve multiple constant drivers for net "data1[14]" at ADSR.vhd(82) File: D:/My_Designs/Diplom/ADSR.vhd Line: 82
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 1 warning
+    Error: Peak virtual memory: 4799 megabytes
+    Error: Processing ended: Wed Apr 24 18:22:45 2019
+    Error: Elapsed time: 00:00:18
+    Error: Total CPU time (on all processors): 00:00:30
 
 

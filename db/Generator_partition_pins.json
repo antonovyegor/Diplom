@@ -4,147 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "RXOUT[0]",
+					"name" : "SIGNAL_OUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[1]",
+					"name" : "SIGNAL_OUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[2]",
+					"name" : "SIGNAL_OUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[3]",
+					"name" : "SIGNAL_OUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[4]",
+					"name" : "SIGNAL_OUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[5]",
+					"name" : "SIGNAL_OUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[6]",
+					"name" : "SIGNAL_OUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[7]",
+					"name" : "SIGNAL_OUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[8]",
+					"name" : "SIGNAL_OUT[8]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[9]",
+					"name" : "SIGNAL_OUT[9]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[10]",
+					"name" : "SIGNAL_OUT[10]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[11]",
+					"name" : "SIGNAL_OUT[11]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[12]",
+					"name" : "SIGNAL_OUT[12]",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[13]",
+					"name" : "C",
 					"strict" : false
 				},
 				{
-					"name" : "RXOUT[14]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[15]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[16]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[17]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[18]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[19]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[20]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[21]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[22]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[23]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[24]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[25]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[26]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[27]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[28]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[29]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[30]",
-					"strict" : false
-				},
-				{
-					"name" : "RXOUT[31]",
-					"strict" : false
-				},
-				{
-					"name" : "ready",
-					"strict" : false
-				},
-				{
-					"name" : "clk50",
-					"strict" : false
-				},
-				{
-					"name" : "R",
-					"strict" : false
-				},
-				{
-					"name" : "RX",
+					"name" : "button[0]",
 					"strict" : false
 				}
 			]

@@ -119,5 +119,5 @@ END SYN;
 -- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL.inc FALSE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL.cmp TRUE
--- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL.bsf FALSE
+-- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL.bsf TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL SHLL_inst.vhd FALSE

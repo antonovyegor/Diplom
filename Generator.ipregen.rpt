@@ -1,5 +1,5 @@
 IP Upgrade report for Generator
-Sat Apr 20 10:41:00 2019
+Wed Apr 24 18:30:17 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -34,10 +34,10 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; IP Upgrade Summary                                                         ;
 +------------------------------+---------------------------------------------+
-; IP Components Upgrade Status ; Failed - Sat Apr 20 10:41:00 2019           ;
+; IP Components Upgrade Status ; Failed - Wed Apr 24 18:30:17 2019           ;
 ; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                ; Generator                                   ;
-; Top-level Entity Name        ; Main                                        ;
+; Top-level Entity Name        ; ADSR                                        ;
 ; Family                       ; Cyclone IV E                                ;
 +------------------------------+---------------------------------------------+
 
@@ -47,9 +47,9 @@ refer to the applicable agreement for further details.
 +---------------------+
 Info (23030): Evaluation of Tcl script d:/qurtusprime/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Sat Apr 20 10:41:01 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4782 megabytes
+    Info: Processing ended: Wed Apr 24 18:30:17 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 

@@ -8,31 +8,33 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/My_Designs/Diplom/simulation/modelsim
-Ehard_block
-Z1 w1555788164
-Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
-Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z7 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Emain
+Z1 w1556099960
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
 R0
-Z8 8Generator.vho
-Z9 FGenerator.vho
+Z10 8Generator.vho
+Z11 FGenerator.vho
 l0
-L34
-VF25TiLjh`DQcC8Z=zbJ?Y3
-!s100 A`ID_i56<Ua56=ZD=[EG=2
-Z10 OV;C;10.5b;63
+L36
+Vnz[d:9:WL86Jk[25Y[_TR1
+!s100 jhHYGgL_kcCFnP52k`EO<2
+Z12 OV;C;10.5b;63
 31
-Z11 !s110 1555788177
+Z13 !s110 1556099968
 !i10b 1
-Z12 !s108 1555788177.000000
-Z13 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
-Z14 !s107 Generator.vho|
+Z14 !s108 1556099968.000000
+Z15 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
+Z16 !s107 Generator.vho|
 !i113 1
-Z15 o-93 -work work
-Z16 tExplicit 1 CvgOpt 0
+Z17 o-93 -work work
+Z18 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -40,69 +42,20 @@ R4
 R5
 R6
 R7
-DEx4 work 10 hard_block 0 22 F25TiLjh`DQcC8Z=zbJ?Y3
-l64
-L50
-VZ2P8e]:^NT<7Y7=;nM1Vi3
-!s100 2S?JL;LJ@<3:BHXTNcXS]3
-R10
-31
-R11
-!i10b 1
-R12
-R13
-R14
-!i113 1
-R15
-R16
-Euartrx
-R1
-R3
-R7
-R2
-Z17 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
-R4
-R5
-R6
-Z18 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
-R0
 R8
 R9
-l0
-L79
-Va]8V=Zd`GR`=hTVMDh]AL0
-!s100 8D:WoWWgOzXQ[h?cA^dCQ2
-R10
-31
-R11
-!i10b 1
+DEx4 work 4 main 0 22 nz[d:9:WL86Jk[25Y[_TR1
+l4452
+L73
+VGW:k5Y5h5]0hTHLo6ze9P0
+!s100 1Q6QFP3Xe:_9mk9M1Ud0g3
 R12
+31
 R13
+!i10b 1
 R14
-!i113 1
 R15
 R16
-Astructure
-R3
-R7
-R2
+!i113 1
 R17
-R4
-R5
-R6
 R18
-DEx4 work 6 uartrx 0 22 a]8V=Zd`GR`=hTVMDh]AL0
-l352
-L128
-V2:DLHDeS[JzbkOdHa_dNd1
-!s100 nXLkF5?HE[A>AMcU0@z@B2
-R10
-31
-R11
-!i10b 1
-R12
-R13
-R14
-!i113 1
-R15
-R16

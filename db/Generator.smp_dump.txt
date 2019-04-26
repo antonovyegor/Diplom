@@ -1,7 +1,16 @@
 
-State Machine - |uartRX|fsm
-Name fsm.finish fsm.rec fsm.start fsm.idle 
-fsm.idle 0 0 0 0 
-fsm.start 0 0 1 1 
-fsm.rec 0 1 0 1 
-fsm.finish 1 0 0 1 
+State Machine - |Main|Block1:BlockU2|ADSR:ADSR_inst|Timer:UTIMER|fsm
+Name fsm.release fsm.decay fsm.sustain fsm.attack fsm.idle 
+fsm.idle 0 0 0 0 0 
+fsm.attack 0 0 0 1 1 
+fsm.sustain 0 0 1 0 1 
+fsm.decay 0 1 0 0 1 
+fsm.release 1 0 0 0 1 
+
+State Machine - |Main|Block1:BlockU1|ADSR:ADSR_inst|Timer:UTIMER|fsm
+Name fsm.release fsm.decay fsm.sustain fsm.attack fsm.idle 
+fsm.idle 0 0 0 0 0 
+fsm.attack 0 0 0 1 1 
+fsm.sustain 0 0 1 0 1 
+fsm.decay 0 1 0 0 1 
+fsm.release 1 0 0 0 1 

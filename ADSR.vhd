@@ -3,65 +3,92 @@ use ieee.std_logic_unsigned.all;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 
-entity ADSR is 
 
+
+entity ADSR  is
 	port (
 		C : in std_logic;
-		INPUT : in std_logic_vector(11 downto 0);
-		OUTPUT : out std_logic_vector(11 downto 0);
-		data : in natural;
-		addr : in std_logic_vector (1 downto 0);
-		ENABLE_TO_WRITE :std_logic;
-		current_tick : in natural
-	);
-	end entity ;
-	
-architecture BEH of ADSR is
-subtype INT12 is  integer range 0 to 4095 ;  
-signal int1,int2 : int12 :=0;
-signal attack_ticks,decay_ticks,sustain_ticks,release_ticks: natural;
-signal MODE : std_logic_vector(1 downto 0);
+		R : in std_logic;
+		GATE : in std_logic;
+		BUSY : out std_logic;
+		ATTACK_TIME : in natural;
+		DECAY_TIME : in natural;
+		RELEASE_TIME : in natural;
+		
+		ATTACK_DELTA : in std_logic_vector(31 downto 0);
+		DECAY_DELTA : in std_logic_vector(31 downto 0);
+		SUSTAIN_LEVEL : in std_logic_vector(31 downto 0);
+		RELEASE_DELTA : in std_logic_vector(31 downto 0);
+		
+		FP : out std_logic_vector(31 downto 0)
+		);
+end entity;
+
+
+architecture SYN of ADSR is 
+		signal curr_mode : std_logic_vector (2 downto 0);
+		signal clrADD : std_LOGIC;
+		
+		signal add_sub : std_logic;
+		signal data1: std_logic_vector (31 downto 0):=X"00000000";
+		signal data2: std_logic_vector (31 downto 0):=X"00000000";
+		signal res : std_logic_vector (31 downto 0) :=X"00000000";
+		signal buffer_res : std_logic_vector (31 downto 0) :=X"00000000";
+		component ADDSUB 
+		port (
+			aclr	:	IN  STD_LOGIC; 
+			dataa: in std_logic_vector(31 downto 0);
+			datab: in std_logic_vector(31 downto 0);
+			add_sub : in std_logic:='1';
+			clock : in std_logic ;
+			result : out std_logic_vector(31 downto 0);
+			zero : out std_logic
+			);
+		
+		end component;
+		component timer 
+			port (
+		C : in std_logic;
+		R : in std_logic;
+		GATE : in std_logic;
+		BUSY : out std_logic;
+		ATTACK_TIME : in natural;
+		DECAY_TIME : in natural;
+		RELEASE_TIME : in natural;
+		CLEARADD : out std_logic;
+		CURRENT_STATE : out std_logic_vector (2 downto 0)
+		);
+		end component;
 begin
-
-	process (C,ENABLE_TO_WRITE)
-	begin
-	if rising_edge(C) and ENABLE_TO_WRITE='1' then
-			case addr is 
-				when "00" => 	attack_ticks<=data;				
-				when "01" =>	decay_ticks<=data;				
-				when "10" =>	sustain_ticks<=data;
-				when "11" =>	release_ticks<=data;
-				when others => null;
-			end case;
-	
-	end if;
-	end process;
-
-	int1<=conv_integer(INPUT);
-	
-	
-	process (current_tick,MODE)
-	begin
-	case MODE is
-		when "00" =>int2<=int1*current_tick/attack_ticks;			--ATTACK
-		--when "01" =>int2<=int1*(((819*(current_tick-attack_ticks))/(decay_ticks-attack_ticks))+3276)/4095;			--DECAY
-		--when "10" =>int2<=int1*8/10;			--SUSTAIN
-		--when "11" =>int2<=int1*(3276*((current_tick-sustain_ticks)/(release_ticks-sustain_ticks)))/4095;			--RELEASE
-		when others =>int2<=0;
-	end case;
-	end process;
+	UADDSUB : ADDSUB port map (clock=>C,aclr=>clrADD,dataa=>data1,datab=>data2,result=>buffer_res,add_sub=>add_sub)	;	
+	UTIMER : timer port map (C=>C,R=>R,CLEARADD=>clrADD,GATE=>GATE,BUSY=>BUSY,ATTACK_TIME=>ATTACK_TIME,DECAY_TIME=>DECAY_TIME,RELEASE_TIME=>RELEASE_TIME,CURRENT_STATE=>curr_mode);
 
 	
-	OUTPUT<= conv_std_logic_vector(int2,12);
-		
-		
-	process (current_tick)
+	process(C)
 	begin
-		if current_tick<attack_ticks then MODE<="00";
-		elsif  current_tick<decay_ticks then MODE<="01";
-		elsif current_tick<sustain_ticks then MODE<="10";
-		elsif current_tick<release_ticks then MODE<="11";
-		else  MODE<="UU";
-	end if;
+			if rising_edge (C) then
+				case curr_mode is 
+						when "111" => add_sub<='1' ; data2<=X"00000000";  -- 0
+						when "000" => add_sub<='1' ; data2<=ATTACK_DELTA;  -- ATTACK
+						when "001" => add_sub<='0' ; data2<=DECAY_DELTA; 	-- DECAY
+						when "010" => add_sub<='1' ; data2<=X"00000000";  -- SUSTAIN
+						when "011" => add_sub<='0' ; data2<=RELEASE_DELTA;
+						when others => null;
+				end case;
+			end if;
 	end process;
-end BEH;
+
+	process(C,clrADD)
+	begin
+			if rising_edge (C) then
+				if clrADD='0'and clrADD'event then 
+				FP<=res;
+				data1<=res;
+				else 
+				FP<=buffer_res;
+				data1<=buffer_res;
+				res<=buffer_res;
+				end if;
+			end if;
+	end process;
+end SYN;
