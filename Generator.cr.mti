@@ -1,14 +1,4 @@
-D:/My_Designs/Diplom/MUL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/MUL.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity MUL_altfp_mult_tao
--- Compiling architecture RTL of MUL_altfp_mult_tao
--- Compiling entity MUL
--- Compiling architecture RTL of mul
-
-} {} {}} D:/My_Designs/Diplom/ROMSERIAL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ROMSERIAL.vhd
+C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -18,7 +8,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ROMSERIAL
 -- Compiling architecture BEH of ROMSERIAL
 
-} {} {}} D:/My_Designs/Diplom/Oscill.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Oscill.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -28,7 +18,26 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity Oscill
 -- Compiling architecture BEH of Oscill
 
-} {} {}} D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity MUL_altfp_mult_tao
+-- Compiling architecture RTL of MUL_altfp_mult_tao
+-- Compiling entity MUL
+-- Compiling architecture RTL of mul
+
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package altera_mf_components
+-- Compiling entity ROM1
+-- Compiling architecture SYN of rom1
+
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -54,16 +63,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity CONV_INT_TO_FLOAT
 -- Compiling architecture RTL of conv_int_to_float
 
-} {} {}} D:/My_Designs/Diplom/ROM1.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ROM1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package altera_mf_components
--- Compiling entity ROM1
--- Compiling architecture SYN of rom1
-
-} {} {}} D:/My_Designs/Diplom/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/PLL.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -71,7 +71,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity PLL
 -- Compiling architecture SYN of pll
 
-} {} {}} D:/My_Designs/Diplom/ADD.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ADD.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ADD.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ADD.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -80,7 +80,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ADD
 -- Compiling architecture SYN of add
 
-} {} {}} D:/My_Designs/Diplom/ADSR.vhd {1 {vcom -work work -2002 -explicit -stats=none {D:\My_Designs\Diplom\ADSR.vhd}
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ADSR.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ADSR.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -90,7 +90,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ADSR
 -- Compiling architecture SYN of ADSR
 
-} {} {}} D:/My_Designs/Diplom/SHLL.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/SHLL.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -98,7 +98,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity SHLL
 -- Compiling architecture SYN of shll
 
-} {} {}} D:/My_Designs/Diplom/Block1.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Block1.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -108,7 +108,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity Block1
 -- Compiling architecture Syn of Block1
 
-} {} {}} D:/My_Designs/Diplom/uartRX.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/uartRX.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -118,7 +118,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity uartRX
 -- Compiling architecture SYN of uartRX
 
-} {} {}} D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -130,7 +130,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity CONV_FLOAT_TO_INT
 -- Compiling architecture RTL of conv_float_to_int
 
-} {} {}} D:/My_Designs/Diplom/ButtonProc.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ButtonProc.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -141,7 +141,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ButtonProc
 -- Compiling architecture SYN of BUTtonProc
 
-} {} {}} D:/My_Designs/Diplom/Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Timer.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -151,7 +151,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity Timer
 -- Compiling architecture BEH of Timer
 
-} {} {}} D:/My_Designs/Diplom/ROM12.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/ROM12.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -161,7 +161,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ROM12
 -- Compiling architecture BEH of ROM12
 
-} {} {}} D:/My_Designs/Diplom/gen.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/gen.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -171,7 +171,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity gen
 -- Compiling architecture BEH of gen
 
-} {} {}} D:/My_Designs/Diplom/ADDSUB.vhd {1 {vcom -work work -2002 -explicit -stats=none {D:\My_Designs\Diplom\ADDSUB.vhd}
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ADDSUB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ADDSUB.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -221,7 +221,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ADDSUB
 -- Compiling architecture RTL of addsub
 
-} {} {}} D:/My_Designs/Diplom/Main.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/Diplom/Main.vhd
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
 -- Loading package TEXTIO

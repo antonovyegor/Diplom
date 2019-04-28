@@ -59,8 +59,12 @@ architecture SYN of ADSR is
 		CURRENT_STATE : out std_logic_vector (2 downto 0)
 		);
 		end component;
+		
+		signal load : std_LOGIC:='1';
+		signal clear : std_LOGIC:='0';
+		
 begin
-	UADDSUB : ADDSUB port map (clock=>C,aclr=>clrADD,dataa=>data1,datab=>data2,result=>buffer_res,add_sub=>add_sub)	;	
+	UADDSUB : ADDSUB port map (clock=>C,aclr=>clear,dataa=>data1,datab=>data2,result=>res,add_sub=>add_sub)	;	
 	UTIMER : timer port map (C=>C,R=>R,CLEARADD=>clrADD,GATE=>GATE,BUSY=>BUSY,ATTACK_TIME=>ATTACK_TIME,DECAY_TIME=>DECAY_TIME,RELEASE_TIME=>RELEASE_TIME,CURRENT_STATE=>curr_mode);
 
 	
@@ -77,18 +81,43 @@ begin
 				end case;
 			end if;
 	end process;
+	
 
-	process(C,clrADD)
+	process(C)
 	begin
 			if rising_edge (C) then
-				if clrADD='0'and clrADD'event then 
-				FP<=res;
-				data1<=res;
-				else 
-				FP<=buffer_res;
-				data1<=buffer_res;
-				res<=buffer_res;
-				end if;
+				case load is 
+						when '0' =>  FP<=buffer_res;  
+						when '1' =>  FP<=res; 
+						when others => null;
+				end case;
 			end if;
 	end process;
+	
+	process(C,clrADD)
+	variable flag : std_LOGIC;
+	variable count : integer:=0;
+	begin
+	if rising_edge(C) then
+		if clrADD='1' then
+			buffer_res<=res;
+			load<='0';
+			clear<='1';
+			flag:='1';
+		else clear<='0';
+		end if;
+		
+		if flag='1' and count/=6 then 
+			count:=count+1;
+		else 
+			load<='1';
+			count:=0;
+			flag:='0';
+		end if;
+		
+	end if;
+	end process;
+	
+	
+	
 end SYN;

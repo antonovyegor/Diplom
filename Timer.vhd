@@ -40,7 +40,7 @@ begin
 									if GATE='1' then
 										BUSY<='1';
 										count<=0;
-										CLEARADD<='1';
+										--CLEARADD<='1';
 										fsm<=attack;
 									end if;
 					when attack =>

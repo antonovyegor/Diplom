@@ -91,6 +91,15 @@ BUSY2: in std_logic
 );
 
 end component;
+component 
+ ROM1 
+	PORT
+	(
+		address		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+		clock		: IN STD_LOGIC  := '1';
+		q		: OUT STD_LOGIC_VECTOR (11 DOWNTO 0)
+	);
+END component;
 component ADD 
 PORT
 	(
@@ -111,10 +120,18 @@ begin
 		
 	
 
-		UROM: ROMSERIAL port map(
-		clock400=>c1,
-		addr0=>addr(0),data0=>data(0),
-		addr1=>addr(1),data1=>data(1)
+--		UROM: ROMSERIAL port map(
+--		clock400=>c1,
+--		addr0=>addr(0),data0=>data(0),
+--		addr1=>addr(1),data1=>data(1)
+--		);
+		UROM1: ROM1 port map(
+		clock=>c1,
+		address=>addr(0),q=>data(0)
+		);
+		UROM2: ROM1 port map(
+		clock=>c1,
+		address=>addr(1),q=>data(1)
 		);
 
 
