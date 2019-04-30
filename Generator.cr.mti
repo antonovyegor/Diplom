@@ -90,6 +90,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ADSR
 -- Compiling architecture SYN of ADSR
 
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity TB_OSCILL
+-- Compiling architecture BEH of TB_OSCILL
+
 } {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -141,16 +151,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity ButtonProc
 -- Compiling architecture SYN of BUTtonProc
 
-} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity Timer
--- Compiling architecture BEH of Timer
-
 } {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -160,6 +160,16 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity ROM12
 -- Compiling architecture BEH of ROM12
+
+} {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Timer
+-- Compiling architecture BEH of Timer
 
 } {} {}} C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
