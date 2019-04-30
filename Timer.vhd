@@ -76,8 +76,7 @@ begin
 					when release =>
 									CURRENT_STATE<="011";
 									CLEARADD<='0';
-									if GATE='0' then fsm<=idle;	
-									elsif count=RELEASE_TIME then
+									if count=RELEASE_TIME then
 										count<=0;
 										CLEARADD<='1';
 										fsm<=idle;
