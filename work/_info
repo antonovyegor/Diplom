@@ -22,9 +22,9 @@ V=llP<lTg]AO0Pc7S4Bfe_3
 !s100 =1cAnbojK[N@GSIk<kdLA0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1556642908
+Z8 !s110 1556722685
 !i10b 1
-Z9 !s108 1556642908.000000
+Z9 !s108 1556722685.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ADD.vhd|
 Z11 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ADD.vhd|
 !i113 1
@@ -62,7 +62,7 @@ V>256M2hfiYek08JI96mN_1
 !s100 `Di2^>Re1SFoAXng<A4eX0
 R7
 32
-Z16 !s110 1556642909
+Z16 !s110 1556722686
 !i10b 1
 R9
 Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ADDSUB.vhd|
@@ -392,7 +392,7 @@ VDLIPF0EnD<cHIZd_3]mco0
 !s100 VkCgfJojLLb;EN3l7U5CI2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -452,7 +452,7 @@ VTXlHR?J7D1]65h0FQc71_0
 !s100 >o_6gK6n1zlbK@T>z23580
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -470,7 +470,7 @@ Vg1L[8D0okdBfiIHchzMY;2
 !s100 hSJP5d@7RN=nF4nz8Z@Dd3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -569,7 +569,7 @@ V4[SW_[8h56C]@iD^0Jdjd0
 !s100 S>d3mi`1HDXIP[S_I`UYF3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -587,7 +587,7 @@ VUkX3AUbRd68^HLOceOBPN1
 !s100 @AOFVX=fAh8?O7jn7@AzL3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -608,7 +608,7 @@ V9KjmZaaWdKdZO[XELQjQW2
 !s100 iFlE7`jZKBH6FffGo>LMo1
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -626,7 +626,7 @@ V;@_?RmA[`FcbT_5X_mAnn0
 !s100 <>ILMGAP>S3n@N>7zTahV2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -647,7 +647,7 @@ V6BV0_gVMkd>W^K04MM`Ck1
 !s100 7OSem?gV_ASIb2E`oJD2E1
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -665,7 +665,7 @@ V@4zBM>lFWRIzhdG;jmJ?L0
 !s100 ZF]OYYG9M4JSEb<UO[NKZ1
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -686,7 +686,7 @@ VMgW`^BDST>mg8>`i2HK_g3
 !s100 2?g=:VfZHf6[FB7EhVKG42
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -704,7 +704,7 @@ VZJ>9aH9;eSW2_ZR3VE2e90
 !s100 :M_mojlzKG?72P34Xb>Af3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -725,7 +725,7 @@ VcDh<M2CMzFDXeWJ[Fg3T52
 !s100 Nk;JDG4=B3SYTIGMEJa^e3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -743,7 +743,7 @@ VXR^h9PGDZ7LYd<]516=Na0
 !s100 30WV>c[2aI?XmlmiZ_19A0
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -764,7 +764,7 @@ VhRDz@@YFiL1NU:F:4HbdV1
 !s100 i?OH[jd989VRH[cf=U5i[2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -782,7 +782,7 @@ Vc6JE>211;D[495?SCCXcb2
 !s100 P=]1nWALjDOIP:dHQ6b1E0
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -803,7 +803,7 @@ VQR:gZ=aA<:6VY6YEC7KDM1
 !s100 Z[;e_X;_M_SI<c^;hRZCG0
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -821,7 +821,7 @@ VWn34]L^aDgM2aPdgD09jY2
 !s100 BoWIA`EgTXFGzKJ06^jR@3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -842,7 +842,7 @@ VDbZ5673G_Glnl[XW7=8C81
 !s100 4jXczG`WNMk:2llcS:6YY2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -860,7 +860,7 @@ Vj<9;cmfn^kelGjA^aDmK`3
 !s100 Xinbn214O`UfW0bV3CH=e3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -920,7 +920,7 @@ V3oZ_f@TQd?Ch`?Ioa;n]g0
 !s100 VzY0jY_BSHZF1WXm8?n?_2
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -938,7 +938,7 @@ VL6X^bScc>^m4DA`=gHkiA0
 !s100 b4GBRK`nMXX@6QzobmmG[3
 R7
 32
-R16
+R8
 !i10b 1
 R9
 R17
@@ -963,7 +963,7 @@ R7
 32
 R16
 !i10b 1
-Z34 !s108 1556642909.000000
+Z34 !s108 1556722686.000000
 Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ADSR.vhd|
 Z36 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ADSR.vhd|
 !i113 1
@@ -1014,25 +1014,25 @@ FD:/My_Designs/Diplom/ADSR.vhd
 8D:/My_Designs/Diplom/ADSR.vhd
 R20
 Eblock1
-R0
+Z37 w1556722510
 R30
 R2
 R3
 R31
 R4
-Z37 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd
-Z38 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd
+Z38 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd
+Z39 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd
 l0
 L8
-VfmBgn^ZiVaKkGcO[5IVHO1
-!s100 S1IeGb10Y6D<5OgWXRC4l2
+VIi;_XDRl8Q=@_F6MYkQ:93
+!s100 :SNf1P=Sm[UoH0nLRUUHl2
 R7
 32
 R16
 !i10b 1
 R34
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd|
-Z40 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd|
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd|
+Z41 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Block1.vhd|
 !i113 1
 R12
 R13
@@ -1041,31 +1041,31 @@ R30
 R2
 R3
 R31
-DEx4 work 6 block1 0 22 fmBgn^ZiVaKkGcO[5IVHO1
-l104
+DEx4 work 6 block1 0 22 Ii;_XDRl8Q=@_F6MYkQ:93
+l102
 L28
-V><2@F2jQ1lWzhog6>U2^I2
-!s100 7k^l;4DI@n``BU>Sb>YZd3
+VOimDT]<Hkg3k;mUfhACdP3
+!s100 PC_ULe`G9fhWY?G4KTNPz3
 R7
 32
 R16
 !i10b 1
 R34
-R39
 R40
+R41
 !i113 1
 R12
 R13
 Ebuttonproc
 R0
-Z41 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z42 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R30
 R2
 R3
 R31
 R4
-Z42 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd
-Z43 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd
+Z43 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd
+Z44 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd
 l0
 L8
 VK?GDZl66G8:9DnJnZN75A2
@@ -1075,13 +1075,13 @@ R7
 R16
 !i10b 1
 R34
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd|
-Z45 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd|
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd|
+Z46 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ButtonProc.vhd|
 !i113 1
 R12
 R13
 Asyn
-R41
+R42
 R30
 R2
 R3
@@ -1096,8 +1096,8 @@ R7
 R16
 !i10b 1
 R34
-R44
 R45
+R46
 !i113 1
 R12
 R13
@@ -1106,19 +1106,19 @@ R0
 R2
 R3
 R4
-Z46 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
-Z47 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
+Z47 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
+Z48 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
 l0
 L1736
 V99]i;`fP?fVc3JCc<<7I83
 !s100 ;UD7=h?K72Bgf?b;`iG743
 R7
 32
-R16
+Z49 !s110 1556722687
 !i10b 1
-R34
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
-Z49 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
+Z50 !s108 1556722687.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
+Z52 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
 !i113 1
 R12
 R13
@@ -1132,11 +1132,11 @@ VJBXAlZ57oHl^Sz4h><BRR2
 !s100 ToT12>VQ4j@af?XLGHF?;2
 R7
 32
-R16
-!i10b 1
-R34
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R12
 R13
@@ -1145,19 +1145,19 @@ R0
 R2
 R3
 R4
-R46
 R47
+R48
 l0
 L47
 VhH8cn:9nV3<khOYSXIL@13
 !s100 X3D<4`z>f2FEeWH;9b79R1
 R7
 32
-R16
-!i10b 1
-R34
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R12
 R13
@@ -1171,11 +1171,11 @@ Vgek7OAJhefO=QI<LXQ6RF1
 !s100 BjW<;j695:8g0ZDdRCX;W2
 R7
 32
-R16
-!i10b 1
-R34
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R12
 R13
@@ -1184,19 +1184,19 @@ R0
 R2
 R3
 R4
-R46
 R47
+R48
 l0
 L396
 VdkCg[ARkXL69nn0Cc1[3=1
 !s100 FeA9dYElLcfbNZQz2GIVz1
 R7
 32
-R16
-!i10b 1
-R34
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R12
 R13
@@ -1210,11 +1210,11 @@ VHj_n9[]fXz;kYXHe<RPK^0
 !s100 4gU=;mZGQ;3l_TWnB:KF72
 R7
 32
-R16
-!i10b 1
-R34
-R48
 R49
+!i10b 1
+R50
+R51
+R52
 !i113 1
 R12
 R13
@@ -1223,19 +1223,19 @@ R0
 R2
 R3
 R4
-Z50 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
-Z51 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
+Z53 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
+Z54 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
 l0
 L1074
 Vh86]4n>`Ze9V?kIXP7XD:0
 !s100 WI=P@ocI`T`HNdOmXk>j71
 R7
 32
-R16
+R49
 !i10b 1
-R34
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
-Z53 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
+R50
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
+Z56 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
 !i113 1
 R12
 R13
@@ -1249,11 +1249,11 @@ V>83KleM5bIDk=_5i[Se?I3
 !s100 ;28lQa8=caCgR^cXzZClb2
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1262,19 +1262,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L47
 Vm0a3`]e9h1d:7>fgKSY>13
 !s100 4iW89Wj27]aA1Sg;`lZW[0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1288,11 +1288,11 @@ VS0YSk6SYze]VV>3=P>z@_1
 !s100 25Y[dodbFa<<JCoZM]_Ac0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1301,19 +1301,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L674
 Vdo4zQf`1jDn0Kz^YeVmao0
 !s100 CzF>ok0BCGl9K3?b^@oHW2
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1327,11 +1327,11 @@ VRMeldSW=_Xn^_NFL4ZUjh3
 !s100 ]NjdoRQbFM9UBJMj1XVDk1
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1340,19 +1340,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L344
 VG0XR6n5Dh_9Sl?eolfn>i3
 !s100 :i0G5nH=O_hIk`7KOTPXN0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1366,11 +1366,11 @@ Vb>>J4@WV5Y:dAX_fo_AR?1
 !s100 Bg0nVGZ8I2n5XnS<MB5B`2
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1379,19 +1379,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L320
 V;nDBD`g2NN[6;3cSB:0n01
 !s100 8`e02oPSm5228^>SGGB8U0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1405,11 +1405,11 @@ V4iYED2JCl4NgK@0OkNf^h2
 !s100 3dB43K5C?UA7@OoHCblm80
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1418,19 +1418,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L427
 Vi9`Fz45>glBmUI_o3jAE<0
 !s100 ;dmmREg3QHk2<EB>RcAb;2
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1444,11 +1444,11 @@ VGHK:Al85`mY4KoDz>8Xch0
 !s100 9lUH3ZM0U5V40l[>zezWA1
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1457,19 +1457,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L366
 VdfVzzFgAbG6@DVUc5Aoee0
 !s100 ;gXLLd3?=0<0f3`c6^1>D0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1483,11 +1483,11 @@ VlH5EDIz:zA]688[WdXMfT0
 !s100 Q46BkmJh_<I25Ia4fLe7=1
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1496,19 +1496,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L548
 Vc2Zn66OANjA7hT3A4;ZJ`2
 !s100 4h?Unk0bEPP33=UY7fi_n1
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1522,11 +1522,11 @@ VW=Mz=D_1dChCH5k_9^KY<0
 !s100 TM`5fCkj[BJmYgTT9:NZQ0
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1535,19 +1535,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L481
 VARoo7e>5PVKmfEQj7m`Eo3
 !s100 z:TF5H3NnG1OazJ=mD^A13
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1561,11 +1561,11 @@ VdzzQKU`C_N9_GlfRzM<0;3
 !s100 `hD;T5F?]D;:mB9OWzSb33
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1574,19 +1574,19 @@ R0
 R2
 R3
 R4
-R50
-R51
+R53
+R54
 l0
 L608
 VDD2JHJ1=i91eT4=5WP_3B1
 !s100 iLCVXlIFd9=;_RC1l4S@?2
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
@@ -1600,34 +1600,34 @@ V>ZEJQndgM1>^7dLieOAG<2
 !s100 ald`:ZVgW6aTmh9;98]Vg3
 R7
 32
-R16
+R49
 !i10b 1
-R34
-R52
-R53
+R50
+R55
+R56
 !i113 1
 R12
 R13
 Egen
-Z54 w1556386851
+Z57 w1556386851
 R30
 R2
 R3
 R31
 R4
-Z55 8C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
-Z56 FC:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
+Z58 8C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
+Z59 FC:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd
 l0
 L7
 VM];=GYI09imW5`nja37UW2
 !s100 aMU29QinRagAbb[5:[oT=0
 R7
 32
-Z57 !s110 1556642910
+R49
 !i10b 1
-Z58 !s108 1556642910.000000
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd|
-Z60 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd|
+R50
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd|
+Z61 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/gen.vhd|
 !i113 1
 R12
 R13
@@ -1643,40 +1643,40 @@ V`fDzaOR6R35ofaem0kRdY0
 !s100 lQ:[;G4]k:gSON1JnGMAb2
 R7
 32
-R57
+R49
 !i10b 1
-R58
-R59
+R50
 R60
+R61
 !i113 1
 R12
 R13
 Emain
-Z61 w1556389223
-R41
+Z62 w1556389223
+R42
 R30
 R2
 R3
 R31
 R4
-Z62 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd
-Z63 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd
+Z63 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd
+Z64 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd
 l0
 L7
 V[1=M@<;cInOmKEkN9ZN6E2
 !s100 2Geo<hcOzP6zQ>OIzOK^@1
 R7
 32
-R57
+Z65 !s110 1556722688
 !i10b 1
-R58
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd|
-Z65 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd|
+Z66 !s108 1556722688.000000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd|
+Z68 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Main.vhd|
 !i113 1
 R12
 R13
 Abeh
-R41
+R42
 R30
 R2
 R3
@@ -1688,11 +1688,11 @@ Vi_7za5bBHNEzT3S2>jBfe3
 !s100 I[2>@>DzB2NG55mdmni>53
 R7
 32
-R57
-!i10b 1
-R58
-R64
 R65
+!i10b 1
+R66
+R67
+R68
 !i113 1
 R12
 R13
@@ -1701,19 +1701,19 @@ R0
 R2
 R3
 R4
-Z66 8C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
-Z67 FC:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
+Z69 8C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
+Z70 FC:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
 l0
 L1439
 VTW4BaGD3kGQfHjSW5gI]Q2
 !s100 o]OKAbHi_?Il2@bk5FWYK1
 R7
 32
-R57
+R65
 !i10b 1
-R58
-Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
-Z69 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
+R66
+Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
+Z72 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
 !i113 1
 R12
 R13
@@ -1727,32 +1727,32 @@ V>j65Jf1Df<lTD<4QTWKF32
 !s100 ]II8heOcMELmYJEjae1S?3
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R68
-R69
+R66
+R71
+R72
 !i113 1
 R12
 R13
 Emul_altfp_mult_9vo
-Z70 w1556037601
+Z73 w1556037601
 R2
 R3
 R20
-Z71 8D:/My_Designs/Diplom/MUL.vhd
-Z72 FD:/My_Designs/Diplom/MUL.vhd
+Z74 8D:/My_Designs/Diplom/MUL.vhd
+Z75 FD:/My_Designs/Diplom/MUL.vhd
 l0
 L46
 Vl7<TOnBUSBj2DXgQj[G3n2
 !s100 _^=^WA^ifj3YHgZGD0Pfd3
 R7
 32
-Z73 !s110 1556050429
+Z76 !s110 1556050429
 !i10b 1
-Z74 !s108 1556050429.000000
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/MUL.vhd|
-Z76 !s107 D:/My_Designs/Diplom/MUL.vhd|
+Z77 !s108 1556050429.000000
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/MUL.vhd|
+Z79 !s107 D:/My_Designs/Diplom/MUL.vhd|
 !i113 1
 R12
 R13
@@ -1766,11 +1766,11 @@ V``HM_GlJG=@>K9G:nkU^G0
 !s100 oG11CCmVLNdJG<:V?EVVF3
 R7
 32
-R73
-!i10b 1
-R74
-R75
 R76
+!i10b 1
+R77
+R78
+R79
 !i113 1
 R12
 R13
@@ -1779,19 +1779,19 @@ R0
 R2
 R3
 R4
-R66
-R67
+R69
+R70
 l0
 L46
 Von467k9hX@Q5SX<TGQQRc1
 !s100 UAJB6FiD3fgA7lQWO17KE3
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R68
-R69
+R66
+R71
+R72
 !i113 1
 R12
 R13
@@ -1805,34 +1805,34 @@ VdX^Y96^L:9^d6jc^9C9b[3
 !s100 oI`BR4l_SSb]`=Fji3bh50
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R68
-R69
+R66
+R71
+R72
 !i113 1
 R12
 R13
 Eoscill
-R0
+Z80 w1556722675
 R30
 R2
 R3
 R31
 R4
-Z77 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd
-Z78 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd
+Z81 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd
+Z82 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd
 l0
 L6
-Vd?e?WcLDP_3^cX7[Pckf:1
-!s100 ]jlzzVek@4S2l33JL285@0
+V_:Jb7=gWPf;GGIIFB[NY[0
+!s100 :eOlUdRm`8Xb;1Te1?neL0
 R7
 32
-R57
+R65
 !i10b 1
-R58
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd|
-Z80 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd|
+R66
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd|
+Z84 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Oscill.vhd|
 !i113 1
 R12
 R13
@@ -1841,18 +1841,18 @@ R30
 R2
 R3
 R31
-DEx4 work 6 oscill 0 22 d?e?WcLDP_3^cX7[Pckf:1
-l41
-L21
-VHKIBQm2J[DGQRlM9d]b[^3
-!s100 z<6HDk:eI8=f?DLUH;[Sh2
+DEx4 work 6 oscill 0 22 _:Jb7=gWPf;GGIIFB[NY[0
+l38
+L19
+V9]Zg1l3fVmj_9>2TA;XIz3
+!s100 m=55W4>nlHV;<LBaMMK:52
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R79
-R80
+R66
+R83
+R84
 !i113 1
 R12
 R13
@@ -1861,19 +1861,19 @@ R0
 R2
 R3
 R4
-Z81 8C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd
-Z82 FC:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd
+Z85 8C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd
+Z86 FC:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd
 l0
 L42
 VG@FXNlRZn6SRLR?b0l_863
 !s100 i8<iCUn^^9>AiHRSWCmHX1
 R7
 32
-R57
+R65
 !i10b 1
-R58
-Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd|
-Z84 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd|
+R66
+Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd|
+Z88 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/PLL.vhd|
 !i113 1
 R12
 R13
@@ -1887,11 +1887,11 @@ V`XA4h[8=[30WRm33T8mnY1
 !s100 mgeNDIMOmSknOFCEGP]CC0
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R83
-R84
+R66
+R87
+R88
 !i113 1
 R12
 R13
@@ -1901,19 +1901,19 @@ R1
 R2
 R3
 R4
-Z85 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd
-Z86 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd
+Z89 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd
+Z90 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd
 l0
 L42
 VFFAfdTZkGd9mS?i<TFL;X3
 !s100 BLPNX1ej383_]I>;SQTPi3
 R7
 32
-R57
+R65
 !i10b 1
-R58
-Z87 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd|
-Z88 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd|
+R66
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd|
+Z92 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM1.vhd|
 !i113 1
 R12
 R13
@@ -1928,11 +1928,11 @@ VL3GKm^]fYRP2VmncbEX4D1
 !s100 :8FJ;jjL5T4:9Ue]DOC4V1
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R87
-R88
+R66
+R91
+R92
 !i113 1
 R12
 R13
@@ -1943,19 +1943,19 @@ R2
 R3
 R31
 R4
-Z89 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
-Z90 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
+Z93 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
+Z94 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd
 l0
 L8
 VQBF@l]QAZ_gjHI27ZdeL`1
 !s100 fn_]LSV09NN>0z2O>;iQ01
 R7
 32
-R57
+R65
 !i10b 1
-R58
-Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd|
-Z92 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd|
+R66
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd|
+Z96 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROM12.vhd|
 !i113 1
 R12
 R13
@@ -1971,11 +1971,11 @@ VRegX6m@5<F3a]Om5aNS0T1
 !s100 mPGi>[WLH;CG?mY;;a?Ph3
 R7
 32
-R57
+R65
 !i10b 1
-R58
-R91
-R92
+R66
+R95
+R96
 !i113 1
 R12
 R13
@@ -1986,19 +1986,19 @@ R2
 R3
 R31
 R4
-Z93 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd
-Z94 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd
+Z97 8C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd
+Z98 FC:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd
 l0
 L7
 Vi3JDXZ<EN[i7GRB0DIL]H2
 !s100 UHUejFWNKjABI:XLe7Lc=0
 R7
 32
-R57
+Z99 !s110 1556722689
 !i10b 1
-R58
-Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd|
-Z96 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd|
+R66
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd|
+Z101 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/ROMSERIAL.vhd|
 !i113 1
 R12
 R13
@@ -2014,11 +2014,11 @@ V2HTb:C8YYd@74ebhRNf:k1
 !s100 m[Hca[fbh<fNDZf5SYPCJ3
 R7
 32
-R57
+R99
 !i10b 1
-R58
-R95
-R96
+R66
+R100
+R101
 !i113 1
 R12
 R13
@@ -2027,19 +2027,19 @@ R0
 R2
 R3
 R4
-Z97 8C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
-Z98 FC:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
+Z102 8C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
+Z103 FC:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd
 l0
 L42
 VlkS3fKonkU?VDNa2=Q]jg3
 !s100 Qkn@J5cg[O5cjO?=D[n0C0
 R7
 32
-Z99 !s110 1556642911
+R99
 !i10b 1
-Z100 !s108 1556642911.000000
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd|
-Z102 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd|
+Z104 !s108 1556722689.000000
+Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd|
+Z106 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/SHLL.vhd|
 !i113 1
 R12
 R13
@@ -2055,32 +2055,32 @@ R7
 32
 R99
 !i10b 1
-R100
-R101
-R102
+R104
+R105
+R106
 !i113 1
 R12
 R13
 Etb_oscill
-Z103 w1556642961
+Z107 w1556722769
 R30
 R2
 R3
 R31
 R4
-Z104 8C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
-Z105 FC:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
+Z108 8C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
+Z109 FC:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
 l0
 L6
-VA>jDn:^l70:CM4Rb2Y[SQ0
-!s100 Nmb6kUWd;TiOK6XR9T^cJ1
+VXTH3f@kS;UGTC?dj:APLT0
+!s100 1NV6`b:4Z=;B3FM<G<SHB0
 R7
 32
-Z106 !s110 1556642967
+Z110 !s110 1556722773
 !i10b 1
-Z107 !s108 1556642967.000000
-Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd|
-Z109 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd|
+Z111 !s108 1556722773.000000
+Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd|
+Z113 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd|
 !i113 1
 R12
 R13
@@ -2089,30 +2089,30 @@ R30
 R2
 R3
 R31
-DEx4 work 9 tb_oscill 0 22 A>jDn:^l70:CM4Rb2Y[SQ0
-l44
-L18
-V3g]kN[iT^F4QPSRWkZI]]0
-!s100 TH=LSMg?1dg;KSUabe<WR2
+DEx4 work 9 tb_oscill 0 22 XTH3f@kS;UGTC?dj:APLT0
+l43
+L19
+V?j?FaWAOJ0dNBTi7Bb[hM1
+!s100 FDTamcj=m9B33W:76ziOb3
 R7
 32
-R106
+R110
 !i10b 1
-R107
-R108
-R109
+R111
+R112
+R113
 !i113 1
 R12
 R13
 Etimer
-Z110 w1556436859
+Z114 w1556436859
 R30
 R2
 R3
 R31
 R4
-Z111 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
-Z112 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
+Z115 8C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
+Z116 FC:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd
 l0
 L6
 VITMRlRPKE=ML;<jG2Fm>d1
@@ -2121,9 +2121,9 @@ R7
 32
 R99
 !i10b 1
-R100
-Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd|
-Z114 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd|
+R104
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd|
+Z118 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/Timer.vhd|
 !i113 1
 R12
 R13
@@ -2141,21 +2141,21 @@ R7
 32
 R99
 !i10b 1
-R100
-R113
-R114
+R104
+R117
+R118
 !i113 1
 R12
 R13
 Euartrx
-Z115 w1556386852
+Z119 w1556386852
 R30
 R2
 R3
 R31
 R4
-Z116 8C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd
-Z117 FC:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd
+Z120 8C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd
+Z121 FC:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd
 l0
 L9
 VT`16`6Vjmd_ia2iXd3DQ92
@@ -2165,8 +2165,8 @@ R7
 R8
 !i10b 1
 R9
-Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd|
-Z119 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd|
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd|
+Z123 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/uartRX.vhd|
 !i113 1
 R12
 R13
@@ -2185,8 +2185,8 @@ R7
 R8
 !i10b 1
 R9
-R118
-R119
+R122
+R123
 !i113 1
 R12
 R13

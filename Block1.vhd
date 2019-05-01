@@ -16,7 +16,7 @@ port (
 	
 	FREQ : in std_LOGIC_VECTOR(31 dowNTO 0) ;
 	GATE : in std_LOGIC;
-	
+	MULT_OUT: in std_LOGIC_VECTOR (1 downto 0);
 	BUSY : out std_LOGIC;
 	
 	TO_ADD : out std_LOGIC_VECTOR(11 dowNTO 0)
@@ -29,11 +29,9 @@ architecture Syn of Block1 is
 	component Oscill 
 		port (
 			C: in std_logic;
+			MULT_OUT : in std_LOGIC_VECTOR(1 downto 0);
 			
-			SINUS_OUT : out std_LOGIC_VECTOR (11 downto 0 );
-			MEANDR_OUT : out std_LOGIC_VECTOR (11 downto 0 );
-			SAW_OUT : out std_LOGIC_VECTOR (11 downto 0 );
-			
+			SIGNAL_OUT : out std_LOGIC_VECTOR (11 downto 0 );
 			ADDRESS_OUT : out std_LOGIC_VECTOR (11 downto 0 );
 			FROM_MEMORY : in  std_LOGIC_VECTOR (11 downto 0 );
 			FREQ_REG : in std_logic_vector ( 31 downto 0 )
@@ -102,7 +100,7 @@ architecture Syn of Block1 is
 	signal	RELEASE_DELTA :  std_logic_vector(31 downto 0);
 	
 begin
-	Oscill_inst : Oscill port map(C=>C50,SINUS_OUT=>osc_out_int,ADDRESS_OUT=>ADDR,FROM_MEMORY=>DATA_SIN,FREQ_REG=>FREQ);
+	Oscill_inst : Oscill port map(C=>C50,MULT_OUT=>MULT_OUT,SIGNAL_OUT=>osc_out_int,ADDRESS_OUT=>ADDR,FROM_MEMORY=>DATA_SIN,FREQ_REG=>FREQ);
 	
 	CONV_INT_TO_FLOAT_inst : CONV_INT_TO_FLOAT PORT MAP (
 		clock	 => C200,

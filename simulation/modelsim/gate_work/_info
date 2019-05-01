@@ -7,9 +7,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/My_Designs/Diplom/simulation/modelsim
+Z0 dC:/Users/Evgeniy/Documents/GitHub/Diplom/simulation/modelsim
 Emain
-Z1 w1556099960
+Z1 w1556722749
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,18 +23,18 @@ Z10 8Generator.vho
 Z11 FGenerator.vho
 l0
 L36
-Vnz[d:9:WL86Jk[25Y[_TR1
-!s100 jhHYGgL_kcCFnP52k`EO<2
+Vj7SIXGNd?n>7S`YC3<mNF2
+!s100 lLk?B:`j`O`XHLYHE]HPQ1
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1556099968
+!s110 1556722760
 !i10b 1
-Z14 !s108 1556099968.000000
-Z15 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
-Z16 !s107 Generator.vho|
+Z13 !s108 1556722760.000000
+Z14 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
+Z15 !s107 Generator.vho|
 !i113 1
-Z17 o-93 -work work
-Z18 tExplicit 1 CvgOpt 0
+Z16 o-93 -work work
+Z17 tExplicit 1 CvgOpt 0
 Astructure
 R2
 R3
@@ -44,18 +44,18 @@ R6
 R7
 R8
 R9
-DEx4 work 4 main 0 22 nz[d:9:WL86Jk[25Y[_TR1
-l4452
+DEx4 work 4 main 0 22 j7SIXGNd?n>7S`YC3<mNF2
+l2829
 L73
-VGW:k5Y5h5]0hTHLo6ze9P0
-!s100 1Q6QFP3Xe:_9mk9M1Ud0g3
+VclVY=Tfma:E>C0Qg>bcPN0
+!s100 UEiPDJKkDD]9i^kHN]<ij1
 R12
 31
-R13
+!s110 1556722761
 !i10b 1
+R13
 R14
 R15
-R16
 !i113 1
+R16
 R17
-R18

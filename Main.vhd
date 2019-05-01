@@ -68,7 +68,7 @@ port (
 	
 	FREQ : in std_LOGIC_VECTOR(31 dowNTO 0) ;
 	GATE : in std_LOGIC;
-	
+	MULT_OUT: in std_LOGIC_VECTOR (1 downto 0);
 	BUSY : out std_LOGIC;
 	
 	TO_ADD : out std_LOGIC_VECTOR(11 dowNTO 0)
