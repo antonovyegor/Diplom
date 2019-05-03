@@ -1,0 +1,2559 @@
+--lpm_mult CBX_DECLARE_ALL_CONNECTED_PORTS="OFF" DEDICATED_MULTIPLIER_CIRCUITRY="YES" DEVICE_FAMILY="Cyclone IV E" DSP_BLOCK_BALANCING="Auto" LPM_PIPELINE=2 LPM_REPRESENTATION="UNSIGNED" LPM_WIDTHA=53 LPM_WIDTHB=53 LPM_WIDTHP=106 LPM_WIDTHS=1 clock dataa datab result CARRY_CHAIN="MANUAL" CARRY_CHAIN_LENGTH=48
+--VERSION_BEGIN 18.1 cbx_cycloneii 2018:09:12:13:04:24:SJ cbx_lpm_add_sub 2018:09:12:13:04:24:SJ cbx_lpm_mult 2018:09:12:13:04:24:SJ cbx_mgl 2018:09:12:13:10:36:SJ cbx_nadder 2018:09:12:13:04:24:SJ cbx_padd 2018:09:12:13:04:24:SJ cbx_stratix 2018:09:12:13:04:24:SJ cbx_stratixii 2018:09:12:13:04:24:SJ cbx_util_mgl 2018:09:12:13:04:24:SJ  VERSION_END
+
+
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details.
+
+
+FUNCTION cycloneive_mac_mult (aclr, clk, dataa[dataa_width-1..0], datab[datab_width-1..0], ena, signa, signb)
+WITH ( dataa_clock, dataa_width, datab_clock, datab_width, signa_clock, signb_clock)
+RETURNS ( dataout[dataa_width+datab_width-1..0]);
+FUNCTION cycloneive_mac_out (aclr, clk, dataa[dataa_width-1..0], ena)
+WITH ( dataa_width = 0, output_clock)
+RETURNS ( dataout[dataa_width-1..0]);
+FUNCTION soft (in)
+RETURNS ( out);
+
+--synthesis_resources = dsp_9bit 18 lut 252 reg 284 
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe100} POWER_UP_LEVEL=LOW;{-to dffe101} POWER_UP_LEVEL=LOW;{-to dffe102} POWER_UP_LEVEL=LOW;{-to dffe103} POWER_UP_LEVEL=LOW;{-to dffe104} POWER_UP_LEVEL=LOW;{-to dffe105} POWER_UP_LEVEL=LOW;{-to dffe106} POWER_UP_LEVEL=LOW;{-to dffe107} POWER_UP_LEVEL=LOW;{-to dffe108} POWER_UP_LEVEL=LOW;{-to dffe109} POWER_UP_LEVEL=LOW;{-to dffe110} POWER_UP_LEVEL=LOW;{-to dffe111} POWER_UP_LEVEL=LOW;{-to dffe112} POWER_UP_LEVEL=LOW;{-to dffe113} POWER_UP_LEVEL=LOW;{-to dffe114} POWER_UP_LEVEL=LOW;{-to dffe115} POWER_UP_LEVEL=LOW;{-to dffe116} POWER_UP_LEVEL=LOW;{-to dffe117} POWER_UP_LEVEL=LOW;{-to dffe118} POWER_UP_LEVEL=LOW;{-to dffe119} POWER_UP_LEVEL=LOW;{-to dffe120} POWER_UP_LEVEL=LOW;{-to dffe121} POWER_UP_LEVEL=LOW;{-to dffe122} POWER_UP_LEVEL=LOW;{-to dffe123} POWER_UP_LEVEL=LOW;{-to dffe124} POWER_UP_LEVEL=LOW;{-to dffe125} POWER_UP_LEVEL=LOW;{-to dffe126} POWER_UP_LEVEL=LOW;{-to dffe127} POWER_UP_LEVEL=LOW;{-to dffe128} POWER_UP_LEVEL=LOW;{-to dffe129} POWER_UP_LEVEL=LOW;{-to dffe130} POWER_UP_LEVEL=LOW;{-to dffe131} POWER_UP_LEVEL=LOW;{-to dffe132} POWER_UP_LEVEL=LOW;{-to dffe133} POWER_UP_LEVEL=LOW;{-to dffe134} POWER_UP_LEVEL=LOW;{-to dffe135} POWER_UP_LEVEL=LOW;{-to dffe136} POWER_UP_LEVEL=LOW;{-to dffe137} POWER_UP_LEVEL=LOW;{-to dffe138} POWER_UP_LEVEL=LOW;{-to dffe139} POWER_UP_LEVEL=LOW;{-to dffe140} POWER_UP_LEVEL=LOW;{-to dffe141} POWER_UP_LEVEL=LOW;{-to dffe142} POWER_UP_LEVEL=LOW;{-to dffe143} POWER_UP_LEVEL=LOW;{-to dffe144} POWER_UP_LEVEL=LOW;{-to dffe145} POWER_UP_LEVEL=LOW;{-to dffe146} POWER_UP_LEVEL=LOW;{-to dffe147} POWER_UP_LEVEL=LOW;{-to dffe148} POWER_UP_LEVEL=LOW;{-to dffe149} POWER_UP_LEVEL=LOW";
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe150} POWER_UP_LEVEL=LOW;{-to dffe151} POWER_UP_LEVEL=LOW;{-to dffe152} POWER_UP_LEVEL=LOW;{-to dffe153} POWER_UP_LEVEL=LOW;{-to dffe154} POWER_UP_LEVEL=LOW;{-to dffe155} POWER_UP_LEVEL=LOW;{-to dffe156} POWER_UP_LEVEL=LOW;{-to dffe157} POWER_UP_LEVEL=LOW;{-to dffe158} POWER_UP_LEVEL=LOW;{-to dffe159} POWER_UP_LEVEL=LOW;{-to dffe160} POWER_UP_LEVEL=LOW;{-to dffe161} POWER_UP_LEVEL=LOW;{-to dffe162} POWER_UP_LEVEL=LOW;{-to dffe163} POWER_UP_LEVEL=LOW;{-to dffe164} POWER_UP_LEVEL=LOW;{-to dffe165} POWER_UP_LEVEL=LOW;{-to dffe166} POWER_UP_LEVEL=LOW;{-to dffe167} POWER_UP_LEVEL=LOW;{-to dffe168} POWER_UP_LEVEL=LOW;{-to dffe169} POWER_UP_LEVEL=LOW;{-to dffe170} POWER_UP_LEVEL=LOW;{-to dffe171} POWER_UP_LEVEL=LOW;{-to dffe172} POWER_UP_LEVEL=LOW;{-to dffe173} POWER_UP_LEVEL=LOW;{-to dffe174} POWER_UP_LEVEL=LOW;{-to dffe175} POWER_UP_LEVEL=LOW;{-to dffe176} POWER_UP_LEVEL=LOW;{-to dffe177} POWER_UP_LEVEL=LOW;{-to dffe178} POWER_UP_LEVEL=LOW;{-to dffe179} POWER_UP_LEVEL=LOW;{-to dffe180} POWER_UP_LEVEL=LOW;{-to dffe181} POWER_UP_LEVEL=LOW;{-to dffe182} POWER_UP_LEVEL=LOW;{-to dffe183} POWER_UP_LEVEL=LOW;{-to dffe184} POWER_UP_LEVEL=LOW;{-to dffe185} POWER_UP_LEVEL=LOW;{-to dffe186} POWER_UP_LEVEL=LOW;{-to dffe187} POWER_UP_LEVEL=LOW;{-to dffe188} POWER_UP_LEVEL=LOW;{-to dffe189} POWER_UP_LEVEL=LOW;{-to dffe19} POWER_UP_LEVEL=LOW;{-to dffe190} POWER_UP_LEVEL=LOW;{-to dffe191} POWER_UP_LEVEL=LOW;{-to dffe192} POWER_UP_LEVEL=LOW;{-to dffe193} POWER_UP_LEVEL=LOW;{-to dffe194} POWER_UP_LEVEL=LOW;{-to dffe195} POWER_UP_LEVEL=LOW;{-to dffe196} POWER_UP_LEVEL=LOW;{-to dffe197} POWER_UP_LEVEL=LOW;{-to dffe198} POWER_UP_LEVEL=LOW;{-to dffe199} POWER_UP_LEVEL=LOW";
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe20} POWER_UP_LEVEL=LOW;{-to dffe200} POWER_UP_LEVEL=LOW;{-to dffe201} POWER_UP_LEVEL=LOW;{-to dffe202} POWER_UP_LEVEL=LOW;{-to dffe203} POWER_UP_LEVEL=LOW;{-to dffe204} POWER_UP_LEVEL=LOW;{-to dffe205} POWER_UP_LEVEL=LOW;{-to dffe206} POWER_UP_LEVEL=LOW;{-to dffe207} POWER_UP_LEVEL=LOW;{-to dffe208} POWER_UP_LEVEL=LOW;{-to dffe209} POWER_UP_LEVEL=LOW;{-to dffe21} POWER_UP_LEVEL=LOW;{-to dffe210} POWER_UP_LEVEL=LOW;{-to dffe211} POWER_UP_LEVEL=LOW;{-to dffe212} POWER_UP_LEVEL=LOW;{-to dffe213} POWER_UP_LEVEL=LOW;{-to dffe214} POWER_UP_LEVEL=LOW;{-to dffe215} POWER_UP_LEVEL=LOW;{-to dffe216} POWER_UP_LEVEL=LOW;{-to dffe217} POWER_UP_LEVEL=LOW;{-to dffe218} POWER_UP_LEVEL=LOW;{-to dffe219} POWER_UP_LEVEL=LOW;{-to dffe22} POWER_UP_LEVEL=LOW;{-to dffe220} POWER_UP_LEVEL=LOW;{-to dffe221} POWER_UP_LEVEL=LOW;{-to dffe222} POWER_UP_LEVEL=LOW;{-to dffe223} POWER_UP_LEVEL=LOW;{-to dffe224} POWER_UP_LEVEL=LOW;{-to dffe225} POWER_UP_LEVEL=LOW;{-to dffe226} POWER_UP_LEVEL=LOW;{-to dffe227} POWER_UP_LEVEL=LOW;{-to dffe228} POWER_UP_LEVEL=LOW;{-to dffe229} POWER_UP_LEVEL=LOW;{-to dffe23} POWER_UP_LEVEL=LOW;{-to dffe230} POWER_UP_LEVEL=LOW;{-to dffe231} POWER_UP_LEVEL=LOW;{-to dffe232} POWER_UP_LEVEL=LOW;{-to dffe233} POWER_UP_LEVEL=LOW;{-to dffe234} POWER_UP_LEVEL=LOW;{-to dffe235} POWER_UP_LEVEL=LOW;{-to dffe236} POWER_UP_LEVEL=LOW;{-to dffe237} POWER_UP_LEVEL=LOW;{-to dffe238} POWER_UP_LEVEL=LOW;{-to dffe239} POWER_UP_LEVEL=LOW;{-to dffe24} POWER_UP_LEVEL=LOW;{-to dffe240} POWER_UP_LEVEL=LOW;{-to dffe241} POWER_UP_LEVEL=LOW;{-to dffe242} POWER_UP_LEVEL=LOW;{-to dffe243} POWER_UP_LEVEL=LOW;{-to dffe244} POWER_UP_LEVEL=LOW;{-to dffe245} POWER_UP_LEVEL=LOW";
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe246} POWER_UP_LEVEL=LOW;{-to dffe247} POWER_UP_LEVEL=LOW;{-to dffe248} POWER_UP_LEVEL=LOW;{-to dffe249} POWER_UP_LEVEL=LOW;{-to dffe25} POWER_UP_LEVEL=LOW;{-to dffe250} POWER_UP_LEVEL=LOW;{-to dffe251} POWER_UP_LEVEL=LOW;{-to dffe252} POWER_UP_LEVEL=LOW;{-to dffe253} POWER_UP_LEVEL=LOW;{-to dffe254} POWER_UP_LEVEL=LOW;{-to dffe255} POWER_UP_LEVEL=LOW;{-to dffe256} POWER_UP_LEVEL=LOW;{-to dffe257} POWER_UP_LEVEL=LOW;{-to dffe258} POWER_UP_LEVEL=LOW;{-to dffe259} POWER_UP_LEVEL=LOW;{-to dffe26} POWER_UP_LEVEL=LOW;{-to dffe260} POWER_UP_LEVEL=LOW;{-to dffe261} POWER_UP_LEVEL=LOW;{-to dffe262} POWER_UP_LEVEL=LOW;{-to dffe263} POWER_UP_LEVEL=LOW;{-to dffe264} POWER_UP_LEVEL=LOW;{-to dffe265} POWER_UP_LEVEL=LOW;{-to dffe266} POWER_UP_LEVEL=LOW;{-to dffe267} POWER_UP_LEVEL=LOW;{-to dffe268} POWER_UP_LEVEL=LOW;{-to dffe269} POWER_UP_LEVEL=LOW;{-to dffe27} POWER_UP_LEVEL=LOW;{-to dffe270} POWER_UP_LEVEL=LOW;{-to dffe271} POWER_UP_LEVEL=LOW;{-to dffe272} POWER_UP_LEVEL=LOW;{-to dffe273} POWER_UP_LEVEL=LOW;{-to dffe274} POWER_UP_LEVEL=LOW;{-to dffe275} POWER_UP_LEVEL=LOW;{-to dffe276} POWER_UP_LEVEL=LOW;{-to dffe277} POWER_UP_LEVEL=LOW;{-to dffe278} POWER_UP_LEVEL=LOW;{-to dffe279} POWER_UP_LEVEL=LOW;{-to dffe28} POWER_UP_LEVEL=LOW;{-to dffe280} POWER_UP_LEVEL=LOW;{-to dffe281} POWER_UP_LEVEL=LOW;{-to dffe282} POWER_UP_LEVEL=LOW;{-to dffe283} POWER_UP_LEVEL=LOW;{-to dffe284} POWER_UP_LEVEL=LOW;{-to dffe285} POWER_UP_LEVEL=LOW;{-to dffe286} POWER_UP_LEVEL=LOW;{-to dffe287} POWER_UP_LEVEL=LOW;{-to dffe288} POWER_UP_LEVEL=LOW;{-to dffe289} POWER_UP_LEVEL=LOW;{-to dffe29} POWER_UP_LEVEL=LOW;{-to dffe290} POWER_UP_LEVEL=LOW;{-to dffe291} POWER_UP_LEVEL=LOW";
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe292} POWER_UP_LEVEL=LOW;{-to dffe293} POWER_UP_LEVEL=LOW;{-to dffe294} POWER_UP_LEVEL=LOW;{-to dffe295} POWER_UP_LEVEL=LOW;{-to dffe296} POWER_UP_LEVEL=LOW;{-to dffe297} POWER_UP_LEVEL=LOW;{-to dffe298} POWER_UP_LEVEL=LOW;{-to dffe299} POWER_UP_LEVEL=LOW;{-to dffe30} POWER_UP_LEVEL=LOW;{-to dffe300} POWER_UP_LEVEL=LOW;{-to dffe301} POWER_UP_LEVEL=LOW;{-to dffe302} POWER_UP_LEVEL=LOW;{-to dffe31} POWER_UP_LEVEL=LOW;{-to dffe32} POWER_UP_LEVEL=LOW;{-to dffe33} POWER_UP_LEVEL=LOW;{-to dffe34} POWER_UP_LEVEL=LOW;{-to dffe35} POWER_UP_LEVEL=LOW;{-to dffe36} POWER_UP_LEVEL=LOW;{-to dffe37} POWER_UP_LEVEL=LOW;{-to dffe38} POWER_UP_LEVEL=LOW;{-to dffe39} POWER_UP_LEVEL=LOW;{-to dffe40} POWER_UP_LEVEL=LOW;{-to dffe41} POWER_UP_LEVEL=LOW;{-to dffe42} POWER_UP_LEVEL=LOW;{-to dffe43} POWER_UP_LEVEL=LOW;{-to dffe44} POWER_UP_LEVEL=LOW;{-to dffe45} POWER_UP_LEVEL=LOW;{-to dffe46} POWER_UP_LEVEL=LOW;{-to dffe47} POWER_UP_LEVEL=LOW;{-to dffe48} POWER_UP_LEVEL=LOW;{-to dffe49} POWER_UP_LEVEL=LOW;{-to dffe50} POWER_UP_LEVEL=LOW;{-to dffe51} POWER_UP_LEVEL=LOW;{-to dffe52} POWER_UP_LEVEL=LOW;{-to dffe53} POWER_UP_LEVEL=LOW;{-to dffe54} POWER_UP_LEVEL=LOW;{-to dffe55} POWER_UP_LEVEL=LOW;{-to dffe56} POWER_UP_LEVEL=LOW;{-to dffe57} POWER_UP_LEVEL=LOW;{-to dffe58} POWER_UP_LEVEL=LOW;{-to dffe59} POWER_UP_LEVEL=LOW;{-to dffe60} POWER_UP_LEVEL=LOW;{-to dffe61} POWER_UP_LEVEL=LOW;{-to dffe62} POWER_UP_LEVEL=LOW;{-to dffe63} POWER_UP_LEVEL=LOW;{-to dffe64} POWER_UP_LEVEL=LOW;{-to dffe65} POWER_UP_LEVEL=LOW;{-to dffe66} POWER_UP_LEVEL=LOW;{-to dffe67} POWER_UP_LEVEL=LOW;{-to dffe68} POWER_UP_LEVEL=LOW;{-to dffe69} POWER_UP_LEVEL=LOW;{-to dffe70} POWER_UP_LEVEL=LOW";
+OPTIONS ALTERA_INTERNAL_OPTION = "{-to dffe71} POWER_UP_LEVEL=LOW;{-to dffe72} POWER_UP_LEVEL=LOW;{-to dffe73} POWER_UP_LEVEL=LOW;{-to dffe74} POWER_UP_LEVEL=LOW;{-to dffe75} POWER_UP_LEVEL=LOW;{-to dffe76} POWER_UP_LEVEL=LOW;{-to dffe77} POWER_UP_LEVEL=LOW;{-to dffe78} POWER_UP_LEVEL=LOW;{-to dffe79} POWER_UP_LEVEL=LOW;{-to dffe80} POWER_UP_LEVEL=LOW;{-to dffe81} POWER_UP_LEVEL=LOW;{-to dffe82} POWER_UP_LEVEL=LOW;{-to dffe83} POWER_UP_LEVEL=LOW;{-to dffe84} POWER_UP_LEVEL=LOW;{-to dffe85} POWER_UP_LEVEL=LOW;{-to dffe86} POWER_UP_LEVEL=LOW;{-to dffe87} POWER_UP_LEVEL=LOW;{-to dffe88} POWER_UP_LEVEL=LOW;{-to dffe89} POWER_UP_LEVEL=LOW;{-to dffe90} POWER_UP_LEVEL=LOW;{-to dffe91} POWER_UP_LEVEL=LOW;{-to dffe92} POWER_UP_LEVEL=LOW;{-to dffe93} POWER_UP_LEVEL=LOW;{-to dffe94} POWER_UP_LEVEL=LOW;{-to dffe95} POWER_UP_LEVEL=LOW;{-to dffe96} POWER_UP_LEVEL=LOW;{-to dffe97} POWER_UP_LEVEL=LOW;{-to dffe98} POWER_UP_LEVEL=LOW;{-to dffe99} POWER_UP_LEVEL=LOW";
+
+SUBDESIGN mult_kls
+( 
+	clock	:	input;
+	dataa[52..0]	:	input;
+	datab[52..0]	:	input;
+	result[105..0]	:	output;
+) 
+VARIABLE
+	add303_result[72..0]	:	WIRE;
+	add307_result[88..0]	:	WIRE;
+	add311_result[35..0]	:	WIRE;
+	add315_result[53..0]	:	WIRE;
+	mac_mult1 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult11 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 17,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult13 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 17,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult15 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 17,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult17 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 17,
+			datab_clock = "none",
+			datab_width = 17,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult3 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult5 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 17,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult7 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_mult9 : cycloneive_mac_mult
+		WITH (
+			dataa_clock = "none",
+			dataa_width = 18,
+			datab_clock = "none",
+			datab_width = 18,
+			signa_clock = "none",
+			signb_clock = "none"
+		);
+	mac_out10 : cycloneive_mac_out
+		WITH (
+			dataa_width = 36,
+			output_clock = "0"
+		);
+	mac_out12 : cycloneive_mac_out
+		WITH (
+			dataa_width = 35,
+			output_clock = "0"
+		);
+	mac_out14 : cycloneive_mac_out
+		WITH (
+			dataa_width = 35,
+			output_clock = "0"
+		);
+	mac_out16 : cycloneive_mac_out
+		WITH (
+			dataa_width = 35,
+			output_clock = "0"
+		);
+	mac_out18 : cycloneive_mac_out
+		WITH (
+			dataa_width = 34,
+			output_clock = "0"
+		);
+	mac_out2 : cycloneive_mac_out
+		WITH (
+			dataa_width = 36,
+			output_clock = "0"
+		);
+	mac_out4 : cycloneive_mac_out
+		WITH (
+			dataa_width = 36,
+			output_clock = "0"
+		);
+	mac_out6 : cycloneive_mac_out
+		WITH (
+			dataa_width = 35,
+			output_clock = "0"
+		);
+	mac_out8 : cycloneive_mac_out
+		WITH (
+			dataa_width = 36,
+			output_clock = "0"
+		);
+	dffe100 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe101 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe102 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe103 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe104 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe105 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe106 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe107 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe108 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe109 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe110 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe111 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe112 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe113 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe114 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe115 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe116 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe117 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe118 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe119 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe120 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe121 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe122 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe123 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe124 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe125 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe126 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe127 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe128 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe129 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe130 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe131 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe132 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe133 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe134 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe135 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe136 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe137 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe138 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe139 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe140 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe141 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe142 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe143 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe144 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe145 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe146 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe147 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe148 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe149 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe150 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe151 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe152 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe153 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe154 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe155 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe156 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe157 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe158 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe159 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe160 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe161 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe162 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe163 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe164 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe165 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe166 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe167 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe168 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe169 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe170 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe171 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe172 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe173 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe174 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe175 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe176 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe177 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe178 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe179 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe180 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe181 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe182 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe183 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe184 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe185 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe186 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe187 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe188 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe189 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe19 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe190 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe191 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe192 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe193 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe194 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe195 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe196 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe197 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe198 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe199 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe20 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe200 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe201 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe202 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe203 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe204 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe205 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe206 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe207 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe208 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe209 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe21 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe210 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe211 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe212 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe213 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe214 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe215 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe216 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe217 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe218 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe219 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe22 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe220 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe221 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe222 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe223 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe224 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe225 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe226 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe227 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe228 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe229 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe23 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe230 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe231 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe232 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe233 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe234 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe235 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe236 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe237 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe238 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe239 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe24 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe240 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe241 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe242 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe243 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe244 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe245 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe246 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe247 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe248 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe249 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe25 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe250 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe251 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe252 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe253 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe254 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe255 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe256 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe257 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe258 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe259 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe26 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe260 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe261 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe262 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe263 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe264 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe265 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe266 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe267 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe268 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe269 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe27 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe270 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe271 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe272 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe273 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe274 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe275 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe276 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe277 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe278 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe279 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe28 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe280 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe281 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe282 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe283 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe284 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe285 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe286 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe287 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe288 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe289 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe29 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe290 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe291 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe292 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe293 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe294 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe295 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe296 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe297 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe298 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe299 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe30 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe300 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe301 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe302 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe31 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe32 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe33 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe34 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe35 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe36 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe37 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe38 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe39 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe40 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe41 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe42 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe43 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe44 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe45 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe46 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe47 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe48 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe49 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe50 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe51 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe52 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe53 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe54 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe55 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe56 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe57 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe58 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe59 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe60 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe61 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe62 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe63 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe64 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe65 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe66 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe67 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe68 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe69 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe70 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe71 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe72 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe73 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe74 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe75 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe76 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe77 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe78 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe79 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe80 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe81 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe82 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe83 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe84 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe85 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe86 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe87 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe88 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe89 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe90 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe91 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe92 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe93 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe94 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe95 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe96 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe97 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe98 : dffe
+		WITH (
+			power_up = "low"
+		);
+	dffe99 : dffe
+		WITH (
+			power_up = "low"
+		);
+	sft304a[72..0] : soft;
+	sft305a[72..0] : soft;
+	sft306a[72..0] : soft;
+	sft308a[88..0] : soft;
+	sft309a[88..0] : soft;
+	sft310a[88..0] : soft;
+	sft312a[35..0] : soft;
+	sft313a[35..0] : soft;
+	sft314a[35..0] : soft;
+	sft316a[53..0] : soft;
+	sft317a[53..0] : soft;
+	sft318a[53..0] : soft;
+	aclr	: NODE;
+	clken	: NODE;
+	w1401w[106..0]	: WIRE;
+	w650w	: WIRE;
+
+BEGIN 
+	add303_result[] = sft304a[].out + sft305a[].out;
+	add307_result[] = sft308a[].out + sft309a[].out;
+	add311_result[] = sft312a[].out + sft313a[].out;
+	add315_result[] = sft316a[].out + sft317a[].out;
+	mac_mult1.dataa[] = ( dataa[17..0]);
+	mac_mult1.datab[] = ( datab[17..0]);
+	mac_mult1.signa = B"0";
+	mac_mult1.signb = B"0";
+	mac_mult11.dataa[] = ( dataa[35..18]);
+	mac_mult11.datab[] = ( datab[52..36]);
+	mac_mult11.signa = B"0";
+	mac_mult11.signb = B"0";
+	mac_mult13.dataa[] = ( dataa[52..36]);
+	mac_mult13.datab[] = ( datab[17..0]);
+	mac_mult13.signa = B"0";
+	mac_mult13.signb = B"0";
+	mac_mult15.dataa[] = ( dataa[52..36]);
+	mac_mult15.datab[] = ( datab[35..18]);
+	mac_mult15.signa = B"0";
+	mac_mult15.signb = B"0";
+	mac_mult17.dataa[] = ( dataa[52..36]);
+	mac_mult17.datab[] = ( datab[52..36]);
+	mac_mult17.signa = B"0";
+	mac_mult17.signb = B"0";
+	mac_mult3.dataa[] = ( dataa[17..0]);
+	mac_mult3.datab[] = ( datab[35..18]);
+	mac_mult3.signa = B"0";
+	mac_mult3.signb = B"0";
+	mac_mult5.dataa[] = ( dataa[17..0]);
+	mac_mult5.datab[] = ( datab[52..36]);
+	mac_mult5.signa = B"0";
+	mac_mult5.signb = B"0";
+	mac_mult7.dataa[] = ( dataa[35..18]);
+	mac_mult7.datab[] = ( datab[17..0]);
+	mac_mult7.signa = B"0";
+	mac_mult7.signb = B"0";
+	mac_mult9.dataa[] = ( dataa[35..18]);
+	mac_mult9.datab[] = ( datab[35..18]);
+	mac_mult9.signa = B"0";
+	mac_mult9.signb = B"0";
+	mac_out10.aclr = aclr;
+	mac_out10.clk = clock;
+	mac_out10.dataa[] = mac_mult9.dataout[];
+	mac_out10.ena = clken;
+	mac_out12.aclr = aclr;
+	mac_out12.clk = clock;
+	mac_out12.dataa[] = mac_mult11.dataout[];
+	mac_out12.ena = clken;
+	mac_out14.aclr = aclr;
+	mac_out14.clk = clock;
+	mac_out14.dataa[] = mac_mult13.dataout[];
+	mac_out14.ena = clken;
+	mac_out16.aclr = aclr;
+	mac_out16.clk = clock;
+	mac_out16.dataa[] = mac_mult15.dataout[];
+	mac_out16.ena = clken;
+	mac_out18.aclr = aclr;
+	mac_out18.clk = clock;
+	mac_out18.dataa[] = mac_mult17.dataout[];
+	mac_out18.ena = clken;
+	mac_out2.aclr = aclr;
+	mac_out2.clk = clock;
+	mac_out2.dataa[] = mac_mult1.dataout[];
+	mac_out2.ena = clken;
+	mac_out4.aclr = aclr;
+	mac_out4.clk = clock;
+	mac_out4.dataa[] = mac_mult3.dataout[];
+	mac_out4.ena = clken;
+	mac_out6.aclr = aclr;
+	mac_out6.clk = clock;
+	mac_out6.dataa[] = mac_mult5.dataout[];
+	mac_out6.ena = clken;
+	mac_out8.aclr = aclr;
+	mac_out8.clk = clock;
+	mac_out8.dataa[] = mac_mult7.dataout[];
+	mac_out8.ena = clken;
+	dffe100.clk = clock;
+	dffe100.clrn = (! aclr);
+	dffe100.d = sft314a[2..2].out;
+	dffe100.ena = clken;
+	dffe101.clk = clock;
+	dffe101.clrn = (! aclr);
+	dffe101.d = mac_out10.dataout[2..2];
+	dffe101.ena = clken;
+	dffe102.clk = clock;
+	dffe102.clrn = (! aclr);
+	dffe102.d = mac_out4.dataout[20..20];
+	dffe102.ena = clken;
+	dffe103.clk = clock;
+	dffe103.clrn = (! aclr);
+	dffe103.d = mac_out8.dataout[21..21];
+	dffe103.ena = clken;
+	dffe104.clk = clock;
+	dffe104.clrn = (! aclr);
+	dffe104.d = sft314a[3..3].out;
+	dffe104.ena = clken;
+	dffe105.clk = clock;
+	dffe105.clrn = (! aclr);
+	dffe105.d = mac_out10.dataout[3..3];
+	dffe105.ena = clken;
+	dffe106.clk = clock;
+	dffe106.clrn = (! aclr);
+	dffe106.d = mac_out4.dataout[21..21];
+	dffe106.ena = clken;
+	dffe107.clk = clock;
+	dffe107.clrn = (! aclr);
+	dffe107.d = mac_out8.dataout[22..22];
+	dffe107.ena = clken;
+	dffe108.clk = clock;
+	dffe108.clrn = (! aclr);
+	dffe108.d = sft314a[4..4].out;
+	dffe108.ena = clken;
+	dffe109.clk = clock;
+	dffe109.clrn = (! aclr);
+	dffe109.d = mac_out10.dataout[4..4];
+	dffe109.ena = clken;
+	dffe110.clk = clock;
+	dffe110.clrn = (! aclr);
+	dffe110.d = mac_out4.dataout[22..22];
+	dffe110.ena = clken;
+	dffe111.clk = clock;
+	dffe111.clrn = (! aclr);
+	dffe111.d = mac_out8.dataout[23..23];
+	dffe111.ena = clken;
+	dffe112.clk = clock;
+	dffe112.clrn = (! aclr);
+	dffe112.d = sft314a[5..5].out;
+	dffe112.ena = clken;
+	dffe113.clk = clock;
+	dffe113.clrn = (! aclr);
+	dffe113.d = mac_out10.dataout[5..5];
+	dffe113.ena = clken;
+	dffe114.clk = clock;
+	dffe114.clrn = (! aclr);
+	dffe114.d = mac_out4.dataout[23..23];
+	dffe114.ena = clken;
+	dffe115.clk = clock;
+	dffe115.clrn = (! aclr);
+	dffe115.d = mac_out8.dataout[24..24];
+	dffe115.ena = clken;
+	dffe116.clk = clock;
+	dffe116.clrn = (! aclr);
+	dffe116.d = sft314a[6..6].out;
+	dffe116.ena = clken;
+	dffe117.clk = clock;
+	dffe117.clrn = (! aclr);
+	dffe117.d = mac_out10.dataout[6..6];
+	dffe117.ena = clken;
+	dffe118.clk = clock;
+	dffe118.clrn = (! aclr);
+	dffe118.d = mac_out4.dataout[24..24];
+	dffe118.ena = clken;
+	dffe119.clk = clock;
+	dffe119.clrn = (! aclr);
+	dffe119.d = mac_out8.dataout[25..25];
+	dffe119.ena = clken;
+	dffe120.clk = clock;
+	dffe120.clrn = (! aclr);
+	dffe120.d = sft314a[7..7].out;
+	dffe120.ena = clken;
+	dffe121.clk = clock;
+	dffe121.clrn = (! aclr);
+	dffe121.d = mac_out10.dataout[7..7];
+	dffe121.ena = clken;
+	dffe122.clk = clock;
+	dffe122.clrn = (! aclr);
+	dffe122.d = mac_out4.dataout[25..25];
+	dffe122.ena = clken;
+	dffe123.clk = clock;
+	dffe123.clrn = (! aclr);
+	dffe123.d = mac_out8.dataout[26..26];
+	dffe123.ena = clken;
+	dffe124.clk = clock;
+	dffe124.clrn = (! aclr);
+	dffe124.d = sft314a[8..8].out;
+	dffe124.ena = clken;
+	dffe125.clk = clock;
+	dffe125.clrn = (! aclr);
+	dffe125.d = mac_out10.dataout[8..8];
+	dffe125.ena = clken;
+	dffe126.clk = clock;
+	dffe126.clrn = (! aclr);
+	dffe126.d = mac_out4.dataout[26..26];
+	dffe126.ena = clken;
+	dffe127.clk = clock;
+	dffe127.clrn = (! aclr);
+	dffe127.d = mac_out8.dataout[27..27];
+	dffe127.ena = clken;
+	dffe128.clk = clock;
+	dffe128.clrn = (! aclr);
+	dffe128.d = sft314a[9..9].out;
+	dffe128.ena = clken;
+	dffe129.clk = clock;
+	dffe129.clrn = (! aclr);
+	dffe129.d = mac_out10.dataout[9..9];
+	dffe129.ena = clken;
+	dffe130.clk = clock;
+	dffe130.clrn = (! aclr);
+	dffe130.d = mac_out4.dataout[27..27];
+	dffe130.ena = clken;
+	dffe131.clk = clock;
+	dffe131.clrn = (! aclr);
+	dffe131.d = mac_out8.dataout[28..28];
+	dffe131.ena = clken;
+	dffe132.clk = clock;
+	dffe132.clrn = (! aclr);
+	dffe132.d = sft314a[10..10].out;
+	dffe132.ena = clken;
+	dffe133.clk = clock;
+	dffe133.clrn = (! aclr);
+	dffe133.d = mac_out10.dataout[10..10];
+	dffe133.ena = clken;
+	dffe134.clk = clock;
+	dffe134.clrn = (! aclr);
+	dffe134.d = mac_out4.dataout[28..28];
+	dffe134.ena = clken;
+	dffe135.clk = clock;
+	dffe135.clrn = (! aclr);
+	dffe135.d = mac_out8.dataout[29..29];
+	dffe135.ena = clken;
+	dffe136.clk = clock;
+	dffe136.clrn = (! aclr);
+	dffe136.d = sft314a[11..11].out;
+	dffe136.ena = clken;
+	dffe137.clk = clock;
+	dffe137.clrn = (! aclr);
+	dffe137.d = mac_out10.dataout[11..11];
+	dffe137.ena = clken;
+	dffe138.clk = clock;
+	dffe138.clrn = (! aclr);
+	dffe138.d = mac_out4.dataout[29..29];
+	dffe138.ena = clken;
+	dffe139.clk = clock;
+	dffe139.clrn = (! aclr);
+	dffe139.d = mac_out8.dataout[30..30];
+	dffe139.ena = clken;
+	dffe140.clk = clock;
+	dffe140.clrn = (! aclr);
+	dffe140.d = sft314a[12..12].out;
+	dffe140.ena = clken;
+	dffe141.clk = clock;
+	dffe141.clrn = (! aclr);
+	dffe141.d = mac_out10.dataout[12..12];
+	dffe141.ena = clken;
+	dffe142.clk = clock;
+	dffe142.clrn = (! aclr);
+	dffe142.d = mac_out4.dataout[30..30];
+	dffe142.ena = clken;
+	dffe143.clk = clock;
+	dffe143.clrn = (! aclr);
+	dffe143.d = mac_out8.dataout[31..31];
+	dffe143.ena = clken;
+	dffe144.clk = clock;
+	dffe144.clrn = (! aclr);
+	dffe144.d = sft314a[13..13].out;
+	dffe144.ena = clken;
+	dffe145.clk = clock;
+	dffe145.clrn = (! aclr);
+	dffe145.d = mac_out10.dataout[13..13];
+	dffe145.ena = clken;
+	dffe146.clk = clock;
+	dffe146.clrn = (! aclr);
+	dffe146.d = mac_out4.dataout[31..31];
+	dffe146.ena = clken;
+	dffe147.clk = clock;
+	dffe147.clrn = (! aclr);
+	dffe147.d = mac_out8.dataout[32..32];
+	dffe147.ena = clken;
+	dffe148.clk = clock;
+	dffe148.clrn = (! aclr);
+	dffe148.d = sft314a[14..14].out;
+	dffe148.ena = clken;
+	dffe149.clk = clock;
+	dffe149.clrn = (! aclr);
+	dffe149.d = mac_out10.dataout[14..14];
+	dffe149.ena = clken;
+	dffe150.clk = clock;
+	dffe150.clrn = (! aclr);
+	dffe150.d = mac_out4.dataout[32..32];
+	dffe150.ena = clken;
+	dffe151.clk = clock;
+	dffe151.clrn = (! aclr);
+	dffe151.d = mac_out8.dataout[33..33];
+	dffe151.ena = clken;
+	dffe152.clk = clock;
+	dffe152.clrn = (! aclr);
+	dffe152.d = sft314a[15..15].out;
+	dffe152.ena = clken;
+	dffe153.clk = clock;
+	dffe153.clrn = (! aclr);
+	dffe153.d = mac_out10.dataout[15..15];
+	dffe153.ena = clken;
+	dffe154.clk = clock;
+	dffe154.clrn = (! aclr);
+	dffe154.d = mac_out4.dataout[33..33];
+	dffe154.ena = clken;
+	dffe155.clk = clock;
+	dffe155.clrn = (! aclr);
+	dffe155.d = mac_out8.dataout[34..34];
+	dffe155.ena = clken;
+	dffe156.clk = clock;
+	dffe156.clrn = (! aclr);
+	dffe156.d = sft314a[16..16].out;
+	dffe156.ena = clken;
+	dffe157.clk = clock;
+	dffe157.clrn = (! aclr);
+	dffe157.d = mac_out10.dataout[16..16];
+	dffe157.ena = clken;
+	dffe158.clk = clock;
+	dffe158.clrn = (! aclr);
+	dffe158.d = mac_out4.dataout[34..34];
+	dffe158.ena = clken;
+	dffe159.clk = clock;
+	dffe159.clrn = (! aclr);
+	dffe159.d = mac_out8.dataout[35..35];
+	dffe159.ena = clken;
+	dffe160.clk = clock;
+	dffe160.clrn = (! aclr);
+	dffe160.d = sft314a[17..17].out;
+	dffe160.ena = clken;
+	dffe161.clk = clock;
+	dffe161.clrn = (! aclr);
+	dffe161.d = mac_out10.dataout[17..17];
+	dffe161.ena = clken;
+	dffe162.clk = clock;
+	dffe162.clrn = (! aclr);
+	dffe162.d = mac_out4.dataout[35..35];
+	dffe162.ena = clken;
+	dffe163.clk = clock;
+	dffe163.clrn = (! aclr);
+	dffe163.d = mac_out12.dataout[0..0];
+	dffe163.ena = clken;
+	dffe164.clk = clock;
+	dffe164.clrn = (! aclr);
+	dffe164.d = sft314a[18..18].out;
+	dffe164.ena = clken;
+	dffe165.clk = clock;
+	dffe165.clrn = (! aclr);
+	dffe165.d = mac_out14.dataout[18..18];
+	dffe165.ena = clken;
+	dffe166.clk = clock;
+	dffe166.clrn = (! aclr);
+	dffe166.d = mac_out6.dataout[18..18];
+	dffe166.ena = clken;
+	dffe167.clk = clock;
+	dffe167.clrn = (! aclr);
+	dffe167.d = mac_out12.dataout[1..1];
+	dffe167.ena = clken;
+	dffe168.clk = clock;
+	dffe168.clrn = (! aclr);
+	dffe168.d = sft314a[19..19].out;
+	dffe168.ena = clken;
+	dffe169.clk = clock;
+	dffe169.clrn = (! aclr);
+	dffe169.d = mac_out14.dataout[19..19];
+	dffe169.ena = clken;
+	dffe170.clk = clock;
+	dffe170.clrn = (! aclr);
+	dffe170.d = mac_out6.dataout[19..19];
+	dffe170.ena = clken;
+	dffe171.clk = clock;
+	dffe171.clrn = (! aclr);
+	dffe171.d = mac_out12.dataout[2..2];
+	dffe171.ena = clken;
+	dffe172.clk = clock;
+	dffe172.clrn = (! aclr);
+	dffe172.d = sft314a[20..20].out;
+	dffe172.ena = clken;
+	dffe173.clk = clock;
+	dffe173.clrn = (! aclr);
+	dffe173.d = mac_out14.dataout[20..20];
+	dffe173.ena = clken;
+	dffe174.clk = clock;
+	dffe174.clrn = (! aclr);
+	dffe174.d = mac_out6.dataout[20..20];
+	dffe174.ena = clken;
+	dffe175.clk = clock;
+	dffe175.clrn = (! aclr);
+	dffe175.d = mac_out12.dataout[3..3];
+	dffe175.ena = clken;
+	dffe176.clk = clock;
+	dffe176.clrn = (! aclr);
+	dffe176.d = sft314a[21..21].out;
+	dffe176.ena = clken;
+	dffe177.clk = clock;
+	dffe177.clrn = (! aclr);
+	dffe177.d = mac_out14.dataout[21..21];
+	dffe177.ena = clken;
+	dffe178.clk = clock;
+	dffe178.clrn = (! aclr);
+	dffe178.d = mac_out6.dataout[21..21];
+	dffe178.ena = clken;
+	dffe179.clk = clock;
+	dffe179.clrn = (! aclr);
+	dffe179.d = mac_out12.dataout[4..4];
+	dffe179.ena = clken;
+	dffe180.clk = clock;
+	dffe180.clrn = (! aclr);
+	dffe180.d = sft314a[22..22].out;
+	dffe180.ena = clken;
+	dffe181.clk = clock;
+	dffe181.clrn = (! aclr);
+	dffe181.d = mac_out14.dataout[22..22];
+	dffe181.ena = clken;
+	dffe182.clk = clock;
+	dffe182.clrn = (! aclr);
+	dffe182.d = mac_out6.dataout[22..22];
+	dffe182.ena = clken;
+	dffe183.clk = clock;
+	dffe183.clrn = (! aclr);
+	dffe183.d = mac_out12.dataout[5..5];
+	dffe183.ena = clken;
+	dffe184.clk = clock;
+	dffe184.clrn = (! aclr);
+	dffe184.d = sft314a[23..23].out;
+	dffe184.ena = clken;
+	dffe185.clk = clock;
+	dffe185.clrn = (! aclr);
+	dffe185.d = mac_out14.dataout[23..23];
+	dffe185.ena = clken;
+	dffe186.clk = clock;
+	dffe186.clrn = (! aclr);
+	dffe186.d = mac_out6.dataout[23..23];
+	dffe186.ena = clken;
+	dffe187.clk = clock;
+	dffe187.clrn = (! aclr);
+	dffe187.d = mac_out12.dataout[6..6];
+	dffe187.ena = clken;
+	dffe188.clk = clock;
+	dffe188.clrn = (! aclr);
+	dffe188.d = sft314a[24..24].out;
+	dffe188.ena = clken;
+	dffe189.clk = clock;
+	dffe189.clrn = (! aclr);
+	dffe189.d = mac_out14.dataout[24..24];
+	dffe189.ena = clken;
+	dffe19.clk = clock;
+	dffe19.clrn = (! aclr);
+	dffe19.d = mac_out2.dataout[0..0];
+	dffe19.ena = clken;
+	dffe190.clk = clock;
+	dffe190.clrn = (! aclr);
+	dffe190.d = mac_out6.dataout[24..24];
+	dffe190.ena = clken;
+	dffe191.clk = clock;
+	dffe191.clrn = (! aclr);
+	dffe191.d = mac_out12.dataout[7..7];
+	dffe191.ena = clken;
+	dffe192.clk = clock;
+	dffe192.clrn = (! aclr);
+	dffe192.d = sft314a[25..25].out;
+	dffe192.ena = clken;
+	dffe193.clk = clock;
+	dffe193.clrn = (! aclr);
+	dffe193.d = mac_out14.dataout[25..25];
+	dffe193.ena = clken;
+	dffe194.clk = clock;
+	dffe194.clrn = (! aclr);
+	dffe194.d = mac_out6.dataout[25..25];
+	dffe194.ena = clken;
+	dffe195.clk = clock;
+	dffe195.clrn = (! aclr);
+	dffe195.d = mac_out12.dataout[8..8];
+	dffe195.ena = clken;
+	dffe196.clk = clock;
+	dffe196.clrn = (! aclr);
+	dffe196.d = sft314a[26..26].out;
+	dffe196.ena = clken;
+	dffe197.clk = clock;
+	dffe197.clrn = (! aclr);
+	dffe197.d = mac_out14.dataout[26..26];
+	dffe197.ena = clken;
+	dffe198.clk = clock;
+	dffe198.clrn = (! aclr);
+	dffe198.d = mac_out6.dataout[26..26];
+	dffe198.ena = clken;
+	dffe199.clk = clock;
+	dffe199.clrn = (! aclr);
+	dffe199.d = mac_out12.dataout[9..9];
+	dffe199.ena = clken;
+	dffe20.clk = clock;
+	dffe20.clrn = (! aclr);
+	dffe20.d = mac_out2.dataout[1..1];
+	dffe20.ena = clken;
+	dffe200.clk = clock;
+	dffe200.clrn = (! aclr);
+	dffe200.d = sft314a[27..27].out;
+	dffe200.ena = clken;
+	dffe201.clk = clock;
+	dffe201.clrn = (! aclr);
+	dffe201.d = mac_out14.dataout[27..27];
+	dffe201.ena = clken;
+	dffe202.clk = clock;
+	dffe202.clrn = (! aclr);
+	dffe202.d = mac_out6.dataout[27..27];
+	dffe202.ena = clken;
+	dffe203.clk = clock;
+	dffe203.clrn = (! aclr);
+	dffe203.d = mac_out12.dataout[10..10];
+	dffe203.ena = clken;
+	dffe204.clk = clock;
+	dffe204.clrn = (! aclr);
+	dffe204.d = sft314a[28..28].out;
+	dffe204.ena = clken;
+	dffe205.clk = clock;
+	dffe205.clrn = (! aclr);
+	dffe205.d = mac_out14.dataout[28..28];
+	dffe205.ena = clken;
+	dffe206.clk = clock;
+	dffe206.clrn = (! aclr);
+	dffe206.d = mac_out6.dataout[28..28];
+	dffe206.ena = clken;
+	dffe207.clk = clock;
+	dffe207.clrn = (! aclr);
+	dffe207.d = mac_out12.dataout[11..11];
+	dffe207.ena = clken;
+	dffe208.clk = clock;
+	dffe208.clrn = (! aclr);
+	dffe208.d = sft314a[29..29].out;
+	dffe208.ena = clken;
+	dffe209.clk = clock;
+	dffe209.clrn = (! aclr);
+	dffe209.d = mac_out14.dataout[29..29];
+	dffe209.ena = clken;
+	dffe21.clk = clock;
+	dffe21.clrn = (! aclr);
+	dffe21.d = mac_out2.dataout[2..2];
+	dffe21.ena = clken;
+	dffe210.clk = clock;
+	dffe210.clrn = (! aclr);
+	dffe210.d = mac_out6.dataout[29..29];
+	dffe210.ena = clken;
+	dffe211.clk = clock;
+	dffe211.clrn = (! aclr);
+	dffe211.d = mac_out12.dataout[12..12];
+	dffe211.ena = clken;
+	dffe212.clk = clock;
+	dffe212.clrn = (! aclr);
+	dffe212.d = sft314a[30..30].out;
+	dffe212.ena = clken;
+	dffe213.clk = clock;
+	dffe213.clrn = (! aclr);
+	dffe213.d = mac_out14.dataout[30..30];
+	dffe213.ena = clken;
+	dffe214.clk = clock;
+	dffe214.clrn = (! aclr);
+	dffe214.d = mac_out6.dataout[30..30];
+	dffe214.ena = clken;
+	dffe215.clk = clock;
+	dffe215.clrn = (! aclr);
+	dffe215.d = mac_out12.dataout[13..13];
+	dffe215.ena = clken;
+	dffe216.clk = clock;
+	dffe216.clrn = (! aclr);
+	dffe216.d = sft314a[31..31].out;
+	dffe216.ena = clken;
+	dffe217.clk = clock;
+	dffe217.clrn = (! aclr);
+	dffe217.d = mac_out14.dataout[31..31];
+	dffe217.ena = clken;
+	dffe218.clk = clock;
+	dffe218.clrn = (! aclr);
+	dffe218.d = mac_out6.dataout[31..31];
+	dffe218.ena = clken;
+	dffe219.clk = clock;
+	dffe219.clrn = (! aclr);
+	dffe219.d = mac_out12.dataout[14..14];
+	dffe219.ena = clken;
+	dffe22.clk = clock;
+	dffe22.clrn = (! aclr);
+	dffe22.d = mac_out2.dataout[3..3];
+	dffe22.ena = clken;
+	dffe220.clk = clock;
+	dffe220.clrn = (! aclr);
+	dffe220.d = sft314a[32..32].out;
+	dffe220.ena = clken;
+	dffe221.clk = clock;
+	dffe221.clrn = (! aclr);
+	dffe221.d = mac_out14.dataout[32..32];
+	dffe221.ena = clken;
+	dffe222.clk = clock;
+	dffe222.clrn = (! aclr);
+	dffe222.d = mac_out6.dataout[32..32];
+	dffe222.ena = clken;
+	dffe223.clk = clock;
+	dffe223.clrn = (! aclr);
+	dffe223.d = mac_out12.dataout[15..15];
+	dffe223.ena = clken;
+	dffe224.clk = clock;
+	dffe224.clrn = (! aclr);
+	dffe224.d = sft314a[33..33].out;
+	dffe224.ena = clken;
+	dffe225.clk = clock;
+	dffe225.clrn = (! aclr);
+	dffe225.d = mac_out14.dataout[33..33];
+	dffe225.ena = clken;
+	dffe226.clk = clock;
+	dffe226.clrn = (! aclr);
+	dffe226.d = mac_out6.dataout[33..33];
+	dffe226.ena = clken;
+	dffe227.clk = clock;
+	dffe227.clrn = (! aclr);
+	dffe227.d = mac_out12.dataout[16..16];
+	dffe227.ena = clken;
+	dffe228.clk = clock;
+	dffe228.clrn = (! aclr);
+	dffe228.d = sft314a[34..34].out;
+	dffe228.ena = clken;
+	dffe229.clk = clock;
+	dffe229.clrn = (! aclr);
+	dffe229.d = mac_out14.dataout[34..34];
+	dffe229.ena = clken;
+	dffe23.clk = clock;
+	dffe23.clrn = (! aclr);
+	dffe23.d = mac_out2.dataout[4..4];
+	dffe23.ena = clken;
+	dffe230.clk = clock;
+	dffe230.clrn = (! aclr);
+	dffe230.d = mac_out6.dataout[34..34];
+	dffe230.ena = clken;
+	dffe231.clk = clock;
+	dffe231.clrn = (! aclr);
+	dffe231.d = mac_out16.dataout[17..17];
+	dffe231.ena = clken;
+	dffe232.clk = clock;
+	dffe232.clrn = (! aclr);
+	dffe232.d = mac_out12.dataout[17..17];
+	dffe232.ena = clken;
+	dffe233.clk = clock;
+	dffe233.clrn = (! aclr);
+	dffe233.d = mac_out10.dataout[35..35];
+	dffe233.ena = clken;
+	dffe234.clk = clock;
+	dffe234.clrn = (! aclr);
+	dffe234.d = sft314a[35..35].out;
+	dffe234.ena = clken;
+	dffe235.clk = clock;
+	dffe235.clrn = (! aclr);
+	dffe235.d = mac_out18.dataout[0..0];
+	dffe235.ena = clken;
+	dffe236.clk = clock;
+	dffe236.clrn = (! aclr);
+	dffe236.d = mac_out16.dataout[18..18];
+	dffe236.ena = clken;
+	dffe237.clk = clock;
+	dffe237.clrn = (! aclr);
+	dffe237.d = mac_out12.dataout[18..18];
+	dffe237.ena = clken;
+	dffe238.clk = clock;
+	dffe238.clrn = (! aclr);
+	dffe238.d = mac_out18.dataout[1..1];
+	dffe238.ena = clken;
+	dffe239.clk = clock;
+	dffe239.clrn = (! aclr);
+	dffe239.d = mac_out16.dataout[19..19];
+	dffe239.ena = clken;
+	dffe24.clk = clock;
+	dffe24.clrn = (! aclr);
+	dffe24.d = mac_out2.dataout[5..5];
+	dffe24.ena = clken;
+	dffe240.clk = clock;
+	dffe240.clrn = (! aclr);
+	dffe240.d = mac_out12.dataout[19..19];
+	dffe240.ena = clken;
+	dffe241.clk = clock;
+	dffe241.clrn = (! aclr);
+	dffe241.d = mac_out18.dataout[2..2];
+	dffe241.ena = clken;
+	dffe242.clk = clock;
+	dffe242.clrn = (! aclr);
+	dffe242.d = mac_out16.dataout[20..20];
+	dffe242.ena = clken;
+	dffe243.clk = clock;
+	dffe243.clrn = (! aclr);
+	dffe243.d = mac_out12.dataout[20..20];
+	dffe243.ena = clken;
+	dffe244.clk = clock;
+	dffe244.clrn = (! aclr);
+	dffe244.d = mac_out18.dataout[3..3];
+	dffe244.ena = clken;
+	dffe245.clk = clock;
+	dffe245.clrn = (! aclr);
+	dffe245.d = mac_out16.dataout[21..21];
+	dffe245.ena = clken;
+	dffe246.clk = clock;
+	dffe246.clrn = (! aclr);
+	dffe246.d = mac_out12.dataout[21..21];
+	dffe246.ena = clken;
+	dffe247.clk = clock;
+	dffe247.clrn = (! aclr);
+	dffe247.d = mac_out18.dataout[4..4];
+	dffe247.ena = clken;
+	dffe248.clk = clock;
+	dffe248.clrn = (! aclr);
+	dffe248.d = mac_out16.dataout[22..22];
+	dffe248.ena = clken;
+	dffe249.clk = clock;
+	dffe249.clrn = (! aclr);
+	dffe249.d = mac_out12.dataout[22..22];
+	dffe249.ena = clken;
+	dffe25.clk = clock;
+	dffe25.clrn = (! aclr);
+	dffe25.d = mac_out2.dataout[6..6];
+	dffe25.ena = clken;
+	dffe250.clk = clock;
+	dffe250.clrn = (! aclr);
+	dffe250.d = mac_out18.dataout[5..5];
+	dffe250.ena = clken;
+	dffe251.clk = clock;
+	dffe251.clrn = (! aclr);
+	dffe251.d = mac_out16.dataout[23..23];
+	dffe251.ena = clken;
+	dffe252.clk = clock;
+	dffe252.clrn = (! aclr);
+	dffe252.d = mac_out12.dataout[23..23];
+	dffe252.ena = clken;
+	dffe253.clk = clock;
+	dffe253.clrn = (! aclr);
+	dffe253.d = mac_out18.dataout[6..6];
+	dffe253.ena = clken;
+	dffe254.clk = clock;
+	dffe254.clrn = (! aclr);
+	dffe254.d = mac_out16.dataout[24..24];
+	dffe254.ena = clken;
+	dffe255.clk = clock;
+	dffe255.clrn = (! aclr);
+	dffe255.d = mac_out12.dataout[24..24];
+	dffe255.ena = clken;
+	dffe256.clk = clock;
+	dffe256.clrn = (! aclr);
+	dffe256.d = mac_out18.dataout[7..7];
+	dffe256.ena = clken;
+	dffe257.clk = clock;
+	dffe257.clrn = (! aclr);
+	dffe257.d = mac_out16.dataout[25..25];
+	dffe257.ena = clken;
+	dffe258.clk = clock;
+	dffe258.clrn = (! aclr);
+	dffe258.d = mac_out12.dataout[25..25];
+	dffe258.ena = clken;
+	dffe259.clk = clock;
+	dffe259.clrn = (! aclr);
+	dffe259.d = mac_out18.dataout[8..8];
+	dffe259.ena = clken;
+	dffe26.clk = clock;
+	dffe26.clrn = (! aclr);
+	dffe26.d = mac_out2.dataout[7..7];
+	dffe26.ena = clken;
+	dffe260.clk = clock;
+	dffe260.clrn = (! aclr);
+	dffe260.d = mac_out16.dataout[26..26];
+	dffe260.ena = clken;
+	dffe261.clk = clock;
+	dffe261.clrn = (! aclr);
+	dffe261.d = mac_out12.dataout[26..26];
+	dffe261.ena = clken;
+	dffe262.clk = clock;
+	dffe262.clrn = (! aclr);
+	dffe262.d = mac_out18.dataout[9..9];
+	dffe262.ena = clken;
+	dffe263.clk = clock;
+	dffe263.clrn = (! aclr);
+	dffe263.d = mac_out16.dataout[27..27];
+	dffe263.ena = clken;
+	dffe264.clk = clock;
+	dffe264.clrn = (! aclr);
+	dffe264.d = mac_out12.dataout[27..27];
+	dffe264.ena = clken;
+	dffe265.clk = clock;
+	dffe265.clrn = (! aclr);
+	dffe265.d = mac_out18.dataout[10..10];
+	dffe265.ena = clken;
+	dffe266.clk = clock;
+	dffe266.clrn = (! aclr);
+	dffe266.d = mac_out16.dataout[28..28];
+	dffe266.ena = clken;
+	dffe267.clk = clock;
+	dffe267.clrn = (! aclr);
+	dffe267.d = mac_out12.dataout[28..28];
+	dffe267.ena = clken;
+	dffe268.clk = clock;
+	dffe268.clrn = (! aclr);
+	dffe268.d = mac_out18.dataout[11..11];
+	dffe268.ena = clken;
+	dffe269.clk = clock;
+	dffe269.clrn = (! aclr);
+	dffe269.d = mac_out16.dataout[29..29];
+	dffe269.ena = clken;
+	dffe27.clk = clock;
+	dffe27.clrn = (! aclr);
+	dffe27.d = mac_out2.dataout[8..8];
+	dffe27.ena = clken;
+	dffe270.clk = clock;
+	dffe270.clrn = (! aclr);
+	dffe270.d = mac_out12.dataout[29..29];
+	dffe270.ena = clken;
+	dffe271.clk = clock;
+	dffe271.clrn = (! aclr);
+	dffe271.d = mac_out18.dataout[12..12];
+	dffe271.ena = clken;
+	dffe272.clk = clock;
+	dffe272.clrn = (! aclr);
+	dffe272.d = mac_out16.dataout[30..30];
+	dffe272.ena = clken;
+	dffe273.clk = clock;
+	dffe273.clrn = (! aclr);
+	dffe273.d = mac_out12.dataout[30..30];
+	dffe273.ena = clken;
+	dffe274.clk = clock;
+	dffe274.clrn = (! aclr);
+	dffe274.d = mac_out18.dataout[13..13];
+	dffe274.ena = clken;
+	dffe275.clk = clock;
+	dffe275.clrn = (! aclr);
+	dffe275.d = mac_out16.dataout[31..31];
+	dffe275.ena = clken;
+	dffe276.clk = clock;
+	dffe276.clrn = (! aclr);
+	dffe276.d = mac_out12.dataout[31..31];
+	dffe276.ena = clken;
+	dffe277.clk = clock;
+	dffe277.clrn = (! aclr);
+	dffe277.d = mac_out18.dataout[14..14];
+	dffe277.ena = clken;
+	dffe278.clk = clock;
+	dffe278.clrn = (! aclr);
+	dffe278.d = mac_out16.dataout[32..32];
+	dffe278.ena = clken;
+	dffe279.clk = clock;
+	dffe279.clrn = (! aclr);
+	dffe279.d = mac_out12.dataout[32..32];
+	dffe279.ena = clken;
+	dffe28.clk = clock;
+	dffe28.clrn = (! aclr);
+	dffe28.d = mac_out2.dataout[9..9];
+	dffe28.ena = clken;
+	dffe280.clk = clock;
+	dffe280.clrn = (! aclr);
+	dffe280.d = mac_out18.dataout[15..15];
+	dffe280.ena = clken;
+	dffe281.clk = clock;
+	dffe281.clrn = (! aclr);
+	dffe281.d = mac_out16.dataout[33..33];
+	dffe281.ena = clken;
+	dffe282.clk = clock;
+	dffe282.clrn = (! aclr);
+	dffe282.d = mac_out12.dataout[33..33];
+	dffe282.ena = clken;
+	dffe283.clk = clock;
+	dffe283.clrn = (! aclr);
+	dffe283.d = mac_out18.dataout[16..16];
+	dffe283.ena = clken;
+	dffe284.clk = clock;
+	dffe284.clrn = (! aclr);
+	dffe284.d = mac_out16.dataout[34..34];
+	dffe284.ena = clken;
+	dffe285.clk = clock;
+	dffe285.clrn = (! aclr);
+	dffe285.d = mac_out12.dataout[34..34];
+	dffe285.ena = clken;
+	dffe286.clk = clock;
+	dffe286.clrn = (! aclr);
+	dffe286.d = mac_out18.dataout[17..17];
+	dffe286.ena = clken;
+	dffe287.clk = clock;
+	dffe287.clrn = (! aclr);
+	dffe287.d = mac_out18.dataout[18..18];
+	dffe287.ena = clken;
+	dffe288.clk = clock;
+	dffe288.clrn = (! aclr);
+	dffe288.d = mac_out18.dataout[19..19];
+	dffe288.ena = clken;
+	dffe289.clk = clock;
+	dffe289.clrn = (! aclr);
+	dffe289.d = mac_out18.dataout[20..20];
+	dffe289.ena = clken;
+	dffe29.clk = clock;
+	dffe29.clrn = (! aclr);
+	dffe29.d = mac_out2.dataout[10..10];
+	dffe29.ena = clken;
+	dffe290.clk = clock;
+	dffe290.clrn = (! aclr);
+	dffe290.d = mac_out18.dataout[21..21];
+	dffe290.ena = clken;
+	dffe291.clk = clock;
+	dffe291.clrn = (! aclr);
+	dffe291.d = mac_out18.dataout[22..22];
+	dffe291.ena = clken;
+	dffe292.clk = clock;
+	dffe292.clrn = (! aclr);
+	dffe292.d = mac_out18.dataout[23..23];
+	dffe292.ena = clken;
+	dffe293.clk = clock;
+	dffe293.clrn = (! aclr);
+	dffe293.d = mac_out18.dataout[24..24];
+	dffe293.ena = clken;
+	dffe294.clk = clock;
+	dffe294.clrn = (! aclr);
+	dffe294.d = mac_out18.dataout[25..25];
+	dffe294.ena = clken;
+	dffe295.clk = clock;
+	dffe295.clrn = (! aclr);
+	dffe295.d = mac_out18.dataout[26..26];
+	dffe295.ena = clken;
+	dffe296.clk = clock;
+	dffe296.clrn = (! aclr);
+	dffe296.d = mac_out18.dataout[27..27];
+	dffe296.ena = clken;
+	dffe297.clk = clock;
+	dffe297.clrn = (! aclr);
+	dffe297.d = mac_out18.dataout[28..28];
+	dffe297.ena = clken;
+	dffe298.clk = clock;
+	dffe298.clrn = (! aclr);
+	dffe298.d = mac_out18.dataout[29..29];
+	dffe298.ena = clken;
+	dffe299.clk = clock;
+	dffe299.clrn = (! aclr);
+	dffe299.d = mac_out18.dataout[30..30];
+	dffe299.ena = clken;
+	dffe30.clk = clock;
+	dffe30.clrn = (! aclr);
+	dffe30.d = mac_out2.dataout[11..11];
+	dffe30.ena = clken;
+	dffe300.clk = clock;
+	dffe300.clrn = (! aclr);
+	dffe300.d = mac_out18.dataout[31..31];
+	dffe300.ena = clken;
+	dffe301.clk = clock;
+	dffe301.clrn = (! aclr);
+	dffe301.d = mac_out18.dataout[32..32];
+	dffe301.ena = clken;
+	dffe302.clk = clock;
+	dffe302.clrn = (! aclr);
+	dffe302.d = mac_out18.dataout[33..33];
+	dffe302.ena = clken;
+	dffe31.clk = clock;
+	dffe31.clrn = (! aclr);
+	dffe31.d = mac_out2.dataout[12..12];
+	dffe31.ena = clken;
+	dffe32.clk = clock;
+	dffe32.clrn = (! aclr);
+	dffe32.d = mac_out2.dataout[13..13];
+	dffe32.ena = clken;
+	dffe33.clk = clock;
+	dffe33.clrn = (! aclr);
+	dffe33.d = mac_out2.dataout[14..14];
+	dffe33.ena = clken;
+	dffe34.clk = clock;
+	dffe34.clrn = (! aclr);
+	dffe34.d = mac_out2.dataout[15..15];
+	dffe34.ena = clken;
+	dffe35.clk = clock;
+	dffe35.clrn = (! aclr);
+	dffe35.d = mac_out2.dataout[16..16];
+	dffe35.ena = clken;
+	dffe36.clk = clock;
+	dffe36.clrn = (! aclr);
+	dffe36.d = mac_out2.dataout[17..17];
+	dffe36.ena = clken;
+	dffe37.clk = clock;
+	dffe37.clrn = (! aclr);
+	dffe37.d = mac_out2.dataout[18..18];
+	dffe37.ena = clken;
+	dffe38.clk = clock;
+	dffe38.clrn = (! aclr);
+	dffe38.d = mac_out8.dataout[0..0];
+	dffe38.ena = clken;
+	dffe39.clk = clock;
+	dffe39.clrn = (! aclr);
+	dffe39.d = mac_out4.dataout[0..0];
+	dffe39.ena = clken;
+	dffe40.clk = clock;
+	dffe40.clrn = (! aclr);
+	dffe40.d = mac_out2.dataout[19..19];
+	dffe40.ena = clken;
+	dffe41.clk = clock;
+	dffe41.clrn = (! aclr);
+	dffe41.d = mac_out8.dataout[1..1];
+	dffe41.ena = clken;
+	dffe42.clk = clock;
+	dffe42.clrn = (! aclr);
+	dffe42.d = mac_out4.dataout[1..1];
+	dffe42.ena = clken;
+	dffe43.clk = clock;
+	dffe43.clrn = (! aclr);
+	dffe43.d = mac_out2.dataout[20..20];
+	dffe43.ena = clken;
+	dffe44.clk = clock;
+	dffe44.clrn = (! aclr);
+	dffe44.d = mac_out8.dataout[2..2];
+	dffe44.ena = clken;
+	dffe45.clk = clock;
+	dffe45.clrn = (! aclr);
+	dffe45.d = mac_out4.dataout[2..2];
+	dffe45.ena = clken;
+	dffe46.clk = clock;
+	dffe46.clrn = (! aclr);
+	dffe46.d = mac_out2.dataout[21..21];
+	dffe46.ena = clken;
+	dffe47.clk = clock;
+	dffe47.clrn = (! aclr);
+	dffe47.d = mac_out8.dataout[3..3];
+	dffe47.ena = clken;
+	dffe48.clk = clock;
+	dffe48.clrn = (! aclr);
+	dffe48.d = mac_out4.dataout[3..3];
+	dffe48.ena = clken;
+	dffe49.clk = clock;
+	dffe49.clrn = (! aclr);
+	dffe49.d = mac_out2.dataout[22..22];
+	dffe49.ena = clken;
+	dffe50.clk = clock;
+	dffe50.clrn = (! aclr);
+	dffe50.d = mac_out8.dataout[4..4];
+	dffe50.ena = clken;
+	dffe51.clk = clock;
+	dffe51.clrn = (! aclr);
+	dffe51.d = mac_out4.dataout[4..4];
+	dffe51.ena = clken;
+	dffe52.clk = clock;
+	dffe52.clrn = (! aclr);
+	dffe52.d = mac_out2.dataout[23..23];
+	dffe52.ena = clken;
+	dffe53.clk = clock;
+	dffe53.clrn = (! aclr);
+	dffe53.d = mac_out8.dataout[5..5];
+	dffe53.ena = clken;
+	dffe54.clk = clock;
+	dffe54.clrn = (! aclr);
+	dffe54.d = mac_out4.dataout[5..5];
+	dffe54.ena = clken;
+	dffe55.clk = clock;
+	dffe55.clrn = (! aclr);
+	dffe55.d = mac_out2.dataout[24..24];
+	dffe55.ena = clken;
+	dffe56.clk = clock;
+	dffe56.clrn = (! aclr);
+	dffe56.d = mac_out8.dataout[6..6];
+	dffe56.ena = clken;
+	dffe57.clk = clock;
+	dffe57.clrn = (! aclr);
+	dffe57.d = mac_out4.dataout[6..6];
+	dffe57.ena = clken;
+	dffe58.clk = clock;
+	dffe58.clrn = (! aclr);
+	dffe58.d = mac_out2.dataout[25..25];
+	dffe58.ena = clken;
+	dffe59.clk = clock;
+	dffe59.clrn = (! aclr);
+	dffe59.d = mac_out8.dataout[7..7];
+	dffe59.ena = clken;
+	dffe60.clk = clock;
+	dffe60.clrn = (! aclr);
+	dffe60.d = mac_out4.dataout[7..7];
+	dffe60.ena = clken;
+	dffe61.clk = clock;
+	dffe61.clrn = (! aclr);
+	dffe61.d = mac_out2.dataout[26..26];
+	dffe61.ena = clken;
+	dffe62.clk = clock;
+	dffe62.clrn = (! aclr);
+	dffe62.d = mac_out8.dataout[8..8];
+	dffe62.ena = clken;
+	dffe63.clk = clock;
+	dffe63.clrn = (! aclr);
+	dffe63.d = mac_out4.dataout[8..8];
+	dffe63.ena = clken;
+	dffe64.clk = clock;
+	dffe64.clrn = (! aclr);
+	dffe64.d = mac_out2.dataout[27..27];
+	dffe64.ena = clken;
+	dffe65.clk = clock;
+	dffe65.clrn = (! aclr);
+	dffe65.d = mac_out8.dataout[9..9];
+	dffe65.ena = clken;
+	dffe66.clk = clock;
+	dffe66.clrn = (! aclr);
+	dffe66.d = mac_out4.dataout[9..9];
+	dffe66.ena = clken;
+	dffe67.clk = clock;
+	dffe67.clrn = (! aclr);
+	dffe67.d = mac_out2.dataout[28..28];
+	dffe67.ena = clken;
+	dffe68.clk = clock;
+	dffe68.clrn = (! aclr);
+	dffe68.d = mac_out8.dataout[10..10];
+	dffe68.ena = clken;
+	dffe69.clk = clock;
+	dffe69.clrn = (! aclr);
+	dffe69.d = mac_out4.dataout[10..10];
+	dffe69.ena = clken;
+	dffe70.clk = clock;
+	dffe70.clrn = (! aclr);
+	dffe70.d = mac_out2.dataout[29..29];
+	dffe70.ena = clken;
+	dffe71.clk = clock;
+	dffe71.clrn = (! aclr);
+	dffe71.d = mac_out8.dataout[11..11];
+	dffe71.ena = clken;
+	dffe72.clk = clock;
+	dffe72.clrn = (! aclr);
+	dffe72.d = mac_out4.dataout[11..11];
+	dffe72.ena = clken;
+	dffe73.clk = clock;
+	dffe73.clrn = (! aclr);
+	dffe73.d = mac_out2.dataout[30..30];
+	dffe73.ena = clken;
+	dffe74.clk = clock;
+	dffe74.clrn = (! aclr);
+	dffe74.d = mac_out8.dataout[12..12];
+	dffe74.ena = clken;
+	dffe75.clk = clock;
+	dffe75.clrn = (! aclr);
+	dffe75.d = mac_out4.dataout[12..12];
+	dffe75.ena = clken;
+	dffe76.clk = clock;
+	dffe76.clrn = (! aclr);
+	dffe76.d = mac_out2.dataout[31..31];
+	dffe76.ena = clken;
+	dffe77.clk = clock;
+	dffe77.clrn = (! aclr);
+	dffe77.d = mac_out8.dataout[13..13];
+	dffe77.ena = clken;
+	dffe78.clk = clock;
+	dffe78.clrn = (! aclr);
+	dffe78.d = mac_out4.dataout[13..13];
+	dffe78.ena = clken;
+	dffe79.clk = clock;
+	dffe79.clrn = (! aclr);
+	dffe79.d = mac_out2.dataout[32..32];
+	dffe79.ena = clken;
+	dffe80.clk = clock;
+	dffe80.clrn = (! aclr);
+	dffe80.d = mac_out8.dataout[14..14];
+	dffe80.ena = clken;
+	dffe81.clk = clock;
+	dffe81.clrn = (! aclr);
+	dffe81.d = mac_out4.dataout[14..14];
+	dffe81.ena = clken;
+	dffe82.clk = clock;
+	dffe82.clrn = (! aclr);
+	dffe82.d = mac_out2.dataout[33..33];
+	dffe82.ena = clken;
+	dffe83.clk = clock;
+	dffe83.clrn = (! aclr);
+	dffe83.d = mac_out8.dataout[15..15];
+	dffe83.ena = clken;
+	dffe84.clk = clock;
+	dffe84.clrn = (! aclr);
+	dffe84.d = mac_out4.dataout[15..15];
+	dffe84.ena = clken;
+	dffe85.clk = clock;
+	dffe85.clrn = (! aclr);
+	dffe85.d = mac_out2.dataout[34..34];
+	dffe85.ena = clken;
+	dffe86.clk = clock;
+	dffe86.clrn = (! aclr);
+	dffe86.d = mac_out8.dataout[16..16];
+	dffe86.ena = clken;
+	dffe87.clk = clock;
+	dffe87.clrn = (! aclr);
+	dffe87.d = mac_out4.dataout[16..16];
+	dffe87.ena = clken;
+	dffe88.clk = clock;
+	dffe88.clrn = (! aclr);
+	dffe88.d = mac_out2.dataout[35..35];
+	dffe88.ena = clken;
+	dffe89.clk = clock;
+	dffe89.clrn = (! aclr);
+	dffe89.d = mac_out8.dataout[17..17];
+	dffe89.ena = clken;
+	dffe90.clk = clock;
+	dffe90.clrn = (! aclr);
+	dffe90.d = mac_out4.dataout[17..17];
+	dffe90.ena = clken;
+	dffe91.clk = clock;
+	dffe91.clrn = (! aclr);
+	dffe91.d = mac_out8.dataout[18..18];
+	dffe91.ena = clken;
+	dffe92.clk = clock;
+	dffe92.clrn = (! aclr);
+	dffe92.d = sft314a[0..0].out;
+	dffe92.ena = clken;
+	dffe93.clk = clock;
+	dffe93.clrn = (! aclr);
+	dffe93.d = mac_out10.dataout[0..0];
+	dffe93.ena = clken;
+	dffe94.clk = clock;
+	dffe94.clrn = (! aclr);
+	dffe94.d = mac_out4.dataout[18..18];
+	dffe94.ena = clken;
+	dffe95.clk = clock;
+	dffe95.clrn = (! aclr);
+	dffe95.d = mac_out8.dataout[19..19];
+	dffe95.ena = clken;
+	dffe96.clk = clock;
+	dffe96.clrn = (! aclr);
+	dffe96.d = sft314a[1..1].out;
+	dffe96.ena = clken;
+	dffe97.clk = clock;
+	dffe97.clrn = (! aclr);
+	dffe97.d = mac_out10.dataout[1..1];
+	dffe97.ena = clken;
+	dffe98.clk = clock;
+	dffe98.clrn = (! aclr);
+	dffe98.d = mac_out4.dataout[19..19];
+	dffe98.ena = clken;
+	dffe99.clk = clock;
+	dffe99.clrn = (! aclr);
+	dffe99.d = mac_out8.dataout[20..20];
+	dffe99.ena = clken;
+	sft304a[].in = ( w650w, ( dffe286.q, ( dffe283.q, ( dffe280.q, ( dffe277.q, ( dffe274.q, ( dffe271.q, ( dffe268.q, ( dffe265.q, ( dffe262.q, ( dffe259.q, ( dffe256.q, ( dffe253.q, ( dffe250.q, ( dffe247.q, ( dffe244.q, ( dffe241.q, ( dffe238.q, ( dffe235.q, ( dffe231.q, ( dffe227.q, ( dffe223.q, ( dffe219.q, ( dffe215.q, ( dffe211.q, ( dffe207.q, ( dffe203.q, ( dffe199.q, ( dffe195.q, ( dffe191.q, ( dffe187.q, ( dffe183.q, ( dffe179.q, ( dffe175.q, ( dffe171.q, ( dffe167.q, ( dffe163.q, ( dffe159.q, ( dffe155.q, ( dffe151.q, ( dffe147.q, ( dffe143.q, ( dffe139.q, ( dffe135.q, ( dffe131.q, ( dffe127.q, ( dffe123.q, ( dffe119.q, ( dffe115.q, ( dffe111.q, ( dffe107.q, ( dffe103.q, ( dffe99.q, ( dffe95.q, ( dffe91.q, ( dffe89.q, ( dffe86.q, ( dffe83.q, ( dffe80.q, ( dffe77.q, ( dffe74.q, ( dffe71.q, ( dffe68.q, ( dffe65.q, ( dffe62.q, ( dffe59.q, ( dffe56.q, ( dffe53.q, ( dffe50.q, ( dffe47.q, ( dffe44.q, ( dffe41.q, dffe38.q))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft305a[].in = ( w650w, ( w650w, ( dffe284.q, ( dffe281.q, ( dffe278.q, ( dffe275.q, ( dffe272.q, ( dffe269.q, ( dffe266.q, ( dffe263.q, ( dffe260.q, ( dffe257.q, ( dffe254.q, ( dffe251.q, ( dffe248.q, ( dffe245.q, ( dffe242.q, ( dffe239.q, ( dffe236.q, ( dffe232.q, ( dffe228.q, ( dffe224.q, ( dffe220.q, ( dffe216.q, ( dffe212.q, ( dffe208.q, ( dffe204.q, ( dffe200.q, ( dffe196.q, ( dffe192.q, ( dffe188.q, ( dffe184.q, ( dffe180.q, ( dffe176.q, ( dffe172.q, ( dffe168.q, ( dffe164.q, ( dffe160.q, ( dffe156.q, ( dffe152.q, ( dffe148.q, ( dffe144.q, ( dffe140.q, ( dffe136.q, ( dffe132.q, ( dffe128.q, ( dffe124.q, ( dffe120.q, ( dffe116.q, ( dffe112.q, ( dffe108.q, ( dffe104.q, ( dffe100.q, ( dffe96.q, ( dffe92.q, ( dffe90.q, ( dffe87.q, ( dffe84.q, ( dffe81.q, ( dffe78.q, ( dffe75.q, ( dffe72.q, ( dffe69.q, ( dffe66.q, ( dffe63.q, ( dffe60.q, ( dffe57.q, ( dffe54.q, ( dffe51.q, ( dffe48.q, ( dffe45.q, ( dffe42.q, dffe39.q))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft306a[].in = add303_result[];
+	sft308a[].in = ( w650w, ( dffe302.q, ( dffe301.q, ( dffe300.q, ( dffe299.q, ( dffe298.q, ( dffe297.q, ( dffe296.q, ( dffe295.q, ( dffe294.q, ( dffe293.q, ( dffe292.q, ( dffe291.q, ( dffe290.q, ( dffe289.q, ( dffe288.q, ( dffe287.q, ( sft306a[71..71].out, ( sft306a[70..70].out, ( sft306a[69..69].out, ( sft306a[68..68].out, ( sft306a[67..67].out, ( sft306a[66..66].out, ( sft306a[65..65].out, ( sft306a[64..64].out, ( sft306a[63..63].out, ( sft306a[62..62].out, ( sft306a[61..61].out, ( sft306a[60..60].out, ( sft306a[59..59].out, ( sft306a[58..58].out, ( sft306a[57..57].out, ( sft306a[56..56].out, ( sft306a[55..55].out, ( sft306a[54..54].out, ( sft306a[53..53].out, ( sft306a[52..52].out, ( sft306a[51..51].out, ( sft306a[50..50].out, ( sft306a[49..49].out, ( sft306a[48..48].out, ( sft306a[47..47].out, ( sft306a[46..46].out, ( sft306a[45..45].out, ( sft306a[44..44].out, ( sft306a[43..43].out, ( sft306a[42..42].out, ( sft306a[41..41].out, ( sft306a[40..40].out, ( sft306a[39..39].out, ( sft306a[38..38].out, ( sft306a[37..37].out, ( sft306a[36..36].out, ( sft306a[35..35].out, ( sft306a[34..34].out, ( sft306a[33..33].out, ( sft306a[32..32].out, ( sft306a[31..31].out, ( sft306a[30..30].out, ( sft306a[29..29].out, ( sft306a[28..28].out, ( sft306a[27..27].out, ( sft306a[26..26].out, ( sft306a[25..25].out, ( sft306a[24..24].out, ( sft306a[23..23].out, ( sft306a[22..22].out, ( sft306a[21..21].out, ( sft306a[20..20].out, ( sft306a[19..19].out, ( sft306a[18..18].out, ( dffe88.q, ( dffe85.q, ( dffe82.q, ( dffe79.q, ( dffe76.q, ( dffe73.q, ( dffe70.q, ( dffe67.q, ( dffe64.q, ( dffe61.q, ( dffe58.q, ( dffe55.q, ( dffe52.q, ( dffe49.q, ( dffe46.q, ( dffe43.q, ( dffe40.q, dffe37.q))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft309a[].in = ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( sft306a[72..72].out, ( sft318a[53..53].out, ( sft318a[52..52].out, ( sft318a[51..51].out, ( sft318a[50..50].out, ( sft318a[49..49].out, ( sft318a[48..48].out, ( sft318a[47..47].out, ( sft318a[46..46].out, ( sft318a[45..45].out, ( sft318a[44..44].out, ( sft318a[43..43].out, ( sft318a[42..42].out, ( sft318a[41..41].out, ( sft318a[40..40].out, ( sft318a[39..39].out, ( sft318a[38..38].out, ( sft318a[37..37].out, ( sft318a[36..36].out, ( sft318a[35..35].out, ( sft318a[34..34].out, ( sft318a[33..33].out, ( sft318a[32..32].out, ( sft318a[31..31].out, ( sft318a[30..30].out, ( sft318a[29..29].out, ( sft318a[28..28].out, ( sft318a[27..27].out, ( sft318a[26..26].out, ( sft318a[25..25].out, ( sft318a[24..24].out, ( sft318a[23..23].out, ( sft318a[22..22].out, ( sft318a[21..21].out, ( sft318a[20..20].out, ( sft318a[19..19].out, ( sft318a[18..18].out, ( sft318a[17..17].out, ( sft318a[16..16].out, ( sft318a[15..15].out, ( sft318a[14..14].out, ( sft318a[13..13].out, ( sft318a[12..12].out, ( sft318a[11..11].out, ( sft318a[10..10].out, ( sft318a[9..9].out, ( sft318a[8..8].out, ( sft318a[7..7].out, ( sft318a[6..6].out, ( sft318a[5..5].out, ( sft318a[4..4].out, ( sft318a[3..3].out, ( sft318a[2..2].out, ( sft318a[1..1].out, ( sft318a[0..0].out, ( sft306a[17..17].out, ( sft306a[16..16].out, ( sft306a[15..15].out, ( sft306a[14..14].out, ( sft306a[13..13].out, ( sft306a[12..12].out, ( sft306a[11..11].out, ( sft306a[10..10].out, ( sft306a[9..9].out, ( sft306a[8..8].out, ( sft306a[7..7].out, ( sft306a[6..6].out, ( sft306a[5..5].out, ( sft306a[4..4].out, ( sft306a[3..3].out, ( sft306a[2..2].out, ( sft306a[1..1].out, sft306a[0..0].out))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft310a[].in = add307_result[];
+	sft312a[].in = ( w650w, ( mac_out16.dataout[16..16], ( mac_out16.dataout[15..15], ( mac_out16.dataout[14..14], ( mac_out16.dataout[13..13], ( mac_out16.dataout[12..12], ( mac_out16.dataout[11..11], ( mac_out16.dataout[10..10], ( mac_out16.dataout[9..9], ( mac_out16.dataout[8..8], ( mac_out16.dataout[7..7], ( mac_out16.dataout[6..6], ( mac_out16.dataout[5..5], ( mac_out16.dataout[4..4], ( mac_out16.dataout[3..3], ( mac_out16.dataout[2..2], ( mac_out16.dataout[1..1], ( mac_out16.dataout[0..0], ( mac_out14.dataout[17..17], ( mac_out14.dataout[16..16], ( mac_out14.dataout[15..15], ( mac_out14.dataout[14..14], ( mac_out14.dataout[13..13], ( mac_out14.dataout[12..12], ( mac_out14.dataout[11..11], ( mac_out14.dataout[10..10], ( mac_out14.dataout[9..9], ( mac_out14.dataout[8..8], ( mac_out14.dataout[7..7], ( mac_out14.dataout[6..6], ( mac_out14.dataout[5..5], ( mac_out14.dataout[4..4], ( mac_out14.dataout[3..3], ( mac_out14.dataout[2..2], ( mac_out14.dataout[1..0])))))))))))))))))))))))))))))))))));
+	sft313a[].in = ( w650w, ( mac_out10.dataout[34..34], ( mac_out10.dataout[33..33], ( mac_out10.dataout[32..32], ( mac_out10.dataout[31..31], ( mac_out10.dataout[30..30], ( mac_out10.dataout[29..29], ( mac_out10.dataout[28..28], ( mac_out10.dataout[27..27], ( mac_out10.dataout[26..26], ( mac_out10.dataout[25..25], ( mac_out10.dataout[24..24], ( mac_out10.dataout[23..23], ( mac_out10.dataout[22..22], ( mac_out10.dataout[21..21], ( mac_out10.dataout[20..20], ( mac_out10.dataout[19..19], ( mac_out10.dataout[18..18], ( mac_out6.dataout[17..17], ( mac_out6.dataout[16..16], ( mac_out6.dataout[15..15], ( mac_out6.dataout[14..14], ( mac_out6.dataout[13..13], ( mac_out6.dataout[12..12], ( mac_out6.dataout[11..11], ( mac_out6.dataout[10..10], ( mac_out6.dataout[9..9], ( mac_out6.dataout[8..8], ( mac_out6.dataout[7..7], ( mac_out6.dataout[6..6], ( mac_out6.dataout[5..5], ( mac_out6.dataout[4..4], ( mac_out6.dataout[3..3], ( mac_out6.dataout[2..2], ( mac_out6.dataout[1..0])))))))))))))))))))))))))))))))))));
+	sft314a[].in = add311_result[];
+	sft316a[].in = ( w650w, ( dffe285.q, ( dffe282.q, ( dffe279.q, ( dffe276.q, ( dffe273.q, ( dffe270.q, ( dffe267.q, ( dffe264.q, ( dffe261.q, ( dffe258.q, ( dffe255.q, ( dffe252.q, ( dffe249.q, ( dffe246.q, ( dffe243.q, ( dffe240.q, ( dffe237.q, ( dffe233.q, ( dffe229.q, ( dffe225.q, ( dffe221.q, ( dffe217.q, ( dffe213.q, ( dffe209.q, ( dffe205.q, ( dffe201.q, ( dffe197.q, ( dffe193.q, ( dffe189.q, ( dffe185.q, ( dffe181.q, ( dffe177.q, ( dffe173.q, ( dffe169.q, ( dffe165.q, ( dffe161.q, ( dffe157.q, ( dffe153.q, ( dffe149.q, ( dffe145.q, ( dffe141.q, ( dffe137.q, ( dffe133.q, ( dffe129.q, ( dffe125.q, ( dffe121.q, ( dffe117.q, ( dffe113.q, ( dffe109.q, ( dffe105.q, ( dffe101.q, ( dffe97.q, dffe93.q)))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft317a[].in = ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( w650w, ( dffe234.q, ( dffe230.q, ( dffe226.q, ( dffe222.q, ( dffe218.q, ( dffe214.q, ( dffe210.q, ( dffe206.q, ( dffe202.q, ( dffe198.q, ( dffe194.q, ( dffe190.q, ( dffe186.q, ( dffe182.q, ( dffe178.q, ( dffe174.q, ( dffe170.q, ( dffe166.q, ( dffe162.q, ( dffe158.q, ( dffe154.q, ( dffe150.q, ( dffe146.q, ( dffe142.q, ( dffe138.q, ( dffe134.q, ( dffe130.q, ( dffe126.q, ( dffe122.q, ( dffe118.q, ( dffe114.q, ( dffe110.q, ( dffe106.q, ( dffe102.q, ( dffe98.q, dffe94.q)))))))))))))))))))))))))))))))))))))))))))))))))))));
+	sft318a[].in = add315_result[];
+	aclr = GND;
+	clken = VCC;
+	result[105..0] = w1401w[105..0];
+	w1401w[] = ( sft310a[88..87].out, sft310a[86..85].out, sft310a[84..83].out, sft310a[82..81].out, sft310a[80..79].out, sft310a[78..77].out, sft310a[76..75].out, sft310a[74..73].out, sft310a[72..71].out, sft310a[70..69].out, sft310a[68..67].out, sft310a[66..65].out, sft310a[64..63].out, sft310a[62..61].out, sft310a[60..59].out, sft310a[58..57].out, sft310a[56..55].out, sft310a[54..53].out, sft310a[52..51].out, sft310a[50..49].out, sft310a[48..47].out, sft310a[46..45].out, sft310a[44..43].out, sft310a[42..41].out, sft310a[40..39].out, sft310a[38..37].out, sft310a[36..35].out, sft310a[34..33].out, sft310a[32..31].out, sft310a[30..29].out, sft310a[28..27].out, sft310a[26..25].out, sft310a[24..23].out, sft310a[22..21].out, sft310a[20..19].out, sft310a[18..17].out, sft310a[16..15].out, sft310a[14..13].out, sft310a[12..11].out, sft310a[10..9].out, sft310a[8..7].out, sft310a[6..5].out, sft310a[4..3].out, sft310a[2..1].out, sft310a[0..0].out, dffe36.q, dffe35.q, dffe34.q, dffe33.q, dffe32.q, dffe31.q, dffe30.q, dffe29.q, dffe28.q, dffe27.q, dffe26.q, dffe25.q, dffe24.q, dffe23.q, dffe22.q, dffe21.q, dffe20.q, dffe19.q);
+	w650w = B"0";
+END;
+--VALID FILE

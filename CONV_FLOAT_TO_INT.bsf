@@ -40,8 +40,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 224 48)
 		(output)
-		(text "result[11..0]" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "result[11..0]" (rect 164 34 218 47)(font "Arial" (font_size 8)))
+		(text "result[12..0]" (rect 0 0 67 14)(font "Arial" (font_size 8)))
+		(text "result[12..0]" (rect 164 34 219 47)(font "Arial" (font_size 8)))
 		(line (pt 224 48)(pt 144 48)(line_width 3))
 	)
 	(drawing

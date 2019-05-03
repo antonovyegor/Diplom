@@ -14,3 +14,16 @@ fsm.attack 0 0 0 1 1
 fsm.sustain 0 0 1 0 1 
 fsm.decay 0 1 0 0 1 
 fsm.release 1 0 0 0 1 
+
+State Machine - |Main|UARTPROC:uartpr|fsm
+Name fsm.finish fsm.rec_data fsm.rec_addr 
+fsm.rec_addr 0 0 0 
+fsm.rec_data 0 1 1 
+fsm.finish 1 0 1 
+
+State Machine - |Main|uartRX:uart|fsm
+Name fsm.finish fsm.rec fsm.start fsm.idle 
+fsm.idle 0 0 0 0 
+fsm.start 0 0 1 1 
+fsm.rec 0 1 0 1 
+fsm.finish 1 0 0 1 

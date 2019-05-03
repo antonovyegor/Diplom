@@ -13,7 +13,7 @@ port (
 		R: in std_logic;
 		RX : in std_logic;
 		
-		RXOUT : out std_logic_vector(31 downto 0 );
+		RXOUT : out std_logic_vector(7 downto 0 );
 		ready : out std_logic
 		
 		
@@ -26,7 +26,7 @@ architecture SYN of uartRX is
 type state is (idle,start,rec,finish);
 signal fsm : state := idle;
 
-signal data : std_logic_vector(31 downto 0);
+signal data : std_logic_vector(7 downto 0);
 signal bit_cnt : integer range 0 to 34;
 signal cnt : integer range 0 to 434;
 signal rx_buffer: std_logic_vector (3 downto 0);
@@ -67,8 +67,8 @@ begin
 					
 					when rec =>		if cnt=434 then 
 											cnt<=0;
-											data(31)<=rx_buffer(0);
-											data(30 downto 0)<= data(31 downto 1);
+											data(7)<=rx_buffer(0);
+											data(6 downto 0)<= data(7 downto 1);
 											
 											if bit_cnt = 31 then 
 													fsm<=finish;
@@ -82,7 +82,7 @@ begin
 				
 			
 		
-					when finish  => RXOUT<=data;
+					when finish  =>RXOUT<=data;
 										ready<='1';
 										fsm<=idle;
 				

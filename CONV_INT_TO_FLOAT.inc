@@ -16,7 +16,7 @@
 FUNCTION CONV_INT_TO_FLOAT 
 (
 	clock,
-	dataa[11..0]
+	dataa[12..0]
 )
 
 RETURNS (

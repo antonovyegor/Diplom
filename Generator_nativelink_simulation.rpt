@@ -34,7 +34,7 @@ ModelSim-Altera Info: # Modifying modelsim.ini
 ModelSim-Altera Info: # 
 ModelSim-Altera Info: # vcom -93 -work work {Generator.vho}
 ModelSim-Altera Info: # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-ModelSim-Altera Info: # Start time: 17:59:20 on May 01,2019
+ModelSim-Altera Info: # Start time: 22:28:30 on May 03,2019
 ModelSim-Altera Info: # vcom -reportprogress 300 -93 -work work Generator.vho 
 ModelSim-Altera Info: # -- Loading package STANDARD
 ModelSim-Altera Info: # -- Loading package TEXTIO
@@ -47,7 +47,7 @@ ModelSim-Altera Info: # -- Loading package cycloneive_atom_pack
 ModelSim-Altera Info: # -- Loading package cycloneive_components
 ModelSim-Altera Info: # -- Compiling entity Main
 ModelSim-Altera Info: # -- Compiling architecture structure of Main
-ModelSim-Altera Info: # End time: 17:59:21 on May 01,2019, Elapsed time: 0:00:01
+ModelSim-Altera Info: # End time: 22:28:33 on May 03,2019, Elapsed time: 0:00:03
 ModelSim-Altera Info: # Errors: 0, Warnings: 0
 ModelSim-Altera Info: # 
 Info: NativeLink simulation flow was successful

@@ -1,5 +1,5 @@
 Flow report for Generator
-Wed May 01 17:59:11 2019
+Fri May 03 22:28:22 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed May 01 17:59:11 2019       ;
+; Flow Status                        ; Successful - Fri May 03 22:28:22 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Generator                                   ;
 ; Top-level Entity Name              ; Main                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,585 / 6,272 ( 25 % )                      ;
-;     Total combinational functions  ; 1,402 / 6,272 ( 22 % )                      ;
-;     Dedicated logic registers      ; 1,154 / 6,272 ( 18 % )                      ;
-; Total registers                    ; 1154                                        ;
-; Total pins                         ; 26 / 92 ( 28 % )                            ;
+; Total logic elements               ; 4,188 / 6,272 ( 67 % )                      ;
+;     Total combinational functions  ; 3,825 / 6,272 ( 61 % )                      ;
+;     Dedicated logic registers      ; 2,252 / 6,272 ( 36 % )                      ;
+; Total registers                    ; 2252                                        ;
+; Total pins                         ; 30 / 92 ( 33 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
+; Total memory bits                  ; 98,524 / 276,480 ( 36 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 14 / 30 ( 47 % )                            ;
 ; Total PLLs                         ; 1 / 2 ( 50 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/01/2019 17:57:58 ;
+; Start date & time ; 05/03/2019 22:26:19 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Generator           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 207458828804622.155672267806624        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 207458828804622.155691157906840        ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
@@ -95,6 +95,7 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                           ; PLL.cmp                                ; --            ; --          ; --             ;
 ; MISC_FILE                           ; PLL.ppf                                ; --            ; --          ; --             ;
 ; MISC_FILE                           ; MUL.bsf                                ; --            ; --          ; --             ;
+; MISC_FILE                           ; MUL_inst.vhd                           ; --            ; --          ; --             ;
 ; MISC_FILE                           ; MUL.inc                                ; --            ; --          ; --             ;
 ; MISC_FILE                           ; MUL.cmp                                ; --            ; --          ; --             ;
 ; MISC_FILE                           ; CONV_INT_TO_FLOAT.bsf                  ; --            ; --          ; --             ;
@@ -125,12 +126,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:34     ; 1.0                     ; 762 MB              ; 00:01:00                           ;
-; Fitter               ; 00:00:19     ; 1.0                     ; 1136 MB             ; 00:00:23                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 566 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.2                     ; 639 MB              ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 550 MB              ; 00:00:04                           ;
-; Total                ; 00:01:03     ; --                      ; --                  ; 00:01:33                           ;
+; Analysis & Synthesis ; 00:00:46     ; 1.0                     ; 781 MB              ; 00:01:10                           ;
+; Fitter               ; 00:00:51     ; 1.1                     ; 1233 MB             ; 00:01:06                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 578 MB              ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.2                     ; 677 MB              ; 00:00:08                           ;
+; EDA Netlist Writer   ; 00:00:08     ; 1.0                     ; 587 MB              ; 00:00:09                           ;
+; Total                ; 00:01:54     ; --                      ; --                  ; 00:02:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -20,5 +20,5 @@ FUNCTION CONV_FLOAT_TO_INT
 )
 
 RETURNS (
-	result[11..0]
+	result[12..0]
 );

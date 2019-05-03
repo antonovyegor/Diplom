@@ -36,16 +36,15 @@ begin
 			case fsm is 
 					when idle =>CURRENT_STATE<="111";
 									BUSY<='0';
-									CLEARADD<='0';
+									CLEARADD<='1';
 									if GATE='1' then
 										BUSY<='1';
 										count<=0;
-										--CLEARADD<='1';
 										fsm<=attack;
 									end if;
 					when attack =>
 									CURRENT_STATE<="000";
-									CLEARADD<='0';
+									CLEARADD<='0';	BUSY<='1';
 									if GATE='0' then fsm<=idle;	
 									elsif count=ATTACK_TIME then
 										count<=0;
@@ -56,7 +55,7 @@ begin
 									end if;
 					when decay =>
 									CURRENT_STATE<="001";
-									CLEARADD<='0';
+									CLEARADD<='0';	BUSY<='1';
 									if GATE='0' then fsm<=idle;	
 									elsif count=DECAY_TIME  then
 										count<=0;
@@ -66,7 +65,7 @@ begin
 									end if;
 					when sustain =>
 									CURRENT_STATE<="010";
-									CLEARADD<='0';		
+									CLEARADD<='0';		BUSY<='1';	
 									if GATE='0'  then
 										count<=0;
 										CLEARADD<='1';
@@ -75,7 +74,7 @@ begin
 									
 					when release =>
 									CURRENT_STATE<="011";
-									CLEARADD<='0';
+									CLEARADD<='0';	BUSY<='1';
 									if count=RELEASE_TIME then
 										count<=0;
 										CLEARADD<='1';

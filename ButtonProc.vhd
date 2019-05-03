@@ -11,18 +11,14 @@ port (
 C200 : in std_logic;
 BUTTON : in std_logic_vector (0 to 11 );
 
-
-
-
-
 OCTAVE : in std_logic_vector ( 3 downto 0);
 
-FREQ1: out std_logic_vector(31 downto 0);
-GATE1: out std_logic;
+FREQ1: out std_logic_vector(31 downto 0):=X"00000000";
+GATE1: out std_logic:='0';
 BUSY1: in std_logic;
 
-FREQ2: out std_logic_vector(31 downto 0);
-GATE2: out std_logic;
+FREQ2: out std_logic_vector(31 downto 0):=X"00000000";
+GATE2: out std_logic:='0';
 BUSY2: in std_logic
 
 
@@ -47,17 +43,12 @@ component SHLL
 		);
 end component;
 
-signal f1: std_LOGIC_VECTOR (31 downto 0):=X"00000000";
-signal f2: std_LOGIC_VECTOR (31 downto 0):=X"00000000";
-signal g1: std_LOGIC :='0';
-signal g2: std_LOGIC :='0';
 
+signal g1_cnt : integer range -1 to 11 := -1;
+signal g2_cnt : integer range -1 to 11 :=-1; 
+signal cnt : integer range 0 to 12 :=0;
 begin
 
-		FREQ1<=f1;
-		FREQ2<=f2;
-		GATE1<=g1;
-		GATE2<=g2;
 
 		USHLL:for j in 0 to 11 generate
 		begin
@@ -68,13 +59,20 @@ begin
 				
 				process(C200)
 				begin
-				if rising_edge(C200) then 
-						if BUTTON(0)='1' then
-						
-							if BUSY1 = '0' then f1<=freq_array(0); g1<=BUTTON(0);
-							elsif BUSY2 = '0' then f2<=freq_array(0); g2<=BUTTON(0);
+				if rising_edge(C200) then
+				
+							if BUTTON(cnt)='1' then
+								if BUSY1 = '0' and g1_cnt=-1 then FREQ1<=freq_array(cnt); GATE1<=BUTTON(cnt); g1_cnt<=cnt;
+								elsif BUSY2 = '0' and g2_cnt=-1 then FREQ2<=freq_array(cnt); GATE2<=BUTTON(cnt);g2_cnt<=cnt;
+								end if;
+							else 
+								if g1_cnt=cnt then GATE1<='0';g1_cnt<=-1; end if;
+								if g2_cnt=cnt then GATE2<='0';g2_cnt<=-1; end if;
 							end if;
-						end if;
+							
+							if cnt = 11 then cnt<=0;
+							else cnt<=cnt+1;
+							end if;
 				end if;
 				end process;	
 				

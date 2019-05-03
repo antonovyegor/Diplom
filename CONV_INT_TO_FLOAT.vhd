@@ -33,42 +33,42 @@
 --refer to the applicable agreement for further details.
 
 
---altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone IV E" OPERATION="INT2FLOAT" ROUNDING="TO_NEAREST" WIDTH_DATA=12 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=12 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 clock dataa result
+--altfp_convert CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone IV E" OPERATION="INT2FLOAT" ROUNDING="TO_NEAREST" WIDTH_DATA=13 WIDTH_EXP_INPUT=8 WIDTH_EXP_OUTPUT=8 WIDTH_INT=13 WIDTH_MAN_INPUT=23 WIDTH_MAN_OUTPUT=23 WIDTH_RESULT=32 clock dataa result
 --VERSION_BEGIN 18.1 cbx_altbarrel_shift 2018:09:12:13:04:24:SJ cbx_altera_syncram_nd_impl 2018:09:12:13:04:24:SJ cbx_altfp_convert 2018:09:12:13:04:24:SJ cbx_altpriority_encoder 2018:09:12:13:04:24:SJ cbx_altsyncram 2018:09:12:13:04:24:SJ cbx_cycloneii 2018:09:12:13:04:24:SJ cbx_lpm_abs 2018:09:12:13:04:24:SJ cbx_lpm_add_sub 2018:09:12:13:04:24:SJ cbx_lpm_compare 2018:09:12:13:04:24:SJ cbx_lpm_decode 2018:09:12:13:04:24:SJ cbx_lpm_divide 2018:09:12:13:04:24:SJ cbx_lpm_mux 2018:09:12:13:04:24:SJ cbx_mgl 2018:09:12:13:10:36:SJ cbx_nadder 2018:09:12:13:04:24:SJ cbx_stratix 2018:09:12:13:04:24:SJ cbx_stratixii 2018:09:12:13:04:24:SJ cbx_stratixiii 2018:09:12:13:04:24:SJ cbx_stratixv 2018:09:12:13:04:24:SJ cbx_util_mgl 2018:09:12:13:04:24:SJ  VERSION_END
 
 
---altbarrel_shift CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone IV E" PIPELINE=2 SHIFTDIR="LEFT" SHIFTTYPE="LOGICAL" WIDTH=12 WIDTHDIST=4 aclr clk_en clock data distance result
+--altbarrel_shift CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="Cyclone IV E" PIPELINE=2 SHIFTDIR="LEFT" SHIFTTYPE="LOGICAL" WIDTH=13 WIDTHDIST=4 aclr clk_en clock data distance result
 --VERSION_BEGIN 18.1 cbx_altbarrel_shift 2018:09:12:13:04:24:SJ cbx_mgl 2018:09:12:13:10:36:SJ  VERSION_END
 
---synthesis_resources = reg 28 
+--synthesis_resources = reg 30 
  LIBRARY ieee;
  USE ieee.std_logic_1164.all;
 
- ENTITY  CONV_INT_TO_FLOAT_altbarrel_shift_qvf IS 
+ ENTITY  CONV_INT_TO_FLOAT_altbarrel_shift_rvf IS 
 	 PORT 
 	 ( 
 		 aclr	:	IN  STD_LOGIC := '0';
 		 clk_en	:	IN  STD_LOGIC := '1';
 		 clock	:	IN  STD_LOGIC := '0';
-		 data	:	IN  STD_LOGIC_VECTOR (11 DOWNTO 0);
+		 data	:	IN  STD_LOGIC_VECTOR (12 DOWNTO 0);
 		 distance	:	IN  STD_LOGIC_VECTOR (3 DOWNTO 0);
-		 result	:	OUT  STD_LOGIC_VECTOR (11 DOWNTO 0)
+		 result	:	OUT  STD_LOGIC_VECTOR (12 DOWNTO 0)
 	 ); 
- END CONV_INT_TO_FLOAT_altbarrel_shift_qvf;
+ END CONV_INT_TO_FLOAT_altbarrel_shift_rvf;
 
- ARCHITECTURE RTL OF CONV_INT_TO_FLOAT_altbarrel_shift_qvf IS
+ ARCHITECTURE RTL OF CONV_INT_TO_FLOAT_altbarrel_shift_rvf IS
 
 	 SIGNAL	 dir_pipe	:	STD_LOGIC_VECTOR(1 DOWNTO 0)
 	 -- synopsys translate_off
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL	 sbit_piper1d	:	STD_LOGIC_VECTOR(11 DOWNTO 0)
+	 SIGNAL	 sbit_piper1d	:	STD_LOGIC_VECTOR(12 DOWNTO 0)
 	 -- synopsys translate_off
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL	 sbit_piper2d	:	STD_LOGIC_VECTOR(11 DOWNTO 0)
+	 SIGNAL	 sbit_piper2d	:	STD_LOGIC_VECTOR(12 DOWNTO 0)
 	 -- synopsys translate_off
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
@@ -83,18 +83,18 @@
 	  := '0'
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w58w59w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w54w55w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w79w80w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w75w76w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w101w102w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w97w98w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w120w121w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w116w117w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w50w51w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w71w72w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w93w94w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w112w113w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w58w59w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w54w55w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w79w80w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w75w76w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w101w102w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w97w98w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w120w121w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w116w117w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w50w51w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w71w72w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w93w94w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w112w113w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range46w58w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range46w54w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range67w79w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
@@ -111,78 +111,78 @@
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range67w71w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range90w93w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_lg_w_sel_w_range109w112w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range90w101w102w103w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range109w120w121w122w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w61w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w82w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w104w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w123w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range90w101w102w103w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range109w120w121w122w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w61w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w82w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w104w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w123w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
 	 SIGNAL  dir_w :	STD_LOGIC_VECTOR (4 DOWNTO 0);
 	 SIGNAL  direction_w :	STD_LOGIC;
 	 SIGNAL  pad_w :	STD_LOGIC_VECTOR (7 DOWNTO 0);
-	 SIGNAL  sbit_w :	STD_LOGIC_VECTOR (59 DOWNTO 0);
+	 SIGNAL  sbit_w :	STD_LOGIC_VECTOR (64 DOWNTO 0);
 	 SIGNAL  sel_w :	STD_LOGIC_VECTOR (3 DOWNTO 0);
-	 SIGNAL  smux_w :	STD_LOGIC_VECTOR (47 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w115w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w118w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range48w_w_w_sbit_w_range41w_range52w53w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range69w_w_w_sbit_w_range64w_range73w74w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range91w_w_w_sbit_w_range84w_range95w96w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range41w_range49w_w_pad_w_range48w56w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range64w_range70w_w_pad_w_range69w77w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range84w_range92w_w_pad_w_range91w99w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  smux_w :	STD_LOGIC_VECTOR (51 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w115w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w118w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range48w_w_w_sbit_w_range41w_range52w53w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range69w_w_w_sbit_w_range64w_range73w74w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_pad_w_range91w_w_w_sbit_w_range84w_range95w96w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range41w_range49w_w_pad_w_range48w56w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range64w_range70w_w_pad_w_range69w77w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_w_w_sbit_w_range84w_range92w_w_pad_w_range91w99w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_dir_w_range43w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_dir_w_range65w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_dir_w_range88w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_dir_w_range107w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range41w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range64w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range84w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range106w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range41w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range64w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range84w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_sbit_w_range106w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_sel_w_range46w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_sel_w_range67w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_sel_w_range90w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_altbarrel_shift5_w_sel_w_range109w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_smux_w_range83w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_w_smux_w_range124w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_smux_w_range83w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_w_smux_w_range124w	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
  BEGIN
 
-	loop0 : FOR i IN 0 TO 11 GENERATE 
+	loop0 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w58w59w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range46w58w(0) AND wire_altbarrel_shift5_w_w_w_sbit_w_range41w_range49w_w_pad_w_range48w56w(i);
 	END GENERATE loop0;
-	loop1 : FOR i IN 0 TO 11 GENERATE 
+	loop1 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w54w55w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range46w54w(0) AND wire_altbarrel_shift5_w_w_pad_w_range48w_w_w_sbit_w_range41w_range52w53w(i);
 	END GENERATE loop1;
-	loop2 : FOR i IN 0 TO 11 GENERATE 
+	loop2 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w79w80w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range67w79w(0) AND wire_altbarrel_shift5_w_w_w_sbit_w_range64w_range70w_w_pad_w_range69w77w(i);
 	END GENERATE loop2;
-	loop3 : FOR i IN 0 TO 11 GENERATE 
+	loop3 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w75w76w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range67w75w(0) AND wire_altbarrel_shift5_w_w_pad_w_range69w_w_w_sbit_w_range64w_range73w74w(i);
 	END GENERATE loop3;
-	loop4 : FOR i IN 0 TO 11 GENERATE 
+	loop4 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w101w102w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range90w101w(0) AND wire_altbarrel_shift5_w_w_w_sbit_w_range84w_range92w_w_pad_w_range91w99w(i);
 	END GENERATE loop4;
-	loop5 : FOR i IN 0 TO 11 GENERATE 
+	loop5 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w97w98w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range90w97w(0) AND wire_altbarrel_shift5_w_w_pad_w_range91w_w_w_sbit_w_range84w_range95w96w(i);
 	END GENERATE loop5;
-	loop6 : FOR i IN 0 TO 11 GENERATE 
+	loop6 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w120w121w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range109w120w(0) AND wire_altbarrel_shift5_w118w(i);
 	END GENERATE loop6;
-	loop7 : FOR i IN 0 TO 11 GENERATE 
+	loop7 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w116w117w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range109w116w(0) AND wire_altbarrel_shift5_w115w(i);
 	END GENERATE loop7;
-	loop8 : FOR i IN 0 TO 11 GENERATE 
+	loop8 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w50w51w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range46w50w(0) AND wire_altbarrel_shift5_w_sbit_w_range41w(i);
 	END GENERATE loop8;
-	loop9 : FOR i IN 0 TO 11 GENERATE 
+	loop9 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w71w72w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range67w71w(0) AND wire_altbarrel_shift5_w_sbit_w_range64w(i);
 	END GENERATE loop9;
-	loop10 : FOR i IN 0 TO 11 GENERATE 
+	loop10 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w93w94w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range90w93w(0) AND wire_altbarrel_shift5_w_sbit_w_range84w(i);
 	END GENERATE loop10;
-	loop11 : FOR i IN 0 TO 11 GENERATE 
+	loop11 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w112w113w(i) <= wire_altbarrel_shift5_w_lg_w_sel_w_range109w112w(0) AND wire_altbarrel_shift5_w_sbit_w_range106w(i);
 	END GENERATE loop11;
 	wire_altbarrel_shift5_w_lg_w_sel_w_range46w58w(0) <= wire_altbarrel_shift5_w_sel_w_range46w(0) AND wire_altbarrel_shift5_w_lg_w_dir_w_range43w57w(0);
@@ -201,59 +201,59 @@
 	wire_altbarrel_shift5_w_lg_w_sel_w_range67w71w(0) <= NOT wire_altbarrel_shift5_w_sel_w_range67w(0);
 	wire_altbarrel_shift5_w_lg_w_sel_w_range90w93w(0) <= NOT wire_altbarrel_shift5_w_sel_w_range90w(0);
 	wire_altbarrel_shift5_w_lg_w_sel_w_range109w112w(0) <= NOT wire_altbarrel_shift5_w_sel_w_range109w(0);
-	loop12 : FOR i IN 0 TO 11 GENERATE 
+	loop12 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w58w59w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w54w55w(i);
 	END GENERATE loop12;
-	loop13 : FOR i IN 0 TO 11 GENERATE 
+	loop13 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w79w80w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w75w76w(i);
 	END GENERATE loop13;
-	loop14 : FOR i IN 0 TO 11 GENERATE 
+	loop14 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range90w101w102w103w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w101w102w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w97w98w(i);
 	END GENERATE loop14;
-	loop15 : FOR i IN 0 TO 11 GENERATE 
+	loop15 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range109w120w121w122w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w120w121w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w116w117w(i);
 	END GENERATE loop15;
-	loop16 : FOR i IN 0 TO 11 GENERATE 
+	loop16 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w61w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range46w50w51w(i);
 	END GENERATE loop16;
-	loop17 : FOR i IN 0 TO 11 GENERATE 
+	loop17 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w82w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range67w71w72w(i);
 	END GENERATE loop17;
-	loop18 : FOR i IN 0 TO 11 GENERATE 
+	loop18 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w104w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range90w101w102w103w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range90w93w94w(i);
 	END GENERATE loop18;
-	loop19 : FOR i IN 0 TO 11 GENERATE 
+	loop19 : FOR i IN 0 TO 12 GENERATE 
 		wire_altbarrel_shift5_w123w(i) <= wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_sel_w_range109w120w121w122w(i) OR wire_altbarrel_shift5_w_lg_w_lg_w_sel_w_range109w112w113w(i);
 	END GENERATE loop19;
 	dir_w <= ( dir_pipe(1) & dir_w(2) & dir_pipe(0) & dir_w(0) & direction_w);
 	direction_w <= '0';
 	pad_w <= (OTHERS => '0');
-	result <= sbit_w(59 DOWNTO 48);
-	sbit_w <= ( sbit_piper2d & smux_w(35 DOWNTO 24) & sbit_piper1d & smux_w(11 DOWNTO 0) & data);
+	result <= sbit_w(64 DOWNTO 52);
+	sbit_w <= ( sbit_piper2d & smux_w(38 DOWNTO 26) & sbit_piper1d & smux_w(12 DOWNTO 0) & data);
 	sel_w <= ( sel_pipec3r1d & sel_pipec2r1d & distance(1 DOWNTO 0));
 	smux_w <= ( wire_altbarrel_shift5_w123w & wire_altbarrel_shift5_w104w & wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range67w79w80w81w82w & wire_altbarrel_shift5_w_lg_w_lg_w_lg_w_lg_w_sel_w_range46w58w59w60w61w);
-	wire_altbarrel_shift5_w115w <= ( pad_w(7 DOWNTO 0) & sbit_w(47 DOWNTO 44));
-	wire_altbarrel_shift5_w118w <= ( sbit_w(39 DOWNTO 36) & pad_w(7 DOWNTO 0));
-	wire_altbarrel_shift5_w_w_pad_w_range48w_w_w_sbit_w_range41w_range52w53w <= ( pad_w(0) & sbit_w(11 DOWNTO 1));
-	wire_altbarrel_shift5_w_w_pad_w_range69w_w_w_sbit_w_range64w_range73w74w <= ( pad_w(1 DOWNTO 0) & sbit_w(23 DOWNTO 14));
-	wire_altbarrel_shift5_w_w_pad_w_range91w_w_w_sbit_w_range84w_range95w96w <= ( pad_w(3 DOWNTO 0) & sbit_w(35 DOWNTO 28));
-	wire_altbarrel_shift5_w_w_w_sbit_w_range41w_range49w_w_pad_w_range48w56w <= ( sbit_w(10 DOWNTO 0) & pad_w(0));
-	wire_altbarrel_shift5_w_w_w_sbit_w_range64w_range70w_w_pad_w_range69w77w <= ( sbit_w(21 DOWNTO 12) & pad_w(1 DOWNTO 0));
-	wire_altbarrel_shift5_w_w_w_sbit_w_range84w_range92w_w_pad_w_range91w99w <= ( sbit_w(31 DOWNTO 24) & pad_w(3 DOWNTO 0));
+	wire_altbarrel_shift5_w115w <= ( pad_w(7 DOWNTO 0) & sbit_w(51 DOWNTO 47));
+	wire_altbarrel_shift5_w118w <= ( sbit_w(43 DOWNTO 39) & pad_w(7 DOWNTO 0));
+	wire_altbarrel_shift5_w_w_pad_w_range48w_w_w_sbit_w_range41w_range52w53w <= ( pad_w(0) & sbit_w(12 DOWNTO 1));
+	wire_altbarrel_shift5_w_w_pad_w_range69w_w_w_sbit_w_range64w_range73w74w <= ( pad_w(1 DOWNTO 0) & sbit_w(25 DOWNTO 15));
+	wire_altbarrel_shift5_w_w_pad_w_range91w_w_w_sbit_w_range84w_range95w96w <= ( pad_w(3 DOWNTO 0) & sbit_w(38 DOWNTO 30));
+	wire_altbarrel_shift5_w_w_w_sbit_w_range41w_range49w_w_pad_w_range48w56w <= ( sbit_w(11 DOWNTO 0) & pad_w(0));
+	wire_altbarrel_shift5_w_w_w_sbit_w_range64w_range70w_w_pad_w_range69w77w <= ( sbit_w(23 DOWNTO 13) & pad_w(1 DOWNTO 0));
+	wire_altbarrel_shift5_w_w_w_sbit_w_range84w_range92w_w_pad_w_range91w99w <= ( sbit_w(34 DOWNTO 26) & pad_w(3 DOWNTO 0));
 	wire_altbarrel_shift5_w_dir_w_range43w(0) <= dir_w(0);
 	wire_altbarrel_shift5_w_dir_w_range65w(0) <= dir_w(1);
 	wire_altbarrel_shift5_w_dir_w_range88w(0) <= dir_w(2);
 	wire_altbarrel_shift5_w_dir_w_range107w(0) <= dir_w(3);
-	wire_altbarrel_shift5_w_sbit_w_range41w <= sbit_w(11 DOWNTO 0);
-	wire_altbarrel_shift5_w_sbit_w_range64w <= sbit_w(23 DOWNTO 12);
-	wire_altbarrel_shift5_w_sbit_w_range84w <= sbit_w(35 DOWNTO 24);
-	wire_altbarrel_shift5_w_sbit_w_range106w <= sbit_w(47 DOWNTO 36);
+	wire_altbarrel_shift5_w_sbit_w_range41w <= sbit_w(12 DOWNTO 0);
+	wire_altbarrel_shift5_w_sbit_w_range64w <= sbit_w(25 DOWNTO 13);
+	wire_altbarrel_shift5_w_sbit_w_range84w <= sbit_w(38 DOWNTO 26);
+	wire_altbarrel_shift5_w_sbit_w_range106w <= sbit_w(51 DOWNTO 39);
 	wire_altbarrel_shift5_w_sel_w_range46w(0) <= sel_w(0);
 	wire_altbarrel_shift5_w_sel_w_range67w(0) <= sel_w(1);
 	wire_altbarrel_shift5_w_sel_w_range90w(0) <= sel_w(2);
 	wire_altbarrel_shift5_w_sel_w_range109w(0) <= sel_w(3);
-	wire_altbarrel_shift5_w_smux_w_range83w <= smux_w(23 DOWNTO 12);
-	wire_altbarrel_shift5_w_smux_w_range124w <= smux_w(47 DOWNTO 36);
+	wire_altbarrel_shift5_w_smux_w_range83w <= smux_w(25 DOWNTO 13);
+	wire_altbarrel_shift5_w_smux_w_range124w <= smux_w(51 DOWNTO 39);
 	PROCESS (clock, aclr)
 	BEGIN
 		IF (aclr = '1') THEN dir_pipe <= (OTHERS => '0');
@@ -295,7 +295,7 @@
 		END IF;
 	END PROCESS;
 
- END RTL; --CONV_INT_TO_FLOAT_altbarrel_shift_qvf
+ END RTL; --CONV_INT_TO_FLOAT_altbarrel_shift_rvf
 
 
 --altpriority_encoder CBX_AUTO_BLACKBOX="ALL" WIDTH=16 WIDTHAD=4 data q
@@ -667,23 +667,23 @@
  LIBRARY lpm;
  USE lpm.all;
 
---synthesis_resources = lpm_add_sub 2 lpm_compare 1 reg 139 
+--synthesis_resources = lpm_add_sub 2 lpm_compare 1 reg 143 
  LIBRARY ieee;
  USE ieee.std_logic_1164.all;
 
- ENTITY  CONV_INT_TO_FLOAT_altfp_convert_h1n IS 
+ ENTITY  CONV_INT_TO_FLOAT_altfp_convert_j1n IS 
 	 PORT 
 	 ( 
 		 clock	:	IN  STD_LOGIC;
-		 dataa	:	IN  STD_LOGIC_VECTOR (11 DOWNTO 0);
+		 dataa	:	IN  STD_LOGIC_VECTOR (12 DOWNTO 0);
 		 result	:	OUT  STD_LOGIC_VECTOR (31 DOWNTO 0)
 	 ); 
- END CONV_INT_TO_FLOAT_altfp_convert_h1n;
+ END CONV_INT_TO_FLOAT_altfp_convert_j1n;
 
- ARCHITECTURE RTL OF CONV_INT_TO_FLOAT_altfp_convert_h1n IS
+ ARCHITECTURE RTL OF CONV_INT_TO_FLOAT_altfp_convert_j1n IS
 
-	 SIGNAL  wire_altbarrel_shift5_data	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  wire_altbarrel_shift5_result	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_data	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  wire_altbarrel_shift5_result	:	STD_LOGIC_VECTOR (12 DOWNTO 0);
 	 SIGNAL  wire_altpriority_encoder2_data	:	STD_LOGIC_VECTOR (15 DOWNTO 0);
 	 SIGNAL  wire_altpriority_encoder2_q	:	STD_LOGIC_VECTOR (3 DOWNTO 0);
 	 SIGNAL	 exponent_bus_pre_reg	:	STD_LOGIC_VECTOR(7 DOWNTO 0)
@@ -701,12 +701,12 @@
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL	 mag_int_a_reg	:	STD_LOGIC_VECTOR(10 DOWNTO 0)
+	 SIGNAL	 mag_int_a_reg	:	STD_LOGIC_VECTOR(11 DOWNTO 0)
 	 -- synopsys translate_off
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL	 mag_int_a_reg2	:	STD_LOGIC_VECTOR(10 DOWNTO 0)
+	 SIGNAL	 mag_int_a_reg2	:	STD_LOGIC_VECTOR(11 DOWNTO 0)
 	 -- synopsys translate_off
 	  := (OTHERS => '0')
 	 -- synopsys translate_on
@@ -751,17 +751,17 @@
 	  := '0'
 	 -- synopsys translate_on
 	 ;
-	 SIGNAL  wire_add_sub1_datab	:	STD_LOGIC_VECTOR (10 DOWNTO 0);
-	 SIGNAL  wire_add_sub1_result	:	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  wire_add_sub1_datab	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  wire_add_sub1_result	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  wire_add_sub3_result	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  wire_cmpr4_w_lg_w_lg_alb22w23w	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  wire_cmpr4_w_lg_alb21w	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  wire_cmpr4_w_lg_alb22w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_cmpr4_alb	:	STD_LOGIC;
 	 SIGNAL  wire_w_lg_w_lg_max_neg_value_selector18w19w	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
-	 SIGNAL  wire_w_lg_w_lg_sign_int_a5w6w	:	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  wire_w_lg_w_lg_sign_int_a5w6w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  wire_w_lg_max_neg_value_selector17w	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
-	 SIGNAL  wire_w_lg_sign_int_a4w	:	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  wire_w_lg_sign_int_a4w	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  wire_w_lg_max_neg_value_selector18w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  wire_w_lg_sign_int_a5w	:	STD_LOGIC_VECTOR (0 DOWNTO 0);
 	 SIGNAL  aclr	:	STD_LOGIC;
@@ -774,33 +774,33 @@
 	 SIGNAL  exponent_output_w :	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  exponent_rounded :	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  exponent_zero_w :	STD_LOGIC_VECTOR (7 DOWNTO 0);
-	 SIGNAL  int_a :	STD_LOGIC_VECTOR (10 DOWNTO 0);
-	 SIGNAL  int_a_2s :	STD_LOGIC_VECTOR (10 DOWNTO 0);
-	 SIGNAL  invert_int_a :	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  int_a :	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  int_a_2s :	STD_LOGIC_VECTOR (11 DOWNTO 0);
+	 SIGNAL  invert_int_a :	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  leading_zeroes :	STD_LOGIC_VECTOR (3 DOWNTO 0);
-	 SIGNAL  mag_int_a :	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  mag_int_a :	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  mantissa_bus :	STD_LOGIC_VECTOR (22 DOWNTO 0);
 	 SIGNAL  mantissa_pre_round :	STD_LOGIC_VECTOR (23 DOWNTO 0);
 	 SIGNAL  mantissa_rounded :	STD_LOGIC_VECTOR (23 DOWNTO 0);
 	 SIGNAL  max_neg_value_selector :	STD_LOGIC;
 	 SIGNAL  max_neg_value_w :	STD_LOGIC_VECTOR (7 DOWNTO 0);
 	 SIGNAL  minus_leading_zero :	STD_LOGIC_VECTOR (7 DOWNTO 0);
-	 SIGNAL  prio_mag_int_a :	STD_LOGIC_VECTOR (11 DOWNTO 0);
-	 SIGNAL  priority_pad_one_w :	STD_LOGIC_VECTOR (3 DOWNTO 0);
+	 SIGNAL  prio_mag_int_a :	STD_LOGIC_VECTOR (12 DOWNTO 0);
+	 SIGNAL  priority_pad_one_w :	STD_LOGIC_VECTOR (2 DOWNTO 0);
 	 SIGNAL  result_w :	STD_LOGIC_VECTOR (31 DOWNTO 0);
-	 SIGNAL  shifted_mag_int_a :	STD_LOGIC_VECTOR (10 DOWNTO 0);
+	 SIGNAL  shifted_mag_int_a :	STD_LOGIC_VECTOR (11 DOWNTO 0);
 	 SIGNAL  sign_bus :	STD_LOGIC;
 	 SIGNAL  sign_int_a :	STD_LOGIC;
 	 SIGNAL  zero_padding_w :	STD_LOGIC_VECTOR (3 DOWNTO 0);
-	 COMPONENT  CONV_INT_TO_FLOAT_altbarrel_shift_qvf
+	 COMPONENT  CONV_INT_TO_FLOAT_altbarrel_shift_rvf
 	 PORT
 	 ( 
 		aclr	:	IN  STD_LOGIC := '0';
 		clk_en	:	IN  STD_LOGIC := '1';
 		clock	:	IN  STD_LOGIC := '0';
-		data	:	IN  STD_LOGIC_VECTOR(11 DOWNTO 0);
+		data	:	IN  STD_LOGIC_VECTOR(12 DOWNTO 0);
 		distance	:	IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
-		result	:	OUT  STD_LOGIC_VECTOR(11 DOWNTO 0)
+		result	:	OUT  STD_LOGIC_VECTOR(12 DOWNTO 0)
 	 ); 
 	 END COMPONENT;
 	 COMPONENT  CONV_INT_TO_FLOAT_altpriority_encoder_rb6
@@ -863,13 +863,13 @@
 	loop29 : FOR i IN 0 TO 7 GENERATE 
 		wire_w_lg_w_lg_max_neg_value_selector18w19w(i) <= wire_w_lg_max_neg_value_selector18w(0) AND exponent_zero_w(i);
 	END GENERATE loop29;
-	loop30 : FOR i IN 0 TO 10 GENERATE 
+	loop30 : FOR i IN 0 TO 11 GENERATE 
 		wire_w_lg_w_lg_sign_int_a5w6w(i) <= wire_w_lg_sign_int_a5w(0) AND int_a(i);
 	END GENERATE loop30;
 	loop31 : FOR i IN 0 TO 7 GENERATE 
 		wire_w_lg_max_neg_value_selector17w(i) <= max_neg_value_selector AND max_neg_value_w(i);
 	END GENERATE loop31;
-	loop32 : FOR i IN 0 TO 10 GENERATE 
+	loop32 : FOR i IN 0 TO 11 GENERATE 
 		wire_w_lg_sign_int_a4w(i) <= sign_int_a AND int_a_2s(i);
 	END GENERATE loop32;
 	wire_w_lg_max_neg_value_selector18w(0) <= NOT max_neg_value_selector;
@@ -877,34 +877,34 @@
 	aclr <= '0';
 	bias_value_w <= "01111111";
 	clk_en <= '1';
-	const_bias_value_add_width_int_w <= "10001001";
+	const_bias_value_add_width_int_w <= "10001010";
 	exceptions_value <= (wire_w_lg_w_lg_max_neg_value_selector18w19w OR wire_w_lg_max_neg_value_selector17w);
 	exponent_bus <= exponent_rounded;
 	exponent_bus_pre <= (wire_cmpr4_w_lg_w_lg_alb22w23w OR wire_cmpr4_w_lg_alb21w);
 	exponent_output_w <= wire_add_sub3_result;
 	exponent_rounded <= exponent_bus_pre_reg;
 	exponent_zero_w <= (OTHERS => '0');
-	int_a <= dataa(10 DOWNTO 0);
+	int_a <= dataa(11 DOWNTO 0);
 	int_a_2s <= wire_add_sub1_result;
 	invert_int_a <= (NOT int_a);
 	leading_zeroes <= (NOT priority_encoder_reg);
 	mag_int_a <= (wire_w_lg_w_lg_sign_int_a5w6w OR wire_w_lg_sign_int_a4w);
 	mantissa_bus <= mantissa_rounded(22 DOWNTO 0);
-	mantissa_pre_round <= ( shifted_mag_int_a(10 DOWNTO 0) & "0000000000000");
+	mantissa_pre_round <= ( shifted_mag_int_a(11 DOWNTO 0) & "000000000000");
 	mantissa_rounded <= mantissa_pre_round_reg;
 	max_neg_value_selector <= (wire_cmpr4_alb AND sign_int_a_reg2);
-	max_neg_value_w <= "10001010";
+	max_neg_value_w <= "10001011";
 	minus_leading_zero <= ( zero_padding_w & leading_zeroes);
 	prio_mag_int_a <= ( mag_int_a_reg & "1");
 	priority_pad_one_w <= (OTHERS => '1');
 	result <= result_reg;
 	result_w <= ( sign_bus & exponent_bus & mantissa_bus);
-	shifted_mag_int_a <= wire_altbarrel_shift5_result(10 DOWNTO 0);
+	shifted_mag_int_a <= wire_altbarrel_shift5_result(11 DOWNTO 0);
 	sign_bus <= sign_int_a_reg5;
-	sign_int_a <= dataa(11);
+	sign_int_a <= dataa(12);
 	zero_padding_w <= (OTHERS => '0');
 	wire_altbarrel_shift5_data <= ( "0" & mag_int_a_reg2);
-	altbarrel_shift5 :  CONV_INT_TO_FLOAT_altbarrel_shift_qvf
+	altbarrel_shift5 :  CONV_INT_TO_FLOAT_altbarrel_shift_rvf
 	  PORT MAP ( 
 		aclr => aclr,
 		clk_en => clk_en,
@@ -1023,11 +1023,11 @@
 			END IF;
 		END IF;
 	END PROCESS;
-	wire_add_sub1_datab <= "00000000001";
+	wire_add_sub1_datab <= "000000000001";
 	add_sub1 :  lpm_add_sub
 	  GENERIC MAP (
 		LPM_DIRECTION => "ADD",
-		LPM_WIDTH => 11,
+		LPM_WIDTH => 12,
 		lpm_hint => "ONE_INPUT_IS_CONSTANT=YES"
 	  )
 	  PORT MAP ( 
@@ -1064,7 +1064,7 @@
 		datab => bias_value_w
 	  );
 
- END RTL; --CONV_INT_TO_FLOAT_altfp_convert_h1n
+ END RTL; --CONV_INT_TO_FLOAT_altfp_convert_j1n
 --VALID FILE
 
 
@@ -1075,7 +1075,7 @@ ENTITY CONV_INT_TO_FLOAT IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
-		dataa		: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+		dataa		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 		result		: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 END CONV_INT_TO_FLOAT;
@@ -1087,10 +1087,10 @@ ARCHITECTURE RTL OF conv_int_to_float IS
 
 
 
-	COMPONENT CONV_INT_TO_FLOAT_altfp_convert_h1n
+	COMPONENT CONV_INT_TO_FLOAT_altfp_convert_j1n
 	PORT (
 			clock	: IN STD_LOGIC ;
-			dataa	: IN STD_LOGIC_VECTOR (11 DOWNTO 0);
+			dataa	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 			result	: OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
 	);
 	END COMPONENT;
@@ -1098,7 +1098,7 @@ ARCHITECTURE RTL OF conv_int_to_float IS
 BEGIN
 	result    <= sub_wire0(31 DOWNTO 0);
 
-	CONV_INT_TO_FLOAT_altfp_convert_h1n_component : CONV_INT_TO_FLOAT_altfp_convert_h1n
+	CONV_INT_TO_FLOAT_altfp_convert_j1n_component : CONV_INT_TO_FLOAT_altfp_convert_j1n
 	PORT MAP (
 		clock => clock,
 		dataa => dataa,
@@ -1119,17 +1119,17 @@ END RTL;
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "altfp_convert"
 -- Retrieval info: CONSTANT: OPERATION STRING "INT2FLOAT"
 -- Retrieval info: CONSTANT: ROUNDING STRING "TO_NEAREST"
--- Retrieval info: CONSTANT: WIDTH_DATA NUMERIC "12"
+-- Retrieval info: CONSTANT: WIDTH_DATA NUMERIC "13"
 -- Retrieval info: CONSTANT: WIDTH_EXP_INPUT NUMERIC "8"
 -- Retrieval info: CONSTANT: WIDTH_EXP_OUTPUT NUMERIC "8"
--- Retrieval info: CONSTANT: WIDTH_INT NUMERIC "12"
+-- Retrieval info: CONSTANT: WIDTH_INT NUMERIC "13"
 -- Retrieval info: CONSTANT: WIDTH_MAN_INPUT NUMERIC "23"
 -- Retrieval info: CONSTANT: WIDTH_MAN_OUTPUT NUMERIC "23"
 -- Retrieval info: CONSTANT: WIDTH_RESULT NUMERIC "32"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
--- Retrieval info: USED_PORT: dataa 0 0 12 0 INPUT NODEFVAL "dataa[11..0]"
--- Retrieval info: CONNECT: @dataa 0 0 12 0 dataa 0 0 12 0
+-- Retrieval info: USED_PORT: dataa 0 0 13 0 INPUT NODEFVAL "dataa[12..0]"
+-- Retrieval info: CONNECT: @dataa 0 0 13 0 dataa 0 0 13 0
 -- Retrieval info: USED_PORT: result 0 0 32 0 OUTPUT NODEFVAL "result[31..0]"
 -- Retrieval info: CONNECT: result 0 0 32 0 @result 0 0 32 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL CONV_INT_TO_FLOAT.vhd TRUE FALSE

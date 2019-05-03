@@ -21,6 +21,5 @@ FUNCTION MUL
 )
 
 RETURNS (
-	result[31..0],
-	zero
+	result[31..0]
 );
