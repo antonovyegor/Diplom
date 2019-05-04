@@ -62,8 +62,8 @@ begin
 				if rising_edge(C200) then
 				
 							if BUTTON(cnt)='1' then
-								if BUSY1 = '0' and g1_cnt=-1 then FREQ1<=freq_array(cnt); GATE1<=BUTTON(cnt); g1_cnt<=cnt;
-								elsif BUSY2 = '0' and g2_cnt=-1 then FREQ2<=freq_array(cnt); GATE2<=BUTTON(cnt);g2_cnt<=cnt;
+								if BUSY1 = '0' and g1_cnt=-1 and g2_cnt/=cnt then FREQ1<=freq_array(cnt); GATE1<='1'; g1_cnt<=cnt;
+								elsif BUSY2 = '0' and g2_cnt=-1 and g1_cnt/=cnt then FREQ2<=freq_array(cnt); GATE2<='1';g2_cnt<=cnt;
 								end if;
 							else 
 								if g1_cnt=cnt then GATE1<='0';g1_cnt<=-1; end if;
