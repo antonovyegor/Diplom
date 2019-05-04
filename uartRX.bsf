@@ -47,8 +47,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 176 32)
 		(output)
-		(text "RXOUT[31..0]" (rect 0 0 57 12)(font "Arial" ))
-		(text "RXOUT[31..0]" (rect 98 27 155 39)(font "Arial" ))
+		(text "RXOUT[7..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "RXOUT[7..0]" (rect 101 27 155 39)(font "Arial" ))
 		(line (pt 176 32)(pt 160 32)(line_width 3))
 	)
 	(port

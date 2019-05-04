@@ -30,6 +30,7 @@ source_file = 1, C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_OSCILL.vhd
 source_file = 1, C:/Users/Evgeniy/Documents/GitHub/Diplom/UARTPROC.vhd
 source_file = 1, C:/Users/Evgeniy/Documents/GitHub/Diplom/test.vhd
 source_file = 1, C:/Users/Evgeniy/Documents/GitHub/Diplom/TB_BLOCK1.vhd
+source_file = 1, C:/Users/Evgeniy/Documents/GitHub/Diplom/MAINDIAGRAM.bdf
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/timing_b.vhd
