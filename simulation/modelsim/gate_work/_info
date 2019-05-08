@@ -7,9 +7,9 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Evgeniy/Documents/GitHub/Diplom/simulation/modelsim
+Z0 dD:/My_Designs/Diplom/simulation/modelsim
 Emain
-Z1 w1556960744
+Z1 w1557315549
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -27,9 +27,9 @@ Va4aER^BagmTUVMlGH^CMF2
 !s100 `B<TYe89X5EnWEI4Gl63L0
 Z12 OV;C;10.5b;63
 31
-!s110 1556960757
+!s110 1557315563
 !i10b 1
-Z13 !s108 1556960757.000000
+Z13 !s108 1557315563.000000
 Z14 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
 Z15 !s107 Generator.vho|
 !i113 1
@@ -45,13 +45,13 @@ R7
 R8
 R9
 DEx4 work 4 main 0 22 a4aER^BagmTUVMlGH^CMF2
-l5859
+l5936
 L81
-V8Oj6A^;3AbKc_k]D[V4We1
-!s100 SA@36flE>zYgbnA?RbDFQ3
+V:F8biWKdMXY0WM2h11Db71
+!s100 oQFT8NQ6C=gMaMl8Hg9l[3
 R12
 31
-!s110 1556960759
+!s110 1557315564
 !i10b 1
 R13
 R14

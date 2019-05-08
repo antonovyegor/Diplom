@@ -36,10 +36,10 @@ begin
 			case fsm is 
 					when idle =>CURRENT_STATE<="111";
 									BUSY<='0';
-									CLEARADD<='1';
+									count<=0;
+									CLEARADD<='0';
 									if GATE='1' then
 										BUSY<='1';
-										count<=0;
 										fsm<=attack;
 									end if;
 					when attack =>
@@ -49,8 +49,7 @@ begin
 									elsif count=ATTACK_TIME then
 										count<=0;
 										CLEARADD<='1';
-										fsm<=decay;
-										
+										fsm<=decay;	
 									else count<=count+1;
 									end if;
 					when decay =>
@@ -65,7 +64,8 @@ begin
 									end if;
 					when sustain =>
 									CURRENT_STATE<="010";
-									CLEARADD<='0';		BUSY<='1';	
+									CLEARADD<='0';
+									BUSY<='1';	
 									if GATE='0'  then
 										count<=0;
 										CLEARADD<='1';

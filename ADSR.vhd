@@ -111,6 +111,12 @@ begin
 	end if;
 	end process;
 
-	FP<=buffer_res;
-
+	process (curr_mode,C200)
+	begin
+	if curr_mode="111" then 
+		FP<=X"00000000";
+	else 
+		FP<=buffer_res;
+	end if;
+	end process;
 end SYN;
