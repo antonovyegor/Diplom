@@ -12,6 +12,7 @@ port (
 		button : in std_logic_vector(0 to 11);
 		BUT_1 : in std_logic:='0';
 		BUT_2 : in std_logic:='0';
+		BUT_3 : in std_logic:='0';
 		SIGNAL_OUT : out std_logic_vector(12 downto 0)
 );
 
@@ -63,8 +64,8 @@ RELEASE_DELTA : out  std_LOGIC_VECTOR(31 downto 0) :=X"3456bf95";
 RELEASE_TIME : out  natural:=5000000;
 
 BUT_1 : in std_logic:='0';
-BUT_2 : in std_logic:='0'
-
+BUT_2 : in std_logic:='0';
+BUT_3 : in std_logic:='0'
 );
 	end component;
 	
@@ -189,7 +190,8 @@ begin
 			RELEASE_DELTA=> relEASE_DELTA_sig,
 			RELEASE_TIME=> releaSE_TIME_sig,
 			BUT_1=>but_1,
-			BUT_2=>but_2
+			BUT_2=>but_2,
+			BUT_3=>but_3
 			);
 
 		UPLL: PLL port map (

@@ -4,63 +4,783 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "SIGNAL_OUT[0]",
+					"name" : "OCTAVE[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[1]",
+					"name" : "OCTAVE[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[2]",
+					"name" : "OCTAVE[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[3]",
+					"name" : "OCTAVE[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[4]",
+					"name" : "MULT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[5]",
+					"name" : "MULT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[6]",
+					"name" : "ATTACK_TIME[0]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[7]",
+					"name" : "ATTACK_TIME[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[8]",
+					"name" : "ATTACK_TIME[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[9]",
+					"name" : "ATTACK_TIME[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[10]",
+					"name" : "ATTACK_TIME[4]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[11]",
+					"name" : "ATTACK_TIME[5]",
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[12]",
+					"name" : "ATTACK_TIME[6]",
 					"strict" : false
 				},
 				{
-					"name" : "C",
+					"name" : "ATTACK_TIME[7]",
 					"strict" : false
 				},
 				{
-					"name" : "R",
+					"name" : "ATTACK_TIME[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_TIME[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "ATTACK_DELTA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_TIME[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "DECAY_DELTA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[30]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_DELTA[31]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[16]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[17]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[18]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[19]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[20]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[21]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[22]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[23]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[24]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[25]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[26]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[27]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[28]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[29]",
+					"strict" : false
+				},
+				{
+					"name" : "RELEASE_TIME[30]",
 					"strict" : false
 				},
 				{
@@ -72,55 +792,47 @@
 					"strict" : false
 				},
 				{
-					"name" : "button[10]",
+					"name" : "C",
 					"strict" : false
 				},
 				{
-					"name" : "button[9]",
+					"name" : "R",
 					"strict" : false
 				},
 				{
-					"name" : "button[8]",
+					"name" : "DATA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "button[11]",
+					"name" : "READY",
 					"strict" : false
 				},
 				{
-					"name" : "button[2]",
+					"name" : "DATA[1]",
 					"strict" : false
 				},
 				{
-					"name" : "button[1]",
+					"name" : "DATA[7]",
 					"strict" : false
 				},
 				{
-					"name" : "button[0]",
+					"name" : "DATA[6]",
 					"strict" : false
 				},
 				{
-					"name" : "button[3]",
+					"name" : "DATA[5]",
 					"strict" : false
 				},
 				{
-					"name" : "button[5]",
+					"name" : "DATA[4]",
 					"strict" : false
 				},
 				{
-					"name" : "button[6]",
+					"name" : "DATA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "button[4]",
-					"strict" : false
-				},
-				{
-					"name" : "button[7]",
-					"strict" : false
-				},
-				{
-					"name" : "RX",
+					"name" : "DATA[2]",
 					"strict" : false
 				}
 			]

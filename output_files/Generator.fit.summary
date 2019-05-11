@@ -1,16 +1,16 @@
-Fitter Status : Successful - Wed May 08 14:38:49 2019
+Fitter Status : Failed - Fri May 10 09:31:07 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Generator
-Top-level Entity Name : Main
+Top-level Entity Name : UARTPROC
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 4,258 / 6,272 ( 68 % )
-    Total combinational functions : 3,894 / 6,272 ( 62 % )
-    Dedicated logic registers : 2,252 / 6,272 ( 36 % )
-Total registers : 2252
-Total pins : 30 / 92 ( 33 % )
+Total logic elements : 296 / 6,272 ( 5 % )
+    Total combinational functions : 113 / 6,272 ( 2 % )
+    Dedicated logic registers : 274 / 6,272 ( 4 % )
+Total registers : 274
+Total pins : 209 / 92 ( 227 % )
 Total virtual pins : 0
-Total memory bits : 98,524 / 276,480 ( 36 % )
-Embedded Multiplier 9-bit elements : 14 / 30 ( 47 % )
-Total PLLs : 1 / 2 ( 50 % )
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

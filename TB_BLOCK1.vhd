@@ -20,7 +20,6 @@ port (
 		
 		ATTACK_DELTA : in std_logic_vector(31 downto 0);
 		DECAY_DELTA : in std_logic_vector(31 downto 0);
-		SUSTAIN_LEVEL : in std_logic_vector(31 downto 0);
 		RELEASE_DELTA : in std_logic_vector(31 downto 0);
 	TO_ADD : out std_LOGIC_VECTOR(11 dowNTO 0)
 
@@ -49,7 +48,6 @@ port (
 		
 		ATTACK_DELTA : in std_logic_vector(31 downto 0);
 		DECAY_DELTA : in std_logic_vector(31 downto 0);
-		SUSTAIN_LEVEL : in std_logic_vector(31 downto 0);
 		RELEASE_DELTA : in std_logic_vector(31 downto 0);
 		
 	
@@ -77,7 +75,6 @@ begin
   relEASE_TIME=>RELEASE_TIME,
   attACK_DELTA=>ATTACK_DELTA,
   decAY_DELTA=>DECAY_DELTA,
-  susTAIN_LEVEL=>SUSTAIN_LEVEL,
   relEASE_DELTA=>relEASE_DELTA,
 	TO_ADD=>TO_ADD);
   
