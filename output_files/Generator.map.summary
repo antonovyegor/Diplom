@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri May 10 09:31:04 2019
+Analysis & Synthesis Status : Successful - Tue May 28 22:35:40 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Generator
-Top-level Entity Name : UARTPROC
+Top-level Entity Name : Main
 Family : Cyclone IV E
-Total logic elements : 295
-    Total combinational functions : 112
-    Dedicated logic registers : 274
-Total registers : 274
-Total pins : 209
+Total logic elements : 4,476
+    Total combinational functions : 3,831
+    Dedicated logic registers : 2,302
+Total registers : 2302
+Total pins : 20
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total memory bits : 98,524
+Embedded Multiplier 9-bit elements : 14
+Total PLLs : 1

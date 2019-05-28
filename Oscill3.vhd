@@ -44,8 +44,8 @@ with MULT_OUT select SIGNAL_OUT <=
     FROM_MEMORY when "11",
 	 X"000" when others;
 
-Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);	
-Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);		 
-Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);		 	 	
+--Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);	
+--Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);		 
+--Ugen1: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);		 	 	
 
 end BEH;

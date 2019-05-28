@@ -13,7 +13,9 @@ port (
 		BUT_1 : in std_logic:='0';
 		BUT_2 : in std_logic:='0';
 		BUT_3 : in std_logic:='0';
-		SIGNAL_OUT : out std_logic_vector(12 downto 0)
+		LED: out std_LOGIC;
+		--SIGNAL_OUT : out std_logic_vector(12 downto 0)
+		SIGNAL_OUT : out std_logic
 );
 
 end entity;
@@ -42,6 +44,8 @@ architecture BEH of Main is
 	signal busy1: std_LOGIC;
 	
 	signal octave_sig : std_LOGIC_VECTOR(3  dowNTO 0) := "0000";
+	
+	signal SIGNAL_TO_DAC :  std_logic_vector(12 downto 0);
 	
 	component UARTPROC 
 	port (
@@ -164,7 +168,13 @@ PORT
 		result		: OUT STD_LOGIC_VECTOR (12 DOWNTO 0)
 	);
 end component;
-  
+
+
+component DAC
+	Port ( DACin : in  STD_LOGIC_VECTOR (12 downto 0);
+           DAC_Clk : in  STD_LOGIC;
+           DACout : out  STD_LOGIC);
+end component;
   
   signal uart_data : std_LOGIC_VECTOR (7 dowNTO 0);
   signal uart_ready : std_LOGIC;
@@ -178,6 +188,20 @@ signal DECAY_DELTA_sig :   std_LOGIC_VECTOR(31 downto 0);
 signal RELEASE_DELTA_sig :   std_LOGIC_VECTOR(31 downto 0);
 signal RELEASE_TIME_sig :   natural ;
 begin
+
+		process (C)
+		variable count: natural := 0;
+		variable ledv : std_LOGIC :='0';
+		begin
+		LED<=ledv;
+		if rising_edge(C) then
+			count:=count+1;
+			if count = 50000000 then 
+				ledv := not(ledv);
+			end if;
+			
+		end if;
+		end process;
 
 		uart : UARTRX port map(clk50=>C,R=>R,RX=>RX,RXOUT=>uart_data,READY=>uart_ready);
 		uartpr : UARTPROC port map (C=>c0,R=>R, READY=>uart_ready,DATA=>uart_data ,
@@ -216,8 +240,12 @@ begin
 		UADD : ADD port map(
 		data0x=>sin_from_gen(0),
 		data1x=>sin_from_gen(1),
-		result => SIGNAL_OUT
+		--result => SIGNAL_OUT
+		result =>SIGNAL_TO_DAC
 		);
+		
+		
+		UDAC : DAC port map (DACin=>SIGNAL_TO_DAC, DAC_CLK=>c0,DACout => SIGNAL_OUT );
 		
 		UBut : ButtonProc port map (C200=>c0,BUTTON=>BUTTON,OCTAVE=>octave_sig,
 		FREQ1=>freq0,FREQ2=>freq1,GATE1=>gate0,GATE2=>gate1,BUSY1=>busy0,BUSY2=>busy1);
