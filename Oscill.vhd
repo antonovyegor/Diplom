@@ -36,11 +36,12 @@ signal saw :  std_LOGIC_VECTOR (11 dowNTO 0);
 	
 			
 begin 
-with MULT_OUT select SIGNAL_OUT <=
-    meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr when "01",
-    saw when "10",
-    FROM_MEMORY when "11",
-	 X"000" when others;
+with MULT_OUT select 
+		SIGNAL_OUT <=
+		meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr&meandr when "01",
+		saw when "10",
+		FROM_MEMORY when "11",
+		X"000" when others;
 
 Ugen: gen port map (C=>C, FREQ_REG=>FREQ_REG,ADDR_SIN=>ADDRESS_OUT,SIG_MEANDR=>meandr,SIG_SAW=>saw);		 	
 

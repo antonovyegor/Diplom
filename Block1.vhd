@@ -27,8 +27,7 @@ port (
 	DECAY_DELTA : in std_logic_vector(31 downto 0);
 	RELEASE_DELTA : in std_logic_vector(31 downto 0);
 		
-	
-	
+
 	TO_ADD : out std_LOGIC_VECTOR(11 dowNTO 0)
 );
 

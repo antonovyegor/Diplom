@@ -10,8 +10,8 @@ R: in std_logic;
 READY : in std_logic;
 DATA : in std_logic_vector ( 7 downto 0);
 
-OCTAVE: out std_LOGIC_VECTOR(3 downto 0) :="0000";
-MULT :  out std_LOGIC_VECTOR (1 downto 0) := "00";
+OCTAVE: out std_LOGIC_VECTOR(3 downto 0) :="0010";
+MULT :  out std_LOGIC_VECTOR (1 downto 0) := "11";
 ATTACK_TIME : out  natural := 7000000;
 ATTACK_DELTA : out  std_LOGIC_VECTOR(31 downto 0):=X"34196446";
 
@@ -49,17 +49,11 @@ MULT<=conv_std_logic_vector(mult_cnt,2);
  process (BUT_1,BUT_2,BUT_3)
  begin
 		if rising_edge(BUT_1) then
-				octave_cnt<=octave_cnt+1;
-				if octave_cnt = 9 then octave_cnt<=0; end if;
+				if octave_cnt = 9 then octave_cnt<=0; else octave_cnt<=octave_cnt+1; end if;
 		end if;
 		if rising_edge(BUT_2) then
-				mult_cnt<=mult_cnt+1;
-				if mult_cnt = 3 then mult_cnt<=0; end if;
+				if mult_cnt = 3 then mult_cnt<=0;else mult_cnt<=mult_cnt+1; end if;
 		end if;
-		if rising_edge(BUT_3) then
-				
-		end if;		
- 
  end process;
  
  
@@ -69,32 +63,6 @@ begin
 			if R='1' then 
 				fsm<= rec_addr;
 			elsif rising_edge(C) then
---			
-----				if BUT_1='1'  then 
-----							OCTAVE<="0100";
-----							MULT<="11";
-----							ATTACK_TIME<=7000000;
-----							DECAY_TIME<=3000000;
-----							RELEASE_TIME<=5000000;
-----							ATTACK_DELTA<=X"34196446";
-----							DECAY_DELTA<=X"34b2f4fc";
-----							RELEASE_DELTA<=X"3456bf95";
---							
-----				elsif BUT_2='1' then
-----							OCTAVE<="0111";
-----							MULT<="11";
-----							ATTACK_TIME<=1;
-----							DECAY_TIME<=0;
-----							RELEASE_TIME<=10000000;
-----							ATTACK_DELTA<=X"3f800000";
-----							DECAY_DELTA<=X"00000000";
-----							RELEASE_DELTA<=X"33d6bf95";
---							
---				elsif BUT_3='1' then 
---							-- нажатие клавиши переключает настройки ADSR
---				end if;
-			
-			
 				case fsm is 
 					when rec_addr => 
 						cnt<=0;

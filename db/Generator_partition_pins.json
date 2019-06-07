@@ -8,7 +8,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT",
+					"name" : "SIGNAL_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SIGNAL_OUT[12]",
 					"strict" : false
 				},
 				{
@@ -17,54 +65,6 @@
 				},
 				{
 					"name" : "R",
-					"strict" : false
-				},
-				{
-					"name" : "button[5]",
-					"strict" : false
-				},
-				{
-					"name" : "button[6]",
-					"strict" : false
-				},
-				{
-					"name" : "button[4]",
-					"strict" : false
-				},
-				{
-					"name" : "button[7]",
-					"strict" : false
-				},
-				{
-					"name" : "button[1]",
-					"strict" : false
-				},
-				{
-					"name" : "button[2]",
-					"strict" : false
-				},
-				{
-					"name" : "button[0]",
-					"strict" : false
-				},
-				{
-					"name" : "button[3]",
-					"strict" : false
-				},
-				{
-					"name" : "button[9]",
-					"strict" : false
-				},
-				{
-					"name" : "button[10]",
-					"strict" : false
-				},
-				{
-					"name" : "button[8]",
-					"strict" : false
-				},
-				{
-					"name" : "button[11]",
 					"strict" : false
 				},
 				{
@@ -77,6 +77,22 @@
 				},
 				{
 					"name" : "RX",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
 					"strict" : false
 				}
 			]

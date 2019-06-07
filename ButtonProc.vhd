@@ -55,13 +55,13 @@ begin
 		 U: SHLL port map ( data=>freq_memory(j),distance=>OCTAVE,result=>freq_array(j));
 		end generate USHLL;
 		
-
+		
 				
 				process(C200)
 				begin
 				if rising_edge(C200) then
 				
-							if BUTTON(cnt)='1' then
+							if BUTTON(cnt)='0' then
 								if BUSY1 = '0' and g1_cnt=-1 and g2_cnt/=cnt then FREQ1<=freq_array(cnt); GATE1<='1'; g1_cnt<=cnt;
 								elsif BUSY2 = '0' and g2_cnt=-1 and g1_cnt/=cnt then FREQ2<=freq_array(cnt); GATE2<='1';g2_cnt<=cnt;
 								end if;
