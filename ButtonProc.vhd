@@ -31,9 +31,8 @@ architecture SYN of BUTtonProc is
 
 	type MEM1232 is array(0 to 11) of std_LOGIC_VECTOR(31 dowNTO 0 );
 
-
-signal freq_array : MEM1232:=( X"0000057d",X"000005d0",X"00000629",X"00000686",X"000006ea",X"00000752",X"000007c2",X"00000838",X"000008b6",X"0000049D",X"0000093a",X"00000a5c");
 constant freq_memory : MEM1232:=(X"0000057d",X"000005d0",X"00000629",X"00000686",X"000006ea",X"00000752",X"000007c2",X"00000838",X"000008b6",X"0000049D",X"0000093a",X"00000a5c");
+signal freq_array : MEM1232:=freq_memory;
 
 
 component SHLL

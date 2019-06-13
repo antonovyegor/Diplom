@@ -14,8 +14,7 @@ port (
 		BUT_2 : in std_logic;
 		BUT_3 : in std_logic;
 		LED: out std_LOGIC;
-		SIGNAL_OUT : out std_logic_vector(12 downto 0)
-		--SIGNAL_OUT : out std_logic
+		SIGNAL_OUT : out std_logic
 );
 
 end entity;
@@ -24,41 +23,6 @@ end entity;
 architecture BEH of Main is
 
 	type  MEM2_12 is array (0 to 1) of std_LOGIC_VECTOR(11 downto 0);
-	signal c50: std_LOGIC;
-	signal c0: std_LOGIC;
-	signal c1: std_LOGIC;
-	signal c2: std_LOGIC;
-	
-	
-	signal addr : MEM2_12;
-	signal data : MEM2_12;
-	signal sin_from_gen : MEM2_12;
-
-	signal freq0  : std_LOGIC_VECTOR(31 downto 0);
-	signal freq1  : std_LOGIC_VECTOR(31 downto 0);
-	
-	signal gate0: std_LOGIC;
-	signal gate1: std_LOGIC;
-	
-	signal busy0: std_LOGIC;
-	signal busy1: std_LOGIC;
-	
-	signal octave_sig : std_LOGIC_VECTOR(3  dowNTO 0) := "0011";
-	
-	signal SIGNAL_VECTOR :  std_logic_vector(12 downto 0);
-	
-	signal But_Count : std_logic_vector(0 to 11) := "101111111111";
-	
-	
-	component Debuger is
-		port (
-			source : out std_logic_vector(3 downto 0);                     -- source
-			probe  : in  std_logic_vector(19 downto 0) := (others => 'X')  -- probe
-		);
-	end component Debuger;
-
-	
-
 	
 	
 	component UARTPROC 
@@ -68,22 +32,22 @@ R: in std_logic;
 READY : in std_logic;
 DATA : in std_logic_vector ( 7 downto 0);
 
-OCTAVE: out std_LOGIC_VECTOR(3 downto 0) :="0011";
-MULT :  out std_LOGIC_VECTOR (1 downto 0) := "00";
-ATTACK_TIME : out  natural := 7000000;
-ATTACK_DELTA : out  std_LOGIC_VECTOR(31 downto 0):=X"34196446";
+OCTAVE: out std_LOGIC_VECTOR(3 downto 0) ;
+MULT :  out std_LOGIC_VECTOR (1 downto 0) ;
+ATTACK_TIME : out  natural ;
+ATTACK_DELTA : out  std_LOGIC_VECTOR(31 downto 0);
 
-DECAY_TIME :  out natural :=3000000;
-DECAY_DELTA :  out std_LOGIC_VECTOR(31 downto 0):=X"34b2f4fc";
+DECAY_TIME :  out natural ;
+DECAY_DELTA :  out std_LOGIC_VECTOR(31 downto 0);
 
 
 
-RELEASE_DELTA : out  std_LOGIC_VECTOR(31 downto 0) :=X"3456bf95";
-RELEASE_TIME : out  natural:=5000000;
+RELEASE_DELTA : out  std_LOGIC_VECTOR(31 downto 0) ;
+RELEASE_TIME : out  natural;
 
-BUT_1 : in std_logic:='0';
-BUT_2 : in std_logic:='0';
-BUT_3 : in std_logic:='0'
+BUT_1 : in std_logic;
+BUT_2 : in std_logic;
+BUT_3 : in std_logic
 );
 	end component;
 	
@@ -153,11 +117,11 @@ BUTTON : in std_logic_vector (0 to 11 );
 
 OCTAVE : in std_logic_vector ( 3 downto 0);
 
-FREQ1: out std_logic_vector(31 downto 0):=X"00000000";
+FREQ1: out std_logic_vector(31 downto 0);
 GATE1: out std_logic:='0';
 BUSY1: in std_logic;
 
-FREQ2: out std_logic_vector(31 downto 0):=X"00000000";
+FREQ2: out std_logic_vector(31 downto 0);
 GATE2: out std_logic:='0';
 BUSY2: in std_logic
 
@@ -189,44 +153,48 @@ component DAC
            DAC_Clk : in  STD_LOGIC;
            DACout : out  STD_LOGIC);
 end component;
-  
-  signal uart_data : std_LOGIC_VECTOR (7 dowNTO 0);
-  signal uart_ready : std_LOGIC;
-signal MULT_sig :   std_LOGIC_VECTOR (1 downto 0);
-signal ATTACK_TIME_sig :   natural;
-signal ATTACK_DELTA_sig :   std_LOGIC_VECTOR(31 downto 0);
-
-signal DECAY_TIME_sig :   natural;
-signal DECAY_DELTA_sig :   std_LOGIC_VECTOR(31 downto 0);
-
-signal RELEASE_DELTA_sig :   std_LOGIC_VECTOR(31 downto 0);
-signal RELEASE_TIME_sig :   natural ;
-begin
-		
 	
-		c50<= C;
-		
-		udebuger :  Debuger
-		port map (
-			 -- sources.source
-			probe  => SIGNAL_VECTOR&"0000000"   --  probes.probe
-		);
-		
-		
-		
-		process(C)
-		variable count : integer :=0;
-		begin
-			if rising_edge(C) then
-				if count = 150000000 then 
-					count:=0;
-					but_Count(1 to 11 ) <= but_Count( 0 to 10);
-					but_Count(0)<=but_Count(11);
-				else count:=count+1;
-				end if;
-			end if;
-		end process;
-		--LED<=but_Count(0 to 3);
+	signal C200: std_LOGIC;
+	signal C400: std_LOGIC;
+	signal C10: std_LOGIC;
+	
+	
+	signal addr : MEM2_12;
+	signal data : MEM2_12;
+	signal sin_from_gen : MEM2_12;
+
+	signal freq0  : std_LOGIC_VECTOR(31 downto 0);
+	signal freq1  : std_LOGIC_VECTOR(31 downto 0);
+	
+	signal gate0: std_LOGIC;
+	signal gate1: std_LOGIC;
+	
+	signal busy0: std_LOGIC;
+	signal busy1: std_LOGIC;
+	
+	signal octave_sig : std_LOGIC_VECTOR(3  dowNTO 0) := "1000";
+	
+	signal SIGNAL_VECTOR :  std_logic_vector(12 downto 0);
+	signal SIGNAL_TO_DAC :  std_logic_vector(12 downto 0);
+	
+	signal uart_data : std_LOGIC_VECTOR (7 dowNTO 0);
+	signal uart_ready : std_LOGIC;
+	
+	
+	signal MULT_SIG :   std_LOGIC_VECTOR (1 downto 0)  := "11";
+	
+	signal ATTACK_TIME_sig :   natural := 7000000;
+	signal ATTACK_DELTA_SIG :   std_LOGIC_VECTOR(31 downto 0):=X"34196446";
+
+	signal DECAY_TIME_SIG :   natural:= 3000000;
+	signal DECAY_DELTA_SIG :   std_LOGIC_VECTOR(31 downto 0):=X"34b2f4fc";
+
+	signal RELEASE_TIME_SIG :   natural :=5000000 ;
+	signal RELEASE_DELTA_SIG :   std_LOGIC_VECTOR(31 downto 0):=X"3456bf95";
+	
+
+	
+begin
 		
 		process (C)
 		variable count: natural := 0;
@@ -238,21 +206,25 @@ begin
 			if count = 50000000 then 
 				ledv := not(ledv);
 				count:=0;
-			end if;
-			
+			end if;	
 		end if;
 		end process;
 
 		uart : UARTRX port map(clk50=>C,R=>R,RX=>RX,RXOUT=>uart_data,READY=>uart_ready);
-		uartpr : UARTPROC port map (C=>c0,R=>R, READY=>uart_ready,DATA=>uart_data ,
-			OCTAVE=>octave_sig,
-			MULT=>mulT_sig,
-			ATTACK_TIME=>attack_time_sig,
-			ATTACK_DELTA=> attACK_DELTA_sig,
-			DECAY_DELTA=>decAY_DELTA_sig,
-			DECAY_TIME=>decAY_TIME_sig,
-			RELEASE_DELTA=> relEASE_DELTA_sig,
-			RELEASE_TIME=> releaSE_TIME_sig,
+		
+		uartpr : UARTPROC port map (
+			C=>C200,
+			R=>R, 
+			READY=>uart_ready,
+			DATA=>uart_data ,
+			OCTAVE=>octave_SIG,
+			MULT=>mulT_SIG,
+			ATTACK_TIME=>attack_time_SIG,
+			ATTACK_DELTA=> attACK_DELTA_SIG,
+			DECAY_DELTA=>decAY_DELTA_SIG,
+			DECAY_TIME=>decAY_TIME_SIG,
+			RELEASE_DELTA=> relEASE_DELTA_SIG,
+			RELEASE_TIME=> releaSE_TIME_SIG,
 			BUT_1=>but_1,
 			BUT_2=>but_2,
 			BUT_3=>but_3
@@ -260,43 +232,46 @@ begin
 
 		UPLL: PLL port map (
 			inclk0=>C,
-			c0 =>c0, -- 200
-			c1 =>c1, -- 400
-			c2 =>c2  -- 10
+			C0 =>C200, 
+			c1 =>C400, 
+			c2 =>C10 
 		);
 
 		
 
 		UROM1: ROM1 port map(
-		clock=>c1,
+		clock=>C200,
 		address=>addr(0),q=>data(0)
 		);
 		UROM2: ROM1 port map(
-		clock=>c1,
+		clock=>C200,
 		address=>addr(1),q=>data(1)
 		);
 
-		SIGNAL_OUT<=SIGNAL_VECTOR;
+		
 		UADD : ADD port map(
 		data0x=>sin_from_gen(0),
 		data1x=>sin_from_gen(1),
-		result =>SIGNAL_VECTOR
-		--result => SIGNAL_OUT
-		--result =>SIGNAL_TO_DAC
+		result =>SIGNAL_TO_DAC
 		);
 		
 		
-		--UDAC : DAC port map (DACin=>SIGNAL_TO_DAC, DAC_CLK=>c0,DACout => SIGNAL_OUT );
+		UDAC : DAC port map(DAC_CLK=>C, DACin => SIGNAL_TO_DAC, DACout=>SIGNAL_OUT);
 		
---		UBut : ButtonProc port map (C200=>c0,BUTTON=>BUTTON,OCTAVE=>octave_sig,
---		FREQ1=>freq0,FREQ2=>freq1,GATE1=>gate0,GATE2=>gate1,BUSY1=>busy0,BUSY2=>busy1);
-		
-		UBut : ButtonProc port map (C200=>C,BUTTON=>but_Count,OCTAVE=>octave_sig,
-		FREQ1=>freq0,FREQ2=>freq1,GATE1=>gate0,GATE2=>gate1,BUSY1=>busy0,BUSY2=>busy1);
+		UBut : ButtonProc port map (
+		C200=>C,
+		BUTTON=>but_Count,
+		OCTAVE=>octave_SIG,
+		FREQ1=>freq0,
+		FREQ2=>freq1,
+		GATE1=>gate0,
+		GATE2=>gate1,
+		BUSY1=>busy0,
+		BUSY2=>busy1);
 		
 		BlockU1 : Block1 port map (
-		C200=>c0,
-		C50=>C,C10=>c2,
+		C200=>C200,
+		C50=>C,C10=>C10,
 		MULT_OUT=>mulT_sig,
 		ADDR=>addr(0),
 		DATA_SIN=>data(0),
@@ -312,8 +287,8 @@ begin
 		RELEASE_TIME=>releaSE_TIME_sig
 		);
 		BlockU2 : Block1 port map (
-		C200=>c0,
-		C50=>C,C10=>c2,
+		C200=>C200,
+		C50=>C,C10=>C10,
 		MULT_OUT=>mulT_sig,
 		ADDR=>addr(1),
 		DATA_SIN=>data(1),

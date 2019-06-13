@@ -11,11 +11,7 @@ end DAC;
  
 architecture Behavioral of DAC is
  
---signal DeltaB : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
---signal SigmaA : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
---signal SigmaB : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
---signal SigmaLatсhD : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
---signal SigmaLatсhQ : STD_LOGIC_VECTOR (14 downto 0) := "000000000000000";
+
 
 signal DeltaB : std_LOGIC_VECTOR (14 downto 0) := "000000000000000";
  signal SigmaA : std_LOGIC_VECTOR (14 downto 0) := "000000000000000";

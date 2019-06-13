@@ -8,63 +8,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SIGNAL_OUT[0]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[7]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[8]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[9]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[10]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[11]",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT[12]",
+					"name" : "SIGNAL_OUT",
 					"strict" : false
 				},
 				{
 					"name" : "C",
-					"strict" : false
-				},
-				{
-					"name" : "R",
 					"strict" : false
 				},
 				{
@@ -73,26 +21,6 @@
 				},
 				{
 					"name" : "BUT_1",
-					"strict" : false
-				},
-				{
-					"name" : "RX",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tms",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
 					"strict" : false
 				}
 			]

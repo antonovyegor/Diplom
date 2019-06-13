@@ -75,37 +75,24 @@ set_global_assignment -name VHDL_FILE Block1.vhd
 set_global_assignment -name VHDL_FILE ButtonProc.vhd
 set_global_assignment -name VHDL_FILE TB_OSCILL.vhd
 set_global_assignment -name VHDL_FILE UARTPROC.vhd
-set_global_assignment -name VHDL_FILE test.vhd
 set_global_assignment -name VHDL_FILE TB_BLOCK1.vhd
 set_global_assignment -name BDF_FILE MAINDIAGRAM.bdf
 set_global_assignment -name VHDL_FILE LFO.vhd
 set_global_assignment -name MIF_FILE LFO_ROM.mif
 set_global_assignment -name QIP_FILE ROMLFO.qip
-set_global_assignment -name VHDL_FILE Oscill3.vhd
 set_global_assignment -name VHDL_FILE DAC.vhd
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
+set_global_assignment -name VHDL_FILE Debuger/synthesis/Debuger.vhd
+set_global_assignment -name QIP_FILE Debuger/synthesis/Debuger.qip
+set_global_assignment -name VHDL_FILE TB_DAC.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_88 -to BUT_1
 set_location_assignment PIN_89 -to BUT_2
-set_instance_assignment -name IO_STANDARD "2.5 V" -to button[7]
-set_location_assignment PIN_28 -to SIGNAL_OUT[12]
-set_location_assignment PIN_31 -to SIGNAL_OUT[11]
-set_location_assignment PIN_33 -to SIGNAL_OUT[10]
-set_location_assignment PIN_42 -to SIGNAL_OUT[9]
-set_location_assignment PIN_44 -to SIGNAL_OUT[8]
-set_location_assignment PIN_49 -to SIGNAL_OUT[7]
-set_location_assignment PIN_51 -to SIGNAL_OUT[6]
-set_location_assignment PIN_53 -to SIGNAL_OUT[5]
-set_location_assignment PIN_55 -to SIGNAL_OUT[4]
-set_location_assignment PIN_59 -to SIGNAL_OUT[3]
-set_location_assignment PIN_64 -to SIGNAL_OUT[2]
-set_location_assignment PIN_66 -to SIGNAL_OUT[1]
-set_location_assignment PIN_68 -to SIGNAL_OUT[0]
-set_global_assignment -name VHDL_FILE Debuger/synthesis/Debuger.vhd
-set_global_assignment -name QIP_FILE Debuger/synthesis/Debuger.qip
 set_location_assignment PIN_87 -to LED
+set_location_assignment PIN_80 -to SIGNAL_OUT
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VHDL_FILE MAINDIAGRAM.vhd

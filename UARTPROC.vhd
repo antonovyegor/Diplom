@@ -81,11 +81,8 @@ begin
 						end if;
 					when finish => 
 							case addr is
-								when X"01" =>    --octave_cnt<=conv_integer('0'& data_vector(3 downto 0));
-								when X"02" =>    --mult_cnt<=conv_integer('0'& data_vector(1 downto 0));
 								when X"03" =>    ATTACK_TIME<=conv_integer(data_vector);
 								when X"04" =>    DECAY_TIME<=conv_integer( data_vector);
-								when X"05" =>    
 								when X"06" =>    RELEASE_TIME<=conv_integer( data_vector);
 								when X"07" =>    ATTACK_DELTA<=data_vector;
 								when X"08" =>    DECAY_DELTA<=data_vector;

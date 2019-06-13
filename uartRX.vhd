@@ -80,8 +80,6 @@ begin
 											cnt<=cnt+1;
 										end if;
 				
-			
-		
 					when finish  =>RXOUT<=data;
 										ready<='1';
 										fsm<=idle;
