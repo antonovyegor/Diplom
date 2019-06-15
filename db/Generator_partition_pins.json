@@ -4,11 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LED",
-					"strict" : false
-				},
-				{
-					"name" : "SIGNAL_OUT",
+					"name" : "SIG_OUT",
 					"strict" : false
 				},
 				{
@@ -16,11 +12,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "BUT_2",
+					"name" : "BUTTON",
 					"strict" : false
 				},
 				{
-					"name" : "BUT_1",
+					"name" : "MUX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MUX[0]",
 					"strict" : false
 				}
 			]

@@ -9,6 +9,7 @@ entity TB_DAC  is
 port (
 		C : in std_logic;
 		BUTTON : in std_LOGIC;
+		MUX: in std_LOGIC_VECTOR(0 to 1);
 		SIG_OUT : out std_LOGIC
 );
 
@@ -54,28 +55,27 @@ port (
 );
 end component;
 
-signal c10,c200 : std_LOGIC ; 
---signal addr : std_LOGIC_VECTOR(11 dowNTO 0) ; 
+signal C10,C200 : std_LOGIC ; 
+
 signal data : std_LOGIC_VECTOR(12 dowNTO 0) ; 
 
 begin
 UPLL: PLL port map (
 			inclk0=>C,
-			c0 =>c200, -- 200
-			--c1 =>c400, -- 400
-			c2 =>c10  -- 10
+			c0 =>c200, 
+			c2 =>c10 
 		);
 data(12)<='0';
 
-U2 : DAC port map (DAC_Clk => C, DACin=> data,  DACout=> SIG_OUT);
+U2 : DAC port map (DAC_Clk => C10, DACin=> data,  DACout=> SIG_OUT);
 
 U3: TB_BLOCK1 port map(
 C200=>c200,
 C50 => C,
  C10=>c10,
- FREQ=>X"00000FFF",
+ FREQ=>X"00029F14",
  GatE=>not(BUTTON),
- MULT_OUT=>"01",
+ MULT_OUT=>MUX,
  ATTACK_TIME=>7000000,
  DECAY_TIME=>3000000,
  RELEASE_TIME=>5000000,

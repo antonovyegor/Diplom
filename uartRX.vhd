@@ -54,7 +54,7 @@ begin
 									if rx_buffer(0)='1' and rx_buffer(1)='0'  then 
 										bit_cnt<=0;
 										fsm<=start;
-										cnt <=0;
+										cnt <=0;	
 									
 									end if;
 									ready<='0';
@@ -70,7 +70,7 @@ begin
 											data(7)<=rx_buffer(0);
 											data(6 downto 0)<= data(7 downto 1);
 											
-											if bit_cnt = 31 then 
+											if bit_cnt = 7 then 
 													fsm<=finish;
 											else bit_cnt<=bit_cnt+1;
 											end if;

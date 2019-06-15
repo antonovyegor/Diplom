@@ -260,7 +260,7 @@ begin
 		
 		UBut : ButtonProc port map (
 		C200=>C,
-		BUTTON=>but_Count,
+		BUTTON=>butTON,
 		OCTAVE=>octave_SIG,
 		FREQ1=>freq0,
 		FREQ2=>freq1,

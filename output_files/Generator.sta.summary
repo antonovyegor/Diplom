@@ -3,27 +3,23 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -9.938
-TNS   : -2885.316
+Slack : -8.713
+TNS   : -1334.508
+
+Type  : Slow 1200mV 85C Model Setup 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : -5.055
+TNS   : -103.983
 
 Type  : Slow 1200mV 85C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -4.607
-TNS   : -246.937
-
-Type  : Slow 1200mV 85C Model Setup 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : -4.239
-TNS   : -119.325
-
-Type  : Slow 1200mV 85C Model Setup 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : -3.723
-TNS   : -102.662
+Slack : -3.572
+TNS   : -90.888
 
 Type  : Slow 1200mV 85C Model Setup 'C'
-Slack : -1.066
-TNS   : -8.248
+Slack : 15.929
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.402
+Slack : 0.421
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
@@ -31,31 +27,23 @@ Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'C'
-Slack : 0.454
+Slack : 0.464
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 1.325
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 1.782
+Type  : Slow 1200mV 85C Model Hold 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 1.510
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.855
+Slack : 1.846
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.604
+Slack : 1.577
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 0.341
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 0.354
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 0.361
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
@@ -63,35 +51,31 @@ Slack : 0.799
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'C'
-Slack : 9.780
+Slack : 9.781
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 49.694
+Slack : 49.693
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -8.920
-TNS   : -2451.395
+Slack : -7.789
+TNS   : -1138.095
 
-Type  : Slow 1200mV 0C Model Setup 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : -4.423
-TNS   : -123.655
+Type  : Slow 1200mV 0C Model Setup 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : -5.172
+TNS   : -107.171
 
 Type  : Slow 1200mV 0C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -3.955
-TNS   : -210.053
-
-Type  : Slow 1200mV 0C Model Setup 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : -3.928
-TNS   : -108.382
+Slack : -3.027
+TNS   : -75.480
 
 Type  : Slow 1200mV 0C Model Setup 'C'
-Slack : -0.835
-TNS   : -5.927
+Slack : 16.349
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.287
+Slack : 0.373
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
@@ -99,31 +83,23 @@ Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'C'
-Slack : 0.402
+Slack : 0.416
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 1.345
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Hold 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 1.770
+Type  : Slow 1200mV 0C Model Hold 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 1.553
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.167
+Slack : 2.159
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 1.460
+Slack : 1.434
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 0.211
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 0.252
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
@@ -131,79 +107,67 @@ Slack : 0.799
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'C'
-Slack : 9.771
+Slack : 9.772
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 49.673
+Slack : 49.670
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.430
-TNS   : -919.323
+Slack : -3.759
+TNS   : -398.563
+
+Type  : Fast 1200mV 0C Model Setup 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : -1.982
+TNS   : -39.879
 
 Type  : Fast 1200mV 0C Model Setup 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : -2.111
-TNS   : -113.269
-
-Type  : Fast 1200mV 0C Model Setup 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : -1.745
-TNS   : -45.098
-
-Type  : Fast 1200mV 0C Model Setup 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : -1.277
-TNS   : -34.449
+Slack : -1.523
+TNS   : -39.037
 
 Type  : Fast 1200mV 0C Model Setup 'C'
-Slack : 2.281
+Slack : 18.195
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.143
+Slack : 0.140
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 0.186
+Slack : 0.185
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'C'
-Slack : 0.187
+Slack : 0.193
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 0.536
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Hold 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 0.708
+Type  : Fast 1200mV 0C Model Hold 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 0.723
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 3.538
+Slack : 3.534
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.693
+Slack : 0.671
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Block1:BlockU2|ADSR:ADSR_inst|EN'
-Slack : 0.301
-TNS   : 0.000
-
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Block1:BlockU1|ADSR:ADSR_inst|EN'
-Slack : 0.337
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'TB_BLOCK1:U3|Block1:ub|ADSR:ADSR_inst|EN'
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 2.233
+Slack : 2.232
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'C'
-Slack : 9.434
+Slack : 9.436
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'UPLL|altpll_component|auto_generated|pll1|clk[2]'
-Slack : 49.769
+Slack : 49.783
 TNS   : 0.000
 
 ------------------------------------------------------------
