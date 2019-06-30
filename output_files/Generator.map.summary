@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Jun 13 19:54:19 2019
+Analysis & Synthesis Status : Successful - Sat Jun 29 12:33:42 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Generator
-Top-level Entity Name : TB_DAC
+Top-level Entity Name : TB_2SIN
 Family : Cyclone IV E
-Total logic elements : 1,747
-    Total combinational functions : 1,548
-    Dedicated logic registers : 916
-Total registers : 916
-Total pins : 5
+Total logic elements : 118
+    Total combinational functions : 115
+    Dedicated logic registers : 81
+Total registers : 81
+Total pins : 4
 Total virtual pins : 0
-Total memory bits : 49,262
-Embedded Multiplier 9-bit elements : 7
+Total memory bits : 98,304
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 1

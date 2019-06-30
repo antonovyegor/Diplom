@@ -30,9 +30,9 @@ begin
 	end process;
 	
 	
-	SIG_SAW<=conv_std_logic_vector(acc(31 downto 31-11),12);
-	SIG_MEANDR<=acc(31);
-	ADDR_SIN<=conv_std_logic_vector(acc(31 downto 31-11),12);
+	SIG_SAW<= X"000" when FREq_reg = X"00000000" else conv_std_logic_vector(acc(31 downto 31-11),12);
+	SIG_MEANDR<= '0' when FREq_reg = X"00000000" else acc(31);
+	ADDR_SIN<= X"000" when FREq_reg = X"00000000" else conv_std_logic_vector(acc(31 downto 31-11),12);
 	
 end BEH;
 

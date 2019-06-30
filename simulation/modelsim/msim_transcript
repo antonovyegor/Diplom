@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {Generator.vho}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:54:53 on Jun 13,2019
+# Start time: 12:34:12 on Jun 29,2019
 # vcom -reportprogress 300 -93 -work work Generator.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -23,7 +23,8 @@
 # -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-# -- Compiling entity TB_DAC
-# -- Compiling architecture structure of TB_DAC
-# End time: 19:54:54 on Jun 13,2019, Elapsed time: 0:00:01
+# -- Compiling entity TB_2SIN
+# -- Compiling architecture structure of TB_2SIN
+# End time: 12:34:12 on Jun 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# 

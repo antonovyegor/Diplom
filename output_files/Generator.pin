@@ -90,7 +90,7 @@ GND                          : 19        : gnd    :                   :         
 TDO                          : 20        : output :                   :         : 1         :                
 nCE                          : 21        :        :                   :         : 1         :                
 GND                          : 22        : gnd    :                   :         :           :                
-C                            : 23        : input  : 2.5 V             :         : 1         : Y              
+Clock                        : 23        : input  : 2.5 V             :         : 1         : Y              
 GND+                         : 24        :        :                   :         : 2         :                
 GND+                         : 25        :        :                   :         : 2         :                
 VCCIO2                       : 26        : power  :                   : 2.5V    : 2         :                
@@ -154,10 +154,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 83        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 84        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
-SIG_OUT                      : 87        : output : 2.5 V             :         : 5         : Y              
-MUX[0]                       : 88        : input  : 2.5 V             :         : 5         : Y              
-MUX[1]                       : 89        : input  : 2.5 V             :         : 5         : Y              
-BUTTON                       : 90        : input  : 2.5 V             :         : 6         : Y              
+Signal_OUT                   : 87        : output : 2.5 V             :         : 5         : Y              
+BUT1                         : 88        : input  : 2.5 V             :         : 5         : Y              
+BUT2                         : 89        : input  : 2.5 V             :         : 5         : Y              
+GND+                         : 90        :        :                   :         : 6         :                
 GND+                         : 91        :        :                   :         : 6         :                
 CONF_DONE                    : 92        :        :                   :         : 6         :                
 VCCIO6                       : 93        : power  :                   : 2.5V    : 6         :                

@@ -22,9 +22,9 @@ V=llP<lTg]AO0Pc7S4Bfe_3
 !s100 =1cAnbojK[N@GSIk<kdLA0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1560380193
+Z8 !s110 1561201273
 !i10b 1
-Z9 !s108 1560380192.000000
+Z9 !s108 1561201273.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ADD.vhd|
 Z11 !s107 D:/My_Designs/Diplom/ADD.vhd|
 !i113 1
@@ -62,9 +62,9 @@ V>256M2hfiYek08JI96mN_1
 !s100 `Di2^>Re1SFoAXng<A4eX0
 R7
 32
-R8
+Z17 !s110 1561201274
 !i10b 1
-Z17 !s108 1560380193.000000
+R9
 Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ADDSUB.vhd|
 Z19 !s107 D:/My_Designs/Diplom/ADDSUB.vhd|
 !i113 1
@@ -80,9 +80,9 @@ Vec5]nK<gHPJKT_J<i]@bT1
 !s100 BaCEZh0BWIn54NE<NLUOQ3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -103,7 +103,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -121,7 +121,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -142,7 +142,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -160,7 +160,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -218,9 +218,9 @@ V`^G9`[IXdA8lz5gX:Yi?=3
 !s100 kJ1L]dX:]Hff7SQm;oP8X0
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -236,9 +236,9 @@ V3;9eb9bL5KHAkdiCk9o2?3
 !s100 zc]YJ]lUW6m]87GT;z>^b1
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -259,7 +259,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -277,7 +277,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -298,7 +298,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -316,7 +316,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -337,7 +337,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -355,7 +355,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -376,7 +376,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -394,7 +394,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -415,7 +415,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -433,7 +433,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -454,7 +454,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -472,7 +472,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -491,9 +491,9 @@ VP@]E=YA:Q@dW1`:P@L1=]2
 !s100 7^59noi3cN^_[MX8GVDI92
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -509,9 +509,9 @@ Vo;ce<=YCaTV`f=L_?;E7_3
 !s100 lhY0aSc4XV9Z@0cf>_n@`0
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -530,9 +530,9 @@ V4Wl@?n;NjiPH`HoWL11WP1
 !s100 JKfmLG3mjXQ@E;aXbQD<X3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -548,9 +548,9 @@ VJmN9NLf]OE38P`^0@0=Y21
 !s100 bRi6?zAEoKRh02Y7P5e`n1
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -569,9 +569,9 @@ V4[SW_[8h56C]@iD^0Jdjd0
 !s100 S>d3mi`1HDXIP[S_I`UYF3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -587,9 +587,9 @@ VUkX3AUbRd68^HLOceOBPN1
 !s100 @AOFVX=fAh8?O7jn7@AzL3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -608,9 +608,9 @@ V9KjmZaaWdKdZO[XELQjQW2
 !s100 iFlE7`jZKBH6FffGo>LMo1
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -626,9 +626,9 @@ V;@_?RmA[`FcbT_5X_mAnn0
 !s100 <>ILMGAP>S3n@N>7zTahV2
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -649,7 +649,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -667,7 +667,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -686,9 +686,9 @@ VMgW`^BDST>mg8>`i2HK_g3
 !s100 2?g=:VfZHf6[FB7EhVKG42
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -704,9 +704,9 @@ VZJ>9aH9;eSW2_ZR3VE2e90
 !s100 :M_mojlzKG?72P34Xb>Af3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -727,7 +727,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -745,7 +745,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -766,7 +766,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -784,7 +784,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -805,7 +805,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -823,7 +823,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -844,7 +844,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -862,7 +862,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -881,9 +881,9 @@ VC];Ja3PU@[0j=ekO9Fl8:0
 !s100 ]gYFnJ>HhM3Vok_No>DMU3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -899,9 +899,9 @@ VnNNB[6?m9UI8III9iQ6JP2
 !s100 N`id4Dz9VJ0];g4XV6mUR3
 R7
 32
-R8
-!i10b 1
 R17
+!i10b 1
+R9
 R18
 R19
 !i113 1
@@ -922,7 +922,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -940,7 +940,7 @@ R7
 32
 R8
 !i10b 1
-R17
+R9
 R18
 R19
 !i113 1
@@ -961,9 +961,9 @@ V6BFAEHEj1M>>E<?@UA5N83
 !s100 fcH]DNH>Nc<k5o72AH8EA0
 R7
 32
-Z30 !s110 1560380194
-!i10b 1
 R17
+!i10b 1
+Z30 !s108 1561201274.000000
 Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ADSR.vhd|
 Z32 !s107 D:/My_Designs/Diplom/ADSR.vhd|
 !i113 1
@@ -981,9 +981,9 @@ V`Hc7[I05j64UoZY5?Xz`P0
 !s100 H_[<UZdX`bO@:GGVK^MMh0
 R7
 32
-R30
-!i10b 1
 R17
+!i10b 1
+R30
 R31
 R32
 !i113 1
@@ -1025,11 +1025,11 @@ VTzY0N1a`h]TmfHmcgbHU@2
 !s100 I[OBl;TkUH]7EZK<hianR2
 R7
 32
-R30
+R17
 !i10b 1
-Z36 !s108 1560380194.000000
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Block1.vhd|
-Z38 !s107 D:/My_Designs/Diplom/Block1.vhd|
+R30
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Block1.vhd|
+Z37 !s107 D:/My_Designs/Diplom/Block1.vhd|
 !i113 1
 R12
 R13
@@ -1045,77 +1045,77 @@ V1QCe^S4`7iVXH?Rg83gVV0
 !s100 f;9dbfKD5AjN[AO6jkKji2
 R7
 32
-R30
+R17
 !i10b 1
+R30
 R36
 R37
-R38
 !i113 1
 R12
 R13
 Ebuttonproc
-Z39 w1559563769
-Z40 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z38 w1560434205
+Z39 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R26
 R2
 R3
 R27
 R4
-Z41 8D:/My_Designs/Diplom/ButtonProc.vhd
-Z42 FD:/My_Designs/Diplom/ButtonProc.vhd
+Z40 8D:/My_Designs/Diplom/ButtonProc.vhd
+Z41 FD:/My_Designs/Diplom/ButtonProc.vhd
 l0
 L8
 V3o=@;S_Lc_<F5goU__50]2
 !s100 hm2_RG>e7eL6_z>fGdO;_1
 R7
 32
-R30
+R17
 !i10b 1
-R36
-Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ButtonProc.vhd|
-Z44 !s107 D:/My_Designs/Diplom/ButtonProc.vhd|
+R30
+Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ButtonProc.vhd|
+Z43 !s107 D:/My_Designs/Diplom/ButtonProc.vhd|
 !i113 1
 R12
 R13
 Asyn
-R40
+R39
 R26
 R2
 R3
 R27
 DEx4 work 10 buttonproc 0 22 3o=@;S_Lc_<F5goU__50]2
-l50
+l49
 L30
-VlYPk[`bi6:RbZn>0??<8Y3
-!s100 A_JoD:JMLYc3SX2[oWA6O3
+V1W?Y_iNhCAJJWCQY?GmV41
+!s100 DO8;_IP49W8d_:SeJ]Dom3
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R42
 R43
-R44
 !i113 1
 R12
 R13
 Econv_32_to_64
-Z45 w1556812214
+Z44 w1556812214
 R2
 R3
-Z46 dC:/Users/Evgeniy/Documents/GitHub/Diplom
-Z47 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd
-Z48 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd
+Z45 dC:/Users/Evgeniy/Documents/GitHub/Diplom
+Z46 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd
+Z47 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd
 l0
 L505
 VE9Ld:iW_b[gFgdb1N0ROX1
 !s100 e^?Dn7J^lSAObOUlX3]9Z2
 R7
 32
-Z49 !s110 1556892041
+Z48 !s110 1556892041
 !i10b 1
-Z50 !s108 1556892041.000000
-Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd|
-Z52 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd|
+Z49 !s108 1556892041.000000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd|
+Z51 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_32_TO_64.vhd|
 !i113 1
 R12
 R13
@@ -1129,32 +1129,32 @@ VUiQ3R4bLSY2VoG<N6k9_U0
 !s100 HSPC3^MES`5H]XT2IRjXe0
 R7
 32
-R49
+R48
 !i10b 1
+R49
 R50
 R51
-R52
 !i113 1
 R12
 R13
 Econv_32_to_64_altfp_convert_h9n
-R45
+R44
 R2
 R3
+R45
 R46
 R47
-R48
 l0
 L46
 V6?TP:]ezakAlZ1ko4<9bS0
 !s100 PEPhi8bGRahEgV9a1aB:N2
 R7
 32
-R49
+R48
 !i10b 1
+R49
 R50
 R51
-R52
 !i113 1
 R12
 R13
@@ -1168,32 +1168,32 @@ VXTG[0OXUlcCPik@XQH2i00
 !s100 _8WmfDje:YYYJ^Ikj:;_=3
 R7
 32
-R49
+R48
 !i10b 1
+R49
 R50
 R51
-R52
 !i113 1
 R12
 R13
 Econv_float_to_int
-Z53 w1557122118
+Z52 w1557122118
 R2
 R3
 R4
-Z54 8D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd
-Z55 FD:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd
+Z53 8D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd
+Z54 FD:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd
 l0
 L1736
 VLY^JZ6[n`?9<;>o_LNdbE0
 !s100 eDV`8VR^[LiG6_D@H;b230
 R7
 32
-R30
+R17
 !i10b 1
-R36
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd|
-Z57 !s107 D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd|
+R30
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd|
+Z56 !s107 D:/My_Designs/Diplom/CONV_FLOAT_TO_INT.vhd|
 !i113 1
 R12
 R13
@@ -1207,32 +1207,32 @@ VbDKi6=XUJze;^TjFPO2<I2
 !s100 1aZ=1nbOaN4Y]7>0:UP^G1
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R55
 R56
-R57
 !i113 1
 R12
 R13
 Econv_float_to_int_altbarrel_shift_00g
-Z58 w1556815628
+Z57 w1556815628
 R2
 R3
-R46
-Z59 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
-Z60 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
+R45
+Z58 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
+Z59 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd
 l0
 L47
 VhH8cn:9nV3<khOYSXIL@13
 !s100 X3D<4`z>f2FEeWH;9b79R1
 R7
 32
-Z61 !s110 1556880097
+Z60 !s110 1556880097
 !i10b 1
-Z62 !s108 1556880097.000000
-Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
-Z64 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
+Z61 !s108 1556880097.000000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
+Z63 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_FLOAT_TO_INT.vhd|
 !i113 1
 R12
 R13
@@ -1246,32 +1246,32 @@ Vgek7OAJhefO=QI<LXQ6RF1
 !s100 BjW<;j695:8g0ZDdRCX;W2
 R7
 32
-R61
+R60
 !i10b 1
+R61
 R62
 R63
-R64
 !i113 1
 R12
 R13
 Econv_float_to_int_altbarrel_shift_10g
-R53
+R52
 R2
 R3
 R4
+R53
 R54
-R55
 l0
 L47
 VVDT86ci]bXTjo2Fe28d7S2
 !s100 `Ec`?NSam0bkA=KJgWG=:1
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R55
 R56
-R57
 !i113 1
 R12
 R13
@@ -1285,21 +1285,21 @@ V`UZP^lQAz`W_>D8o9aHb>3
 !s100 RBZ2[XWH^:gacNgM`:^:90
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R55
 R56
-R57
 !i113 1
 R12
 R13
 Econv_float_to_int_altbarrel_shift_20g
-Z65 w1556809091
+Z64 w1556809091
 R2
 R3
-R46
+R45
+R58
 R59
-R60
 l0
 L47
 VIoDV91E]@UY>^nZo7M7@52
@@ -1308,9 +1308,9 @@ R7
 32
 !s110 1556813249
 !i10b 1
-Z66 !s108 1556813249.000000
+Z65 !s108 1556813249.000000
+R62
 R63
-R64
 !i113 1
 R12
 R13
@@ -1324,32 +1324,32 @@ V0PdN=Cn;G1;i0ZDPJ0PFj1
 !s100 TWVniNeSNN;;JEfBcT:lm0
 R7
 32
-Z67 !s110 1556813250
+Z66 !s110 1556813250
 !i10b 1
-R66
+R65
+R62
 R63
-R64
 !i113 1
 R12
 R13
 Econv_float_to_int_altfp_convert_23n
-R65
+R64
 R2
 R3
-R46
+R45
+R58
 R59
-R60
 l0
 L396
 V]BFQj3o2n_[KL:hTlJ?We3
 !s100 O=[7`LiICSL]]Na5Mz?S^2
 R7
 32
-R67
-!i10b 1
 R66
+!i10b 1
+R65
+R62
 R63
-R64
 !i113 1
 R12
 R13
@@ -1363,32 +1363,32 @@ V6iJ`NoNcfSZcWJ?AN7_2F1
 !s100 If>nFUMOMk0V3f@U@YjzR2
 R7
 32
-R67
-!i10b 1
 R66
+!i10b 1
+R65
+R62
 R63
-R64
 !i113 1
 R12
 R13
 Econv_float_to_int_altfp_convert_h1n
-R58
+R57
 R2
 R3
-R46
+R45
+R58
 R59
-R60
 l0
 L396
 VdkCg[ARkXL69nn0Cc1[3=1
 !s100 FeA9dYElLcfbNZQz2GIVz1
 R7
 32
-R61
+R60
 !i10b 1
+R61
 R62
 R63
-R64
 !i113 1
 R12
 R13
@@ -1402,32 +1402,32 @@ VHj_n9[]fXz;kYXHe<RPK^0
 !s100 4gU=;mZGQ;3l_TWnB:KF72
 R7
 32
-R61
+R60
 !i10b 1
+R61
 R62
 R63
-R64
 !i113 1
 R12
 R13
 Econv_float_to_int_altfp_convert_j1n
-R53
+R52
 R2
 R3
 R4
+R53
 R54
-R55
 l0
 L396
 VzgnW@[G6V0DghWG7DfO7`1
 !s100 WJ>a32RV4nkfLBTn0feGG0
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R55
 R56
-R57
 !i113 1
 R12
 R13
@@ -1441,32 +1441,32 @@ V_I@n?^PWd`_<?6QePNgmJ1
 !s100 O]k2M`iFD6S9ReOic?2X[3
 R7
 32
-R30
+R17
 !i10b 1
-R36
+R30
+R55
 R56
-R57
 !i113 1
 R12
 R13
 Econv_int_to_float
-R53
+R52
 R2
 R3
 R4
-Z68 8D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd
-Z69 FD:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd
+Z67 8D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd
+Z68 FD:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd
 l0
 L1074
 V03@7B>W7Ub[>XL^<b4^[=2
 !s100 SbAHMdF8K>^Z>QCMhf3MM0
 R7
 32
-Z70 !s110 1560380195
+R17
 !i10b 1
-R36
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd|
-Z72 !s107 D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd|
+R30
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd|
+Z70 !s107 D:/My_Designs/Diplom/CONV_INT_TO_FLOAT.vhd|
 !i113 1
 R12
 R13
@@ -1480,32 +1480,32 @@ VXMcc0C3<FSm?_b_c5bBio0
 !s100 @hYMScXSAIP=ekYKCk@:22
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altbarrel_shift_qvf
-Z73 w1556386850
+Z71 w1556386850
 R2
 R3
-R46
-Z74 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
-Z75 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
+R45
+Z72 8C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
+Z73 FC:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd
 l0
 L47
 Vm0a3`]e9h1d:7>fgKSY>13
 !s100 4iW89Wj27]aA1Sg;`lZW[0
 R7
 32
-Z76 !s110 1556796101
+Z74 !s110 1556796101
 !i10b 1
-Z77 !s108 1556796101.000000
-Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
-Z79 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
+Z75 !s108 1556796101.000000
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
+Z77 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/CONV_INT_TO_FLOAT.vhd|
 !i113 1
 R12
 R13
@@ -1519,32 +1519,32 @@ VS0YSk6SYze]VV>3=P>z@_1
 !s100 25Y[dodbFa<<JCoZM]_Ac0
 R7
 32
-R76
+R74
 !i10b 1
+R75
+R76
 R77
-R78
-R79
 !i113 1
 R12
 R13
 Econv_int_to_float_altbarrel_shift_rvf
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L47
 VeU7ZC8=joWEY>YPf]KdV01
 !s100 0[;abLDk9gZEkjXA1KAfl1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1558,32 +1558,32 @@ V0^b2F1;[ehN3@>8Ec8la42
 !s100 =oI:;>Xj7zB2Ja45ChUie1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altfp_convert_43n
-Z80 w1556808993
+Z78 w1556808993
 R2
 R3
-R46
-R74
-R75
+R45
+R72
+R73
 l0
 L674
 VkW5@28oaMZ0lPe9zn<eLb0
 !s100 d@?diRkI?l2j38TA@MQ5Q0
 R7
 32
-R67
+R66
 !i10b 1
-Z81 !s108 1556813250.000000
-R78
-R79
+Z79 !s108 1556813250.000000
+R76
+R77
 !i113 1
 R12
 R13
@@ -1597,32 +1597,32 @@ VkWi@M[?LfIPSacFZf^9Bm1
 !s100 1GdRlKPTL?=W[N>Bgcfl13
 R7
 32
-R67
+R66
 !i10b 1
-R81
-R78
 R79
+R76
+R77
 !i113 1
 R12
 R13
 Econv_int_to_float_altfp_convert_h1n
-R73
+R71
 R2
 R3
-R46
-R74
-R75
+R45
+R72
+R73
 l0
 L674
 Vdo4zQf`1jDn0Kz^YeVmao0
 !s100 CzF>ok0BCGl9K3?b^@oHW2
 R7
 32
-Z82 !s110 1556796102
+Z80 !s110 1556796102
 !i10b 1
+R75
+R76
 R77
-R78
-R79
 !i113 1
 R12
 R13
@@ -1636,32 +1636,32 @@ VRMeldSW=_Xn^_NFL4ZUjh3
 !s100 ]NjdoRQbFM9UBJMj1XVDk1
 R7
 32
-R82
+R80
 !i10b 1
+R75
+R76
 R77
-R78
-R79
 !i113 1
 R12
 R13
 Econv_int_to_float_altfp_convert_j1n
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L674
 VRj@[A7ha8i@Hl<QH3_>MS3
 !s100 =C6^6ohz3SbIVS2MAV[Xa1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1675,32 +1675,32 @@ VGRoBmPaf7_aa;NP^V2OA50
 !s100 4N_DgV5DLJMjcFLhQiM6N3
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_3e8
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L344
 VG0XR6n5Dh_9Sl?eolfn>i3
 !s100 :i0G5nH=O_hIk`7KOTPXN0
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1714,32 +1714,32 @@ Vb>>J4@WV5Y:dAX_fo_AR?1
 !s100 Bg0nVGZ8I2n5XnS<MB5B`2
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_3v7
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L320
 V;nDBD`g2NN[6;3cSB:0n01
 !s100 8`e02oPSm5228^>SGGB8U0
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1753,32 +1753,32 @@ V4iYED2JCl4NgK@0OkNf^h2
 !s100 3dB43K5C?UA7@OoHCblm80
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_6e8
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L427
 Vi9`Fz45>glBmUI_o3jAE<0
 !s100 ;dmmREg3QHk2<EB>RcAb;2
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1792,32 +1792,32 @@ VGHK:Al85`mY4KoDz>8Xch0
 !s100 9lUH3ZM0U5V40l[>zezWA1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_6v7
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L366
 VdfVzzFgAbG6@DVUc5Aoee0
 !s100 ;gXLLd3?=0<0f3`c6^1>D0
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1831,32 +1831,32 @@ VlH5EDIz:zA]688[WdXMfT0
 !s100 Q46BkmJh_<I25Ia4fLe7=1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_be8
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L548
 Vc2Zn66OANjA7hT3A4;ZJ`2
 !s100 4h?Unk0bEPP33=UY7fi_n1
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1870,32 +1870,32 @@ VW=Mz=D_1dChCH5k_9^KY<0
 !s100 TM`5fCkj[BJmYgTT9:NZQ0
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_bv7
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L481
 VARoo7e>5PVKmfEQj7m`Eo3
 !s100 z:TF5H3NnG1OazJ=mD^A13
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1909,32 +1909,32 @@ VdzzQKU`C_N9_GlfRzM<0;3
 !s100 `hD;T5F?]D;:mB9OWzSb33
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Econv_int_to_float_altpriority_encoder_rb6
-R53
+R52
 R2
 R3
 R4
+R67
 R68
-R69
 l0
 L608
 VDD2JHJ1=i91eT4=5WP_3B1
 !s100 iLCVXlIFd9=;_RC1l4S@?2
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
@@ -1948,40 +1948,40 @@ V>ZEJQndgM1>^7dLieOAG<2
 !s100 ald`:ZVgW6aTmh9;98]Vg3
 R7
 32
-R70
+R17
 !i10b 1
-R36
-R71
-R72
+R30
+R69
+R70
 !i113 1
 R12
 R13
 Edac
-Z83 w1560336169
-R40
+Z81 w1560336169
+R39
 R26
 R27
 R2
 R3
 R4
-Z84 8D:/My_Designs/Diplom/DAC.vhd
-Z85 FD:/My_Designs/Diplom/DAC.vhd
+Z82 8D:/My_Designs/Diplom/DAC.vhd
+Z83 FD:/My_Designs/Diplom/DAC.vhd
 l0
 L6
 V]YPB3Za6F7T_P@_[L6:iQ2
 !s100 FPEXI1]i7IF:8EX3WaO0o1
 R7
 32
-Z86 !s110 1560380198
+Z84 !s110 1561201277
 !i10b 1
-Z87 !s108 1560380198.000000
-Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/DAC.vhd|
-Z89 !s107 D:/My_Designs/Diplom/DAC.vhd|
+Z85 !s108 1561201277.000000
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/DAC.vhd|
+Z87 !s107 D:/My_Designs/Diplom/DAC.vhd|
 !i113 1
 R12
 R13
 Abehavioral
-R40
+R39
 R26
 R27
 R2
@@ -1993,34 +1993,116 @@ VC<HW``Zm2^zlgO3C=TjF23
 !s100 1NEFU>ge69dG]m>@MKJM50
 R7
 32
-R86
+R84
 !i10b 1
+R85
+R86
 R87
-R88
-R89
 !i113 1
 R12
 R13
-Egen
-Z90 w1556087162
+Eecho
+Z88 w1561201580
 R26
 R2
 R3
 R27
 R4
-Z91 8D:/My_Designs/Diplom/gen.vhd
-Z92 FD:/My_Designs/Diplom/gen.vhd
+Z89 8D:\My_Designs\Diplom\Echo.vhd
+Z90 FD:\My_Designs\Diplom\Echo.vhd
+l0
+L7
+VnOBLRfo9XMf9OV[boDBg63
+!s100 bI4Yl9MU7of<gld>7YfGn3
+R7
+32
+Z91 !s110 1561201612
+!i10b 1
+Z92 !s108 1561201612.000000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:\My_Designs\Diplom\Echo.vhd|
+Z94 !s107 D:\My_Designs\Diplom\Echo.vhd|
+!i113 1
+R12
+R13
+Asyn
+R26
+R2
+R3
+R27
+Z95 DEx4 work 4 echo 0 22 nOBLRfo9XMf9OV[boDBg63
+l35
+L16
+VaCVE^>SiKUJ]O;f0gJAY43
+!s100 NR=0`OD;JS=_[Ne^JV@Ml2
+R7
+32
+R91
+!i10b 1
+R92
+R93
+R94
+!i113 1
+R12
+R13
+Efifo
+Z96 w1561193095
+R2
+R3
+R4
+Z97 8D:/My_Designs/Diplom/FIFO.vhd
+Z98 FD:/My_Designs/Diplom/FIFO.vhd
+l0
+L42
+VdhCMRmMgD0PMVbg1fDiGo0
+!s100 VnK:K^mKP;73FgFk^ZjCC0
+R7
+32
+Z99 !s110 1561201278
+!i10b 1
+Z100 !s108 1561201278.000000
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/FIFO.vhd|
+Z102 !s107 D:/My_Designs/Diplom/FIFO.vhd|
+!i113 1
+R12
+R13
+Asyn
+R2
+R3
+DEx4 work 4 fifo 0 22 dhCMRmMgD0PMVbg1fDiGo0
+l82
+L54
+V4^WPAj4^oGMOe;o=Qi2<^3
+!s100 iJ[d5mJdMk9MjIOPMfKi21
+R7
+32
+R99
+!i10b 1
+R100
+R101
+R102
+!i113 1
+R12
+R13
+Egen
+Z103 w1556087162
+R26
+R2
+R3
+R27
+R4
+Z104 8D:/My_Designs/Diplom/gen.vhd
+Z105 FD:/My_Designs/Diplom/gen.vhd
 l0
 L7
 VM];=GYI09imW5`nja37UW2
 !s100 aMU29QinRagAbb[5:[oT=0
 R7
 32
-R70
+Z106 !s110 1561201275
 !i10b 1
-Z93 !s108 1560380195.000000
-Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/gen.vhd|
-Z95 !s107 D:/My_Designs/Diplom/gen.vhd|
+R30
+Z107 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/gen.vhd|
+Z108 !s107 D:/My_Designs/Diplom/gen.vhd|
 !i113 1
 R12
 R13
@@ -2036,34 +2118,34 @@ V`fDzaOR6R35ofaem0kRdY0
 !s100 lQ:[;G4]k:gSON1JnGMAb2
 R7
 32
-R70
+R106
 !i10b 1
-R93
-R94
-R95
+R30
+R107
+R108
 !i113 1
 R12
 R13
 Elfo
-Z96 w1557401343
+Z109 w1557401343
 R26
 R2
 R3
 R27
 R4
-Z97 8D:/My_Designs/Diplom/LFO.vhd
-Z98 FD:/My_Designs/Diplom/LFO.vhd
+Z110 8D:/My_Designs/Diplom/LFO.vhd
+Z111 FD:/My_Designs/Diplom/LFO.vhd
 l0
 L6
 VDhEG97igg6K3IG6Ea1EN20
 !s100 Pb=VmJ3L<o9F;[P:FHh@?3
 R7
 32
-R86
+R84
 !i10b 1
-R87
-Z99 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/LFO.vhd|
-Z100 !s107 D:/My_Designs/Diplom/LFO.vhd|
+R85
+Z112 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/LFO.vhd|
+Z113 !s107 D:/My_Designs/Diplom/LFO.vhd|
 !i113 1
 R12
 R13
@@ -2079,77 +2161,77 @@ VhR<=KS7c_OIP3eU8ATJ]K1
 !s100 h2SG]KPSZ4]DU2E9zJhlU3
 R7
 32
-R86
+R84
 !i10b 1
-R87
-R99
-R100
+R85
+R112
+R113
 !i113 1
 R12
 R13
 Emain
-Z101 w1560380490
-R40
+Z114 w1560439933
+R39
 R26
 R2
 R3
 R27
 R4
-Z102 8D:/My_Designs/Diplom/Main.vhd
-Z103 FD:/My_Designs/Diplom/Main.vhd
+Z115 8D:/My_Designs/Diplom/Main.vhd
+Z116 FD:/My_Designs/Diplom/Main.vhd
 l0
 L7
-VaCLcPJCnbEUb?68AKeeBG0
-!s100 @IYd96GgQNR3bBRU3le9j2
+VnQjoe4A35jdBOCazmo>T72
+!s100 EHzAZ:gJ3mMP90JN_l<9H1
 R7
 32
-Z104 !s110 1560380494
+R106
 !i10b 1
-Z105 !s108 1560380494.000000
-Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Main.vhd|
-Z107 !s107 D:/My_Designs/Diplom/Main.vhd|
+Z117 !s108 1561201275.000000
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Main.vhd|
+Z119 !s107 D:/My_Designs/Diplom/Main.vhd|
 !i113 1
 R12
 R13
 Abeh
-R40
+R39
 R26
 R2
 R3
 R27
-Z108 DEx4 work 4 main 0 22 aCLcPJCnbEUb?68AKeeBG0
-l198
-L24
-Vb<A9^N_6aZ>;9>7INXicU2
-!s100 5IfR?Z>kTnZL6DTYBBG1U3
+DEx4 work 4 main 0 22 nQjoe4A35jdBOCazmo>T72
+l197
+L23
+VN;5`NSWfdk`HXfS:mKTSH3
+!s100 2GD=^XF?1KnAH2b1zI5eV0
 R7
 32
-R104
-!i10b 1
-R105
 R106
-R107
+!i10b 1
+R117
+R118
+R119
 !i113 1
 R12
 R13
 Emul
-R53
+R52
 R2
 R3
 R4
-Z109 8D:/My_Designs/Diplom/MUL.vhd
-Z110 FD:/My_Designs/Diplom/MUL.vhd
+Z120 8D:/My_Designs/Diplom/MUL.vhd
+Z121 FD:/My_Designs/Diplom/MUL.vhd
 l0
 L1422
 V3Kz8QJl5fOPb:05NJHTLK1
 !s100 ]koNh?zQ;WFA@cdCfDKLH2
 R7
 32
-R70
+R106
 !i10b 1
-R93
-Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/MUL.vhd|
-Z112 !s107 D:/My_Designs/Diplom/MUL.vhd|
+R117
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/MUL.vhd|
+Z123 !s107 D:/My_Designs/Diplom/MUL.vhd|
 !i113 1
 R12
 R13
@@ -2163,32 +2245,32 @@ V@[?i>>SOl2h8T>eRYD07a3
 !s100 5X^STCCHWNAn?U@obU=iI3
 R7
 32
-R70
+R106
 !i10b 1
-R93
-R111
-R112
+R117
+R122
+R123
 !i113 1
 R12
 R13
 Emul_altfp_mult_9tn
-Z113 w1556809299
+Z124 w1556809299
 R2
 R3
-R46
-Z114 8C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
-Z115 FC:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
+R45
+Z125 8C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
+Z126 FC:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd
 l0
 L46
 VZ6fGUYI<cd<oPAF?C;`Y^0
 !s100 __8Y]EO^Y`7CFdd;F[?zO3
 R7
 32
-R67
+R66
 !i10b 1
-R81
-Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
-Z117 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
+R79
+Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
+Z128 !s107 C:/Users/Evgeniy/Documents/GitHub/Diplom/MUL.vhd|
 !i113 1
 R12
 R13
@@ -2202,32 +2284,32 @@ VI1Hj2Ln;UzRjj22h4PTII1
 !s100 :Za6T6=ZN?oOO7L5=<b>K3
 R7
 32
-R67
+R66
 !i10b 1
-R81
-R116
-R117
+R79
+R127
+R128
 !i113 1
 R12
 R13
 Emul_altfp_mult_9vo
-Z118 w1556037601
+Z129 w1556037601
 R2
 R3
 R4
-R109
-R110
+R120
+R121
 l0
 L46
 Vl7<TOnBUSBj2DXgQj[G3n2
 !s100 _^=^WA^ifj3YHgZGD0Pfd3
 R7
 32
-Z119 !s110 1556050429
+Z130 !s110 1556050429
 !i10b 1
-Z120 !s108 1556050429.000000
-R111
-R112
+Z131 !s108 1556050429.000000
+R122
+R123
 !i113 1
 R12
 R13
@@ -2241,32 +2323,32 @@ V``HM_GlJG=@>K9G:nkU^G0
 !s100 oG11CCmVLNdJG<:V?EVVF3
 R7
 32
-R119
+R130
 !i10b 1
-R120
-R111
-R112
+R131
+R122
+R123
 !i113 1
 R12
 R13
 Emul_altfp_mult_tao
-R73
+R71
 R2
 R3
-R46
-R114
-R115
+R45
+R125
+R126
 l0
 L46
 Von467k9hX@Q5SX<TGQQRc1
 !s100 UAJB6FiD3fgA7lQWO17KE3
 R7
 32
-R82
+R80
 !i10b 1
-Z121 !s108 1556796102.000000
-R116
-R117
+Z132 !s108 1556796102.000000
+R127
+R128
 !i113 1
 R12
 R13
@@ -2280,32 +2362,32 @@ VdX^Y96^L:9^d6jc^9C9b[3
 !s100 oI`BR4l_SSb]`=Fji3bh50
 R7
 32
-R82
+R80
 !i10b 1
-R121
-R116
-R117
+R132
+R127
+R128
 !i113 1
 R12
 R13
 Emul_altfp_mult_trn
-R53
+R52
 R2
 R3
 R4
-R109
-R110
+R120
+R121
 l0
 L46
 VLYz?mg>HZWW`700CBH6AX1
 !s100 `VTA^>ibZRk@d0Z;f7Zc?2
 R7
 32
-R70
+R106
 !i10b 1
-R93
-R111
-R112
+R117
+R122
+R123
 !i113 1
 R12
 R13
@@ -2319,34 +2401,34 @@ VP3aS0FTDE^lh1K4LH5hYl1
 !s100 L4@S:Yf@Fg;C@Gaf3[K`>3
 R7
 32
-R70
+R106
 !i10b 1
-R93
-R111
-R112
+R117
+R122
+R123
 !i113 1
 R12
 R13
 Eoscill
-Z122 w1559564022
+Z133 w1559564022
 R26
 R2
 R3
 R27
 R4
-Z123 8D:/My_Designs/Diplom/Oscill.vhd
-Z124 FD:/My_Designs/Diplom/Oscill.vhd
+Z134 8D:/My_Designs/Diplom/Oscill.vhd
+Z135 FD:/My_Designs/Diplom/Oscill.vhd
 l0
 L6
 V_:Jb7=gWPf;GGIIFB[NY[0
 !s100 :eOlUdRm`8Xb;1Te1?neL0
 R7
 32
-Z125 !s110 1560380196
+R106
 !i10b 1
-R93
-Z126 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Oscill.vhd|
-Z127 !s107 D:/My_Designs/Diplom/Oscill.vhd|
+R117
+Z136 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Oscill.vhd|
+Z137 !s107 D:/My_Designs/Diplom/Oscill.vhd|
 !i113 1
 R12
 R13
@@ -2362,32 +2444,32 @@ V4S>:5c2D06zjJzRP0YaEA0
 !s100 d[mg;]^5>EC9fb4I69g9i0
 R7
 32
-R125
+R106
 !i10b 1
-R93
-R126
-R127
+R117
+R136
+R137
 !i113 1
 R12
 R13
 Epll
-Z128 w1556089531
+Z138 w1556089531
 R2
 R3
 R4
-Z129 8D:/My_Designs/Diplom/PLL.vhd
-Z130 FD:/My_Designs/Diplom/PLL.vhd
+Z139 8D:/My_Designs/Diplom/PLL.vhd
+Z140 FD:/My_Designs/Diplom/PLL.vhd
 l0
 L42
 VG@FXNlRZn6SRLR?b0l_863
 !s100 i8<iCUn^^9>AiHRSWCmHX1
 R7
 32
-R125
+R106
 !i10b 1
-Z131 !s108 1560380196.000000
-Z132 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/PLL.vhd|
-Z133 !s107 D:/My_Designs/Diplom/PLL.vhd|
+R117
+Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/PLL.vhd|
+Z142 !s107 D:/My_Designs/Diplom/PLL.vhd|
 !i113 1
 R12
 R13
@@ -2401,33 +2483,33 @@ V`XA4h[8=[30WRm33T8mnY1
 !s100 mgeNDIMOmSknOFCEGP]CC0
 R7
 32
-R125
+R106
 !i10b 1
-R131
-R132
-R133
+R117
+R141
+R142
 !i113 1
 R12
 R13
 Erom1
-Z134 w1556089672
+Z143 w1556089672
 R1
 R2
 R3
 R4
-Z135 8D:/My_Designs/Diplom/ROM1.vhd
-Z136 FD:/My_Designs/Diplom/ROM1.vhd
+Z144 8D:/My_Designs/Diplom/ROM1.vhd
+Z145 FD:/My_Designs/Diplom/ROM1.vhd
 l0
 L42
 VFFAfdTZkGd9mS?i<TFL;X3
 !s100 BLPNX1ej383_]I>;SQTPi3
 R7
 32
-R125
+R106
 !i10b 1
-R131
-Z137 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM1.vhd|
-Z138 !s107 D:/My_Designs/Diplom/ROM1.vhd|
+R117
+Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM1.vhd|
+Z147 !s107 D:/My_Designs/Diplom/ROM1.vhd|
 !i113 1
 R12
 R13
@@ -2442,34 +2524,34 @@ VL3GKm^]fYRP2VmncbEX4D1
 !s100 :8FJ;jjL5T4:9Ue]DOC4V1
 R7
 32
-R125
+R106
 !i10b 1
-R131
-R137
-R138
+R117
+R146
+R147
 !i113 1
 R12
 R13
 Erom12
-Z139 w1555680543
+Z148 w1555680543
 R26
 R2
 R3
 R27
 R4
-Z140 8D:/My_Designs/Diplom/ROM12.vhd
-Z141 FD:/My_Designs/Diplom/ROM12.vhd
+Z149 8D:/My_Designs/Diplom/ROM12.vhd
+Z150 FD:/My_Designs/Diplom/ROM12.vhd
 l0
 L8
 VQBF@l]QAZ_gjHI27ZdeL`1
 !s100 fn_]LSV09NN>0z2O>;iQ01
 R7
 32
-R125
+Z151 !s110 1560380196
 !i10b 1
-R131
-Z142 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM12.vhd|
-Z143 !s107 D:/My_Designs/Diplom/ROM12.vhd|
+Z152 !s108 1560380196.000000
+Z153 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROM12.vhd|
+Z154 !s107 D:/My_Designs/Diplom/ROM12.vhd|
 !i113 1
 R12
 R13
@@ -2485,33 +2567,33 @@ VRegX6m@5<F3a]Om5aNS0T1
 !s100 mPGi>[WLH;CG?mY;;a?Ph3
 R7
 32
-R125
+R151
 !i10b 1
-R131
-R142
-R143
+R152
+R153
+R154
 !i113 1
 R12
 R13
 Eromlfo
-Z144 w1557337488
+Z155 w1557337488
 R1
 R2
 R3
 R4
-Z145 8D:/My_Designs/Diplom/ROMLFO.vhd
-Z146 FD:/My_Designs/Diplom/ROMLFO.vhd
+Z156 8D:/My_Designs/Diplom/ROMLFO.vhd
+Z157 FD:/My_Designs/Diplom/ROMLFO.vhd
 l0
 L42
 VMD;EcL`a5<;Y4ekMJAVD03
 !s100 S]U7]`g[Ke96_bgl^2;mf0
 R7
 32
-Z147 !s110 1560380197
+R84
 !i10b 1
-Z148 !s108 1560380197.000000
-Z149 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROMLFO.vhd|
-Z150 !s107 D:/My_Designs/Diplom/ROMLFO.vhd|
+R85
+Z158 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROMLFO.vhd|
+Z159 !s107 D:/My_Designs/Diplom/ROMLFO.vhd|
 !i113 1
 R12
 R13
@@ -2526,34 +2608,34 @@ Vd80eTZ`O01Lcb99[KzFKK0
 !s100 Pg`PLCli:k;Ro[R[:fiSF1
 R7
 32
-R147
+R84
 !i10b 1
-R148
-R149
-R150
+R85
+R158
+R159
 !i113 1
 R12
 R13
 Eromserial
-Z151 w1559564445
+Z160 w1559564445
 R26
 R2
 R3
 R27
 R4
-Z152 8D:/My_Designs/Diplom/ROMSERIAL.vhd
-Z153 FD:/My_Designs/Diplom/ROMSERIAL.vhd
+Z161 8D:/My_Designs/Diplom/ROMSERIAL.vhd
+Z162 FD:/My_Designs/Diplom/ROMSERIAL.vhd
 l0
 L7
 Vi3JDXZ<EN[i7GRB0DIL]H2
 !s100 UHUejFWNKjABI:XLe7Lc=0
 R7
 32
-R125
+Z163 !s110 1561201276
 !i10b 1
-R131
-Z154 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROMSERIAL.vhd|
-Z155 !s107 D:/My_Designs/Diplom/ROMSERIAL.vhd|
+Z164 !s108 1561201276.000000
+Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/ROMSERIAL.vhd|
+Z166 !s107 D:/My_Designs/Diplom/ROMSERIAL.vhd|
 !i113 1
 R12
 R13
@@ -2569,32 +2651,32 @@ V2HTb:C8YYd@74ebhRNf:k1
 !s100 m[Hca[fbh<fNDZf5SYPCJ3
 R7
 32
-R125
+R163
 !i10b 1
-R131
-R154
-R155
+R164
+R165
+R166
 !i113 1
 R12
 R13
 Eshll
-Z156 w1556089485
+Z167 w1556089485
 R2
 R3
 R4
-Z157 8D:/My_Designs/Diplom/SHLL.vhd
-Z158 FD:/My_Designs/Diplom/SHLL.vhd
+Z168 8D:/My_Designs/Diplom/SHLL.vhd
+Z169 FD:/My_Designs/Diplom/SHLL.vhd
 l0
 L42
 VlkS3fKonkU?VDNa2=Q]jg3
 !s100 Qkn@J5cg[O5cjO?=D[n0C0
 R7
 32
-R147
+R84
 !i10b 1
-R131
-Z159 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/SHLL.vhd|
-Z160 !s107 D:/My_Designs/Diplom/SHLL.vhd|
+R85
+Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/SHLL.vhd|
+Z171 !s107 D:/My_Designs/Diplom/SHLL.vhd|
 !i113 1
 R12
 R13
@@ -2608,34 +2690,34 @@ V4KUVGTeg[GNcIQE9jN[9:3
 !s100 3Y8@MgBO_B3QOJWRLo>W[2
 R7
 32
-R147
+R84
 !i10b 1
-R131
-R159
-R160
+R85
+R170
+R171
 !i113 1
 R12
 R13
 Etb_block1
-Z161 w1557415152
+Z172 w1557415152
 R26
 R2
 R3
 R27
 R4
-Z162 8D:/My_Designs/Diplom/TB_BLOCK1.vhd
-Z163 FD:/My_Designs/Diplom/TB_BLOCK1.vhd
+Z173 8D:/My_Designs/Diplom/TB_BLOCK1.vhd
+Z174 FD:/My_Designs/Diplom/TB_BLOCK1.vhd
 l0
 L7
 Va1?KMkjO1EBRAKK]k>CG21
 !s100 X5mR@[lA]1l[^aI@9V<IU2
 R7
 32
-R147
+R84
 !i10b 1
-R148
-Z164 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_BLOCK1.vhd|
-Z165 !s107 D:/My_Designs/Diplom/TB_BLOCK1.vhd|
+R85
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_BLOCK1.vhd|
+Z176 !s107 D:/My_Designs/Diplom/TB_BLOCK1.vhd|
 !i113 1
 R12
 R13
@@ -2651,40 +2733,40 @@ VT90<I<aTce92fGB3_eW483
 !s100 V3KKZ^XF6J_g]a=GYi27E2
 R7
 32
-R147
+R84
 !i10b 1
-R148
-R164
-R165
+R85
+R175
+R176
 !i113 1
 R12
 R13
 Etb_dac
-Z166 w1560358593
-R40
+Z177 w1560444645
+R39
 R26
 R27
 R2
 R3
 R4
-Z167 8D:/My_Designs/Diplom/TB_DAC.vhd
-Z168 FD:/My_Designs/Diplom/TB_DAC.vhd
+Z178 8D:/My_Designs/Diplom/TB_DAC.vhd
+Z179 FD:/My_Designs/Diplom/TB_DAC.vhd
 l0
 L6
-V`n7VAiS35Z[kFa8AZ]a8z0
-!s100 O<WcNDS6Ii6YQ>W^l;=4?1
+V7bNZ]R=[MKU_T[<9kMXHM1
+!s100 1QT=`WejHchz69i7Z7>I^1
 R7
 32
-R86
+R84
 !i10b 1
-R87
-Z169 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_DAC.vhd|
-Z170 !s107 D:/My_Designs/Diplom/TB_DAC.vhd|
+R85
+Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_DAC.vhd|
+Z181 !s107 D:/My_Designs/Diplom/TB_DAC.vhd|
 !i113 1
 R12
 R13
 Asyn
-R40
+R39
 R26
 R27
 R2
@@ -2699,31 +2781,31 @@ R7
 !s110 1560354932
 !i10b 1
 !s108 1560354932.000000
-R169
-R170
+R180
+R181
 !i113 1
 R12
 R13
 Etb_oscill
-R53
+R52
 R26
 R2
 R3
 R27
 R4
-Z171 8D:/My_Designs/Diplom/TB_OSCILL.vhd
-Z172 FD:/My_Designs/Diplom/TB_OSCILL.vhd
+Z182 8D:/My_Designs/Diplom/TB_OSCILL.vhd
+Z183 FD:/My_Designs/Diplom/TB_OSCILL.vhd
 l0
 L6
 VXTH3f@kS;UGTC?dj:APLT0
 !s100 1NV6`b:4Z=;B3FM<G<SHB0
 R7
 32
-R147
+R84
 !i10b 1
-R148
-Z173 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_OSCILL.vhd|
-Z174 !s107 D:/My_Designs/Diplom/TB_OSCILL.vhd|
+R85
+Z184 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/TB_OSCILL.vhd|
+Z185 !s107 D:/My_Designs/Diplom/TB_OSCILL.vhd|
 !i113 1
 R12
 R13
@@ -2739,34 +2821,34 @@ V?j?FaWAOJ0dNBTi7Bb[hM1
 !s100 FDTamcj=m9B33W:76ziOb3
 R7
 32
-R147
+R84
 !i10b 1
-R148
-R173
-R174
+R85
+R184
+R185
 !i113 1
 R12
 R13
 Etimer
-Z175 w1557172315
+Z186 w1557172315
 R26
 R2
 R3
 R27
 R4
-Z176 8D:/My_Designs/Diplom/Timer.vhd
-Z177 FD:/My_Designs/Diplom/Timer.vhd
+Z187 8D:/My_Designs/Diplom/Timer.vhd
+Z188 FD:/My_Designs/Diplom/Timer.vhd
 l0
 L6
 VITMRlRPKE=ML;<jG2Fm>d1
 !s100 `?<RA_WLQCPaH@dk;;W:k0
 R7
 32
-R147
+R84
 !i10b 1
-R148
-Z178 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Timer.vhd|
-Z179 !s107 D:/My_Designs/Diplom/Timer.vhd|
+R85
+Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/Timer.vhd|
+Z190 !s107 D:/My_Designs/Diplom/Timer.vhd|
 !i113 1
 R12
 R13
@@ -2782,34 +2864,34 @@ Vi:2@iA`R=A1ed4iQF4GgS2
 !s100 b52I50ao6h]_[_<3Dm5>V3
 R7
 32
-R147
+R84
 !i10b 1
-R148
-R178
-R179
+R85
+R189
+R190
 !i113 1
 R12
 R13
 Euartproc
-Z180 w1559765369
+Z191 w1560434260
 R26
 R2
 R3
 R27
 R4
-Z181 8D:/My_Designs/Diplom/UARTPROC.vhd
-Z182 FD:/My_Designs/Diplom/UARTPROC.vhd
+Z192 8D:/My_Designs/Diplom/UARTPROC.vhd
+Z193 FD:/My_Designs/Diplom/UARTPROC.vhd
 l0
 L6
 V`EmFhA]DFJZNSZ:l1@=z53
 !s100 h`Rnl9T@9U39>F^NXf3Wg2
 R7
 32
-R147
+R84
 !i10b 1
-R148
-Z183 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/UARTPROC.vhd|
-Z184 !s107 D:/My_Designs/Diplom/UARTPROC.vhd|
+R85
+Z194 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/UARTPROC.vhd|
+Z195 !s107 D:/My_Designs/Diplom/UARTPROC.vhd|
 !i113 1
 R12
 R13
@@ -2821,38 +2903,38 @@ R27
 DEx4 work 8 uartproc 0 22 `EmFhA]DFJZNSZ:l1@=z53
 l44
 L32
-V3>L[8<1jDDk3_O?8FaFk21
-!s100 enldbW:`f1^V6hOdJ1Hda0
+VJJi:C_5jemiHSMIg5j5Qd3
+!s100 CBcn=8[Vdmk:=<eUKV8NL3
 R7
 32
-R147
+R84
 !i10b 1
-R148
-R183
-R184
+R85
+R194
+R195
 !i113 1
 R12
 R13
 Euartrx
-Z185 w1557122119
+Z196 w1560450216
 R26
 R2
 R3
 R27
 R4
-Z186 8D:/My_Designs/Diplom/uartRX.vhd
-Z187 FD:/My_Designs/Diplom/uartRX.vhd
+Z197 8D:/My_Designs/Diplom/uartRX.vhd
+Z198 FD:/My_Designs/Diplom/uartRX.vhd
 l0
 L9
 V7fRN<D4nKJ2zO5>>4Q3SN2
 !s100 ^]d^J14Q>cPCU:zH9Rf@S1
 R7
 32
-Z188 !s110 1560380192
+R8
 !i10b 1
 R9
-Z189 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/uartRX.vhd|
-Z190 !s107 D:/My_Designs/Diplom/uartRX.vhd|
+Z199 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|D:/My_Designs/Diplom/uartRX.vhd|
+Z200 !s107 D:/My_Designs/Diplom/uartRX.vhd|
 !i113 1
 R12
 R13
@@ -2864,15 +2946,15 @@ R27
 DEx4 work 6 uartrx 0 22 7fRN<D4nKJ2zO5>>4Q3SN2
 l34
 L25
-VomC_YCRYnPm?7E:JVnlKI3
-!s100 0aVHHXXHoVChd5NJh24d`2
+VGDYz`HVC[W<`AA9Ck4_LY2
+!s100 IZU0QUi7nQb06ne]Nm`;13
 R7
 32
-R188
+R8
 !i10b 1
 R9
-R189
-R190
+R199
+R200
 !i113 1
 R12
 R13

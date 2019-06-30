@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6E22C8
-set_global_assignment -name TOP_LEVEL_ENTITY TB_DAC
+set_global_assignment -name TOP_LEVEL_ENTITY TB_2SIN
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:30:06  APRIL 15, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -53,7 +53,9 @@ set_global_assignment -name EDA_RUN_TOOL_AUTOMATICALLY ON -section_id eda_simula
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_location_assignment PIN_23 -to C
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
 set_global_assignment -name VHDL_FILE Oscill.vhd
 set_global_assignment -name VHDL_FILE gen.vhd
 set_global_assignment -name VHDL_FILE Timer.vhd
@@ -81,17 +83,17 @@ set_global_assignment -name VHDL_FILE LFO.vhd
 set_global_assignment -name MIF_FILE LFO_ROM.mif
 set_global_assignment -name QIP_FILE ROMLFO.qip
 set_global_assignment -name VHDL_FILE DAC.vhd
-set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
-set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
-set_global_assignment -name PROJECT_IP_REGENERATION_POLICY ALWAYS_REGENERATE_IP
 set_global_assignment -name VHDL_FILE Debuger/synthesis/Debuger.vhd
 set_global_assignment -name QIP_FILE Debuger/synthesis/Debuger.qip
 set_global_assignment -name VHDL_FILE TB_DAC.vhd
+set_global_assignment -name VHDL_FILE Echo.vhd
+set_global_assignment -name QIP_FILE FIFO.qip
+set_global_assignment -name VHDL_FILE TB_2SIN.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_90 -to BUTTON
-set_location_assignment PIN_87 -to SIG_OUT
-set_location_assignment PIN_88 -to MUX[0]
-set_location_assignment PIN_89 -to MUX[1]
+set_location_assignment PIN_23 -to Clock
+set_location_assignment PIN_87 -to Signal_OUT
+set_location_assignment PIN_88 -to BUT1
+set_location_assignment PIN_89 -to BUT2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

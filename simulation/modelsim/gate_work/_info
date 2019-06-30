@@ -8,8 +8,8 @@ z2
 !i10f 100
 cModel Technology
 Z0 dD:/My_Designs/Diplom/simulation/modelsim
-Etb_dac
-Z1 w1560444885
+Etb_2sin
+Z1 w1561800843
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8Generator.vho
 Z11 FGenerator.vho
 l0
 L36
-VYB<?RU3>1A3hB=52z1RMX0
-!s100 O`gYEI[lY1d?]h^JUz97T0
+VI8gdj2A5fVF;UWX^[o`;O1
+!s100 f`YE^H`BhOmO[_aoE?d>i1
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1560444894
+Z13 !s110 1561800852
 !i10b 1
-Z14 !s108 1560444893.000000
+Z14 !s108 1561800852.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|Generator.vho|
 Z16 !s107 Generator.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 6 tb_dac 0 22 YB<?RU3>1A3hB=52z1RMX0
-l2481
-L53
-V^fkUE:X=AbNBAEB@HJAao0
-!s100 CHXEjmN@^5GS5]Cn<Meza1
+DEx4 work 7 tb_2sin 0 22 I8gdj2A5fVF;UWX^[o`;O1
+l325
+L52
+VaC<:TE]@BzbW;n_hH1hbM1
+!s100 U96U]jJo_m?ODmE=5HVbK2
 R12
 31
 R13
